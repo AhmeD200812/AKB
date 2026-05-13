@@ -1,0 +1,18 @@
+{
+  "name": "akb-internal-knowledge-base",
+  "version": "1.0.0",
+  "description": "Aamer Knowledge Base internal employee and call center portal.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": [
+    "akb",
+    "knowledge-base",
+    "internal"
+  ],
+  "author": "Aamer",
+  "license": "UNLICENSED",
+  "private": true
+}

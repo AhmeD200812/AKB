@@ -1,0 +1,4021 @@
+window.AKB_STATIC_DB = {
+  "services": [
+    {
+      "id": "svc-golden-visa",
+      "title": "Golden Visa",
+      "category": "Golden Visa",
+      "department": "To be assigned",
+      "summary": "Service name list for Golden Visa. Details, requirements, fees, and procedures will be completed after employee confirmation.",
+      "audience": "Internal employees and call center",
+      "fees": "To be confirmed later.",
+      "processingTime": "To be confirmed later.",
+      "requirements": [
+        "Golden Visa Nomination",
+        "Golden Visa Nomination - Non-Real Estate Investors",
+        "Golden Visa Nomination - Abu Dhabi Golden Visa for Entrepreneurs",
+        "Golden Visa Nomination - Abu Dhabi Golden Visa for Real Estate Investors",
+        "Golden Visa Nomination - Abu Dhabi Golden Visa for Specialists",
+        "Golden Visa Nomination - Abu Dhabi Golden Visa for Brilliant Talents",
+        "Golden Visa Nomination - Elite Owners",
+        "Abu Dhabi Golden Visa Nomination for Students",
+        "Golden Visa - Elites",
+        "Golden Visa - ADRO",
+        "Golden Visa - 3 Steps",
+        "Golden Visa for Non-Real Estate Investors",
+        "Golden Visa for Real Estate Investors",
+        "Golden Visa for Entrepreneurs",
+        "Golden Visa for Brilliant Talents",
+        "Golden Visa for Specialists",
+        "Golden Visa for Students",
+        "Family Member - New Visa - Outside UAE (10 Year)",
+        "Family Member - Renew Visa - Inside UAE (10 years)",
+        "Family Member - New Visa - Inside UAE (10 Years)",
+        "Family Member - Dubai Inside UAE",
+        "Issue Multiple Entry Permit To Finalize The Procedures Of The Golden Residency (6 Months)"
+      ],
+      "steps": [],
+      "faqs": [],
+      "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+      "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+      "escalationContact": "To be assigned",
+      "tags": [
+        "golden visa",
+        "golden visa nomination",
+        "golden visa nomination - non-real estate investors",
+        "golden visa nomination - abu dhabi golden visa for entrepreneurs",
+        "golden visa nomination - abu dhabi golden visa for real estate investors",
+        "golden visa nomination - abu dhabi golden visa for specialists",
+        "golden visa nomination - abu dhabi golden visa for brilliant talents",
+        "golden visa nomination - elite owners",
+        "abu dhabi golden visa nomination for students",
+        "golden visa - elites",
+        "golden visa - adro",
+        "golden visa - 3 steps",
+        "golden visa for non-real estate investors",
+        "golden visa for real estate investors",
+        "golden visa for entrepreneurs",
+        "golden visa for brilliant talents"
+      ],
+      "status": "published",
+      "updatedAt": "2026-04-30T08:43:03.961Z",
+      "updatedBy": "AKB Admin",
+      "titleAr": "التأشيرة الذهبية",
+      "categoryAr": "التأشيرة الذهبية",
+      "summaryAr": "قائمة أسماء خدمات التأشيرة الذهبية. سيتم إضافة التفاصيل والمتطلبات والرسوم والإجراءات بعد تأكيد الموظفين.",
+      "requirementsAr": [
+        "ترشيح التأشيرة الذهبية",
+        "ترشيح التأشيرة الذهبية - مستثمرون غير عقاريين",
+        "ترشيح التأشيرة الذهبية في أبوظبي - رواد الأعمال",
+        "ترشيح التأشيرة الذهبية في أبوظبي - مستثمرون عقاريون",
+        "ترشيح التأشيرة الذهبية في أبوظبي - متخصصون",
+        "ترشيح التأشيرة الذهبية في أبوظبي - المواهب المتميزة",
+        "ملاك النخبة",
+        "ترشيح التأشيرة الذهبية في أبوظبي للطلاب",
+        "التأشيرة الذهبية - النخبة",
+        "التأشيرة الذهبية - مكتب أبوظبي للمقيمين",
+        "التأشيرة الذهبية - 3 خطوات",
+        "التأشيرة الذهبية للمستثمرين غير العقاريين",
+        "التأشيرة الذهبية للمستثمرين العقاريين",
+        "التأشيرة الذهبية لرواد الأعمال",
+        "التأشيرة الذهبية للمواهب المتميزة",
+        "التأشيرة الذهبية للمتخصصين",
+        "التأشيرة الذهبية للطلاب",
+        "فرد عائلة - تأشيرة جديدة - خارج الإمارات (10 سنوات)",
+        "فرد عائلة - تجديد تأشيرة - داخل الإمارات (10 سنوات)",
+        "فرد عائلة - تأشيرة جديدة - داخل الإمارات (10 سنوات)",
+        "فرد عائلة - دبي داخل الإمارات",
+        "إصدار تصريح دخول متعدد لإنهاء إجراءات الإقامة الذهبية (6 أشهر)"
+      ],
+      "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+      "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين.",
+      "subServices": [
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-1",
+          "title": "Golden Visa Nomination",
+          "titleAr": "ترشيح التأشيرة الذهبية",
+          "summary": "Exact details for Golden Visa Nomination. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-non-real-estate-investors-2",
+          "title": "Golden Visa Nomination - Non-Real Estate Investors",
+          "titleAr": "ترشيح التأشيرة الذهبية - مستثمرون غير عقاريين",
+          "summary": "Exact details for Golden Visa Nomination - Non-Real Estate Investors. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية - مستثمرون غير عقاريين. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-abu-dhabi-golden-visa-for-entrepreneurs-3",
+          "title": "Golden Visa Nomination - Abu Dhabi Golden Visa for Entrepreneurs",
+          "titleAr": "ترشيح التأشيرة الذهبية في أبوظبي - رواد الأعمال",
+          "summary": "Exact details for Golden Visa Nomination - Abu Dhabi Golden Visa for Entrepreneurs. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية في أبوظبي - رواد الأعمال. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-abu-dhabi-golden-visa-for-real-estate-investors-4",
+          "title": "Golden Visa Nomination - Abu Dhabi Golden Visa for Real Estate Investors",
+          "titleAr": "ترشيح التأشيرة الذهبية في أبوظبي - مستثمرون عقاريون",
+          "summary": "Exact details for Golden Visa Nomination - Abu Dhabi Golden Visa for Real Estate Investors. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية في أبوظبي - مستثمرون عقاريون. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-abu-dhabi-golden-visa-for-specialists-5",
+          "title": "Golden Visa Nomination - Abu Dhabi Golden Visa for Specialists",
+          "titleAr": "ترشيح التأشيرة الذهبية في أبوظبي - متخصصون",
+          "summary": "Exact details for Golden Visa Nomination - Abu Dhabi Golden Visa for Specialists. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية في أبوظبي - متخصصون. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-abu-dhabi-golden-visa-for-brilliant-talents-6",
+          "title": "Golden Visa Nomination - Abu Dhabi Golden Visa for Brilliant Talents",
+          "titleAr": "ترشيح التأشيرة الذهبية في أبوظبي - المواهب المتميزة",
+          "summary": "Exact details for Golden Visa Nomination - Abu Dhabi Golden Visa for Brilliant Talents. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية في أبوظبي - المواهب المتميزة. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-nomination-elite-owners-7",
+          "title": "Golden Visa Nomination - Elite Owners",
+          "titleAr": "ملاك النخبة",
+          "summary": "Exact details for Golden Visa Nomination - Elite Owners. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ملاك النخبة. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-abu-dhabi-golden-visa-nomination-for-students-8",
+          "title": "Abu Dhabi Golden Visa Nomination for Students",
+          "titleAr": "ترشيح التأشيرة الذهبية في أبوظبي للطلاب",
+          "summary": "Exact details for Abu Dhabi Golden Visa Nomination for Students. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترشيح التأشيرة الذهبية في أبوظبي للطلاب. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-elites-9",
+          "title": "Golden Visa - Elites",
+          "titleAr": "التأشيرة الذهبية - النخبة",
+          "summary": "Exact details for Golden Visa - Elites. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية - النخبة. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-adro-10",
+          "title": "Golden Visa - ADRO",
+          "titleAr": "التأشيرة الذهبية - مكتب أبوظبي للمقيمين",
+          "summary": "Exact details for Golden Visa - ADRO. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية - مكتب أبوظبي للمقيمين. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-3-steps-11",
+          "title": "Golden Visa - 3 Steps",
+          "titleAr": "التأشيرة الذهبية - 3 خطوات",
+          "summary": "Exact details for Golden Visa - 3 Steps. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية - 3 خطوات. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-for-non-real-estate-investors-12",
+          "title": "Golden Visa for Non-Real Estate Investors",
+          "titleAr": "التأشيرة الذهبية للمستثمرين غير العقاريين",
+          "summary": "Exact details for Golden Visa for Non-Real Estate Investors. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية للمستثمرين غير العقاريين. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-for-real-estate-investors-13",
+          "title": "Golden Visa for Real Estate Investors",
+          "titleAr": "التأشيرة الذهبية للمستثمرين العقاريين",
+          "summary": "Exact details for Golden Visa for Real Estate Investors. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية للمستثمرين العقاريين. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-for-entrepreneurs-14",
+          "title": "Golden Visa for Entrepreneurs",
+          "titleAr": "التأشيرة الذهبية لرواد الأعمال",
+          "summary": "Exact details for Golden Visa for Entrepreneurs. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية لرواد الأعمال. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-for-brilliant-talents-15",
+          "title": "Golden Visa for Brilliant Talents",
+          "titleAr": "التأشيرة الذهبية للمواهب المتميزة",
+          "summary": "Exact details for Golden Visa for Brilliant Talents. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية للمواهب المتميزة. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-for-specialists-16",
+          "title": "Golden Visa for Specialists",
+          "titleAr": "التأشيرة الذهبية للمتخصصين",
+          "summary": "Exact details for Golden Visa for Specialists. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية للمتخصصين. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-golden-visa-for-students-17",
+          "title": "Golden Visa for Students",
+          "titleAr": "التأشيرة الذهبية للطلاب",
+          "summary": "Exact details for Golden Visa for Students. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة التأشيرة الذهبية للطلاب. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-family-member-new-visa-outside-uae-10-year-18",
+          "title": "Family Member - New Visa - Outside UAE (10 Year)",
+          "titleAr": "فرد عائلة - تأشيرة جديدة - خارج الإمارات (10 سنوات)",
+          "summary": "Exact details for Family Member - New Visa - Outside UAE (10 Year). Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة فرد عائلة - تأشيرة جديدة - خارج الإمارات (10 سنوات). سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-family-member-renew-visa-inside-uae-10-years-19",
+          "title": "Family Member - Renew Visa - Inside UAE (10 years)",
+          "titleAr": "فرد عائلة - تجديد تأشيرة - داخل الإمارات (10 سنوات)",
+          "summary": "Exact details for Family Member - Renew Visa - Inside UAE (10 years). Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة فرد عائلة - تجديد تأشيرة - داخل الإمارات (10 سنوات). سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-family-member-new-visa-inside-uae-10-years-20",
+          "title": "Family Member - New Visa - Inside UAE (10 Years)",
+          "titleAr": "فرد عائلة - تأشيرة جديدة - داخل الإمارات (10 سنوات)",
+          "summary": "Exact details for Family Member - New Visa - Inside UAE (10 Years). Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة فرد عائلة - تأشيرة جديدة - داخل الإمارات (10 سنوات). سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-family-member-dubai-inside-uae-21",
+          "title": "Family Member - Dubai Inside UAE",
+          "titleAr": "فرد عائلة - دبي داخل الإمارات",
+          "summary": "Exact details for Family Member - Dubai Inside UAE. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة فرد عائلة - دبي داخل الإمارات. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-golden-visa-issue-multiple-entry-permit-to-finalize-the-procedures-of-the-golden-r-22",
+          "title": "Issue Multiple Entry Permit To Finalize The Procedures Of The Golden Residency (6 Months)",
+          "titleAr": "إصدار تصريح دخول متعدد لإنهاء إجراءات الإقامة الذهبية (6 أشهر)",
+          "summary": "Exact details for Issue Multiple Entry Permit To Finalize The Procedures Of The Golden Residency (6 Months). Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة إصدار تصريح دخول متعدد لإنهاء إجراءات الإقامة الذهبية (6 أشهر). سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        }
+      ]
+    },
+    {
+      "id": "svc-translation",
+      "title": "Translation",
+      "category": "Translation",
+      "department": "To be assigned",
+      "summary": "Service name list for Translation. Details, requirements, fees, and procedures will be completed after employee confirmation.",
+      "audience": "Internal employees and call center",
+      "fees": "To be confirmed later.",
+      "processingTime": "To be confirmed later.",
+      "requirements": [
+        "Documents Translation",
+        "Certificates",
+        "Power of Attorney"
+      ],
+      "steps": [],
+      "faqs": [],
+      "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+      "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+      "escalationContact": "To be assigned",
+      "tags": [
+        "translation",
+        "documents translation",
+        "certificates",
+        "power of attorney"
+      ],
+      "status": "published",
+      "updatedAt": "2026-04-30T08:43:03.961Z",
+      "updatedBy": "AKB Admin",
+      "titleAr": "الترجمة",
+      "categoryAr": "الترجمة",
+      "summaryAr": "قائمة أسماء خدمات الترجمة. سيتم إضافة التفاصيل والمتطلبات والرسوم والإجراءات بعد تأكيد الموظفين.",
+      "requirementsAr": [
+        "ترجمة المستندات",
+        "الشهادات",
+        "الوكالة"
+      ],
+      "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+      "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين.",
+      "subServices": [
+        {
+          "id": "svc-translation-documents-translation-1",
+          "title": "Documents Translation",
+          "titleAr": "ترجمة المستندات",
+          "summary": "Exact details for Documents Translation. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة ترجمة المستندات. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-translation-certificates-2",
+          "title": "Certificates",
+          "titleAr": "الشهادات",
+          "summary": "Exact details for Certificates. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة الشهادات. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-translation-power-of-attorney-3",
+          "title": "Power of Attorney",
+          "titleAr": "الوكالة",
+          "summary": "Exact details for Power of Attorney. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة الوكالة. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        }
+      ]
+    },
+    {
+      "id": "svc-immigration-id",
+      "title": "Immigration & ID",
+      "category": "Immigration & ID",
+      "department": "To be assigned",
+      "summary": "Immigration & ID service records. The completed Passport Services list has been added from employee notes.",
+      "audience": "Internal employees and call center",
+      "fees": "To be confirmed later.",
+      "processingTime": "Approximately 24 hours for the completed Passport Services entries.",
+      "requirements": [
+        "Passport Services - Family Members Visa",
+        "Passport Services - Open Sponsorship File",
+        "Passport Services - Change of Status",
+        "Passport Services - Residence / ID",
+        "Passport Services - Cancel Visa",
+        "Passport Services - Cancel Residence",
+        "Passport Services - Cancel Residence Without Sponsored Persons"
+      ],
+      "steps": [],
+      "faqs": [],
+      "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+      "internalNotes": "Blank placeholder Immigration & ID services were removed after the user confirmed the provided Passport Services list is complete.",
+      "escalationContact": "Ali",
+      "tags": [
+        "immigration",
+        "id",
+        "passport services",
+        "family members visa",
+        "open sponsorship file",
+        "change of status",
+        "residence id",
+        "cancel visa",
+        "cancel residence",
+        "ali"
+      ],
+      "status": "published",
+      "updatedAt": "2026-05-07T10:40:30.496Z",
+      "updatedBy": "AKB Admin",
+      "titleAr": "الهجرة والهوية",
+      "categoryAr": "الهجرة والهوية",
+      "summaryAr": "سجلات خدمات الهجرة والهوية. تمت إضافة قائمة خدمات الجوازات المكتملة من ملاحظات الموظف.",
+      "requirementsAr": [
+        "خدمات الجوازات - تأشيرة أفراد أسرة",
+        "خدمات الجوازات - فتح ملف كفالة",
+        "خدمات الجوازات - تعديل الوضع",
+        "خدمات الجوازات - إقامة / هوية",
+        "خدمات الجوازات - إلغاء تأشيرة",
+        "خدمات الجوازات - إلغاء إقامة",
+        "خدمات الجوازات - إلغاء إقامة بدون مكفولين"
+      ],
+      "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+      "internalNotesAr": "تم حذف خدمات الهجرة والهوية الفارغة بعد تأكيد المستخدم أن قائمة خدمات الجوازات المقدمة مكتملة.",
+      "subServices": [
+        {
+          "id": "svc-immigration-id-passport-family-members-visa",
+          "title": "Passport Services - Family Members Visa",
+          "titleAr": "خدمات الجوازات - تأشيرة أفراد أسرة",
+          "summary": "Passport Services - Family Members Visa under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - تأشيرة أفراد أسرة ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 353.91.",
+          "feesAr": "بند رسوم قابل للاختيار: 353.91 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Sponsor passport copy",
+            "Sponsor ID",
+            "Sponsor salary certificate",
+            "Attested tenancy contract",
+            "Attested marriage contract for wife",
+            "Birth certificate for children",
+            "Sponsored person passport copy",
+            "Sponsored person personal photo"
+          ],
+          "requirementsAr": [
+            "صورة جواز الكفيل",
+            "هوية الكفيل",
+            "شهادة راتب الكفيل",
+            "عقد إيجار مصدق",
+            "عقد زواج مصدق للزوجة",
+            "شهادة ميلاد للأطفال",
+            "صورة جواز المكفول",
+            "صورة شخصية للمكفول"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Family Members Visa",
+              "labelAr": "تأشيرة أفراد أسرة",
+              "amount": 353.91,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "For visit visa applications for a friend or relative under resident category, salary must be at least AED 4,000 for first-degree relatives, AED 8,000 for second- and third-degree relatives, and AED 15,000 for a friend, with proof of relationship. Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لتقديم طلب تأشيرة زيارة لصديق أو قريب لفئة المقيم، يشترط راتب شهري لا يقل عن 4,000 درهم للدرجة الأولى، و8,000 درهم للدرجة الثانية والثالثة، و15,000 درهم للصديق، مع إثبات صلة القرابة. يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "For visit visa applications for a friend or relative under resident category, salary must be at least AED 4,000 for first-degree relatives, AED 8,000 for second- and third-degree relatives, and AED 15,000 for a friend, with proof of relationship.",
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "لتقديم طلب تأشيرة زيارة لصديق أو قريب لفئة المقيم، يشترط راتب شهري لا يقل عن 4,000 درهم للدرجة الأولى، و8,000 درهم للدرجة الثانية والثالثة، و15,000 درهم للصديق، مع إثبات صلة القرابة.",
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "family",
+            "members",
+            "visa"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-immigration-id-passport-open-sponsorship-file",
+          "title": "Passport Services - Open Sponsorship File",
+          "titleAr": "خدمات الجوازات - فتح ملف كفالة",
+          "summary": "Passport Services - Open Sponsorship File under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - فتح ملف كفالة ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 353.91.",
+          "feesAr": "بند رسوم قابل للاختيار: 353.91 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Sponsor passport copy",
+            "Sponsor ID copy",
+            "Sponsor salary certificate"
+          ],
+          "requirementsAr": [
+            "صورة جواز الكفيل",
+            "صورة هوية الكفيل",
+            "شهادة راتب الكفيل"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Open Sponsorship File",
+              "labelAr": "فتح ملف كفالة",
+              "amount": 353.91,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "open",
+            "sponsorship",
+            "file"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-immigration-id-passport-change-of-status",
+          "title": "Passport Services - Change of Status",
+          "titleAr": "خدمات الجوازات - تعديل الوضع",
+          "summary": "Passport Services - Change of Status under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - تعديل الوضع ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 656.05.",
+          "feesAr": "بند رسوم قابل للاختيار: 656.05 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Entry permit copy"
+          ],
+          "requirementsAr": [
+            "صورة من إذن الدخول"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Change of Status",
+              "labelAr": "تعديل الوضع",
+              "amount": 656.05,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "change",
+            "of",
+            "status"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-immigration-id-passport-residence-id",
+          "title": "Passport Services - Residence / ID",
+          "titleAr": "خدمات الجوازات - إقامة / هوية",
+          "summary": "Passport Services - Residence / ID under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - إقامة / هوية ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 756.76.",
+          "feesAr": "بند رسوم قابل للاختيار: 756.76 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Entry permit copy",
+            "Sponsored person passport copy",
+            "Sponsored person personal photo",
+            "Sponsor passport copy",
+            "Sponsor ID copy",
+            "Salary certificate",
+            "Employment contract",
+            "Tenancy contract"
+          ],
+          "requirementsAr": [
+            "صورة من إذن الدخول",
+            "صورة جواز المكفول",
+            "صورة شخصية للمكفول",
+            "صورة جواز الكفيل",
+            "صورة هوية الكفيل",
+            "شهادة راتب",
+            "عقد عمل",
+            "عقد إيجار"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Residence / ID",
+              "labelAr": "إقامة / هوية",
+              "amount": 756.76,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "residence",
+            "id"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-immigration-id-passport-cancel-visa",
+          "title": "Passport Services - Cancel Visa",
+          "titleAr": "خدمات الجوازات - إلغاء تأشيرة",
+          "summary": "Passport Services - Cancel Visa under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - إلغاء تأشيرة ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 202.84.",
+          "feesAr": "بند رسوم قابل للاختيار: 202.84 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Entry permit copy",
+            "Passport copy"
+          ],
+          "requirementsAr": [
+            "صورة من إذن الدخول",
+            "صورة الجواز"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Cancel Visa",
+              "labelAr": "إلغاء تأشيرة",
+              "amount": 202.84,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "cancel",
+            "visa"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-immigration-id-passport-cancel-residence",
+          "title": "Passport Services - Cancel Residence",
+          "titleAr": "خدمات الجوازات - إلغاء إقامة",
+          "summary": "Passport Services - Cancel Residence under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - إلغاء إقامة ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 202.84.",
+          "feesAr": "بند رسوم قابل للاختيار: 202.84 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Passport copy",
+            "Residence or ID copy"
+          ],
+          "requirementsAr": [
+            "صورة جواز السفر",
+            "صورة الإقامة أو الهوية"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Cancel Residence",
+              "labelAr": "إلغاء إقامة",
+              "amount": 202.84,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "cancel",
+            "residence"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-immigration-id-passport-cancel-residence-without-sponsored-persons",
+          "title": "Passport Services - Cancel Residence Without Sponsored Persons",
+          "titleAr": "خدمات الجوازات - إلغاء إقامة بدون مكفولين",
+          "summary": "Passport Services - Cancel Residence Without Sponsored Persons under Immigration & ID Passport Services. Requirements and fee were added from Passport_Services_English_with_Arabic.docx.",
+          "summaryAr": "خدمات الجوازات - إلغاء إقامة بدون مكفولين ضمن خدمات الجوازات في الهجرة والهوية. تمت إضافة المتطلبات والرسوم من ملف Passport_Services_English_with_Arabic.docx.",
+          "fees": "Selectable fee item: AED 5213.61.",
+          "feesAr": "بند رسوم قابل للاختيار: 5213.61 درهم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Passport copies of all sponsored persons",
+            "Sponsor passport",
+            "Sponsor ID"
+          ],
+          "requirementsAr": [
+            "صورة جواز السفر لجميع المكفولين",
+            "جواز سفر الكفيل",
+            "هوية الكفيل"
+          ],
+          "steps": [
+            "Submit the application through the selected channel to obtain the service.",
+            "Review the application form and amend the retrieved data if required.",
+            "Attach the required documents if the data is not retrieved through the electronic link.",
+            "Pay the prescribed fees.",
+            "Receive the final output."
+          ],
+          "stepsAr": [
+            "تقديم الطلب من خلال القناة المختارة للحصول على الخدمة.",
+            "مراجعة استمارة الطلب والتعديل على البيانات المسترجعة إذا تطلب الأمر.",
+            "إرفاق المستندات المطلوبة في حال عدم استرجاع البيانات من خلال الربط الإلكتروني.",
+            "دفع الرسوم المقررة.",
+            "استلام المخرج النهائي."
+          ],
+          "feeItems": [
+            {
+              "label": "Cancel Residence Without Sponsored Persons",
+              "labelAr": "إلغاء إقامة بدون مكفولين",
+              "amount": 5213.61,
+              "currency": "AED",
+              "required": true
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "Valid health insurance must be available inside the UAE. Passport must be valid for at least 6 months. A return ticket must be available when applicable. A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends. The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations. Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "يجب توفر تأمين صحي ساري المفعول داخل الدولة. يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر. يجب توفر تذكرة سفر العودة عند انطباق ذلك. تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة. يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد. تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          },
+          "terms": [
+            "Valid health insurance must be available inside the UAE.",
+            "Passport must be valid for at least 6 months.",
+            "A return ticket must be available when applicable.",
+            "A fine of AED 50 is calculated for each day of staying inside the UAE after the entry visa expires or is cancelled, starting from the day after the grace period ends.",
+            "The guarantee can be refunded after cancellation or after the visa beneficiary leaves the UAE, provided the beneficiary has no residence violations.",
+            "Tourist visa stay is up to 90 continuous days and may be extended for a similar period, provided total stay does not exceed 180 days in one year."
+          ],
+          "termsAr": [
+            "يجب توفر تأمين صحي ساري المفعول داخل الدولة.",
+            "يجب أن يكون جواز السفر صالحاً لمدة لا تقل عن 6 أشهر.",
+            "يجب توفر تذكرة سفر العودة عند انطباق ذلك.",
+            "تحتسب غرامة قدرها 50 درهماً عن كل يوم في حال البقاء داخل الدولة بعد انتهاء أو إلغاء تأشيرة الدخول، ابتداءً من اليوم التالي لانتهاء فترة المهلة.",
+            "يمكن استرجاع الضمان بعد الإلغاء أو بعد خروج المستفيد من التأشيرة من الدولة، بشرط عدم وجود مخالفات إقامة على المستفيد.",
+            "تسمح تأشيرة السياحة بالبقاء لمدة متواصلة لا تتجاوز 90 يوماً، ويجوز تمديدها لمدة مماثلة بشرط ألا تتجاوز مدة البقاء الإجمالية 180 يوماً في السنة."
+          ],
+          "callCenterScript": "Confirm the exact passport service required, check the document list with the customer, confirm passport validity, then select the fee item before submission.",
+          "callCenterScriptAr": "أكد خدمة الجوازات المطلوبة بدقة، راجع قائمة المستندات مع العميل، تأكد من صلاحية الجواز، ثم اختر بند الرسوم قبل التقديم.",
+          "internalNotes": "Added from Passport_Services_English_with_Arabic.docx. Common passport-service steps and terms apply unless an employee later confirms an exception.",
+          "internalNotesAr": "تمت الإضافة من ملف Passport_Services_English_with_Arabic.docx. تنطبق خطوات وشروط خدمات الجوازات العامة ما لم يؤكد الموظف استثناء لاحقاً.",
+          "escalationContact": "Ali",
+          "escalationContactAr": "علي",
+          "tags": [
+            "immigration",
+            "id",
+            "passport services",
+            "visa",
+            "residence",
+            "ali",
+            "passport",
+            "services",
+            "cancel",
+            "residence",
+            "without",
+            "sponsored",
+            "persons"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:40:30.496Z",
+          "updatedBy": "AKB Admin"
+        }
+      ],
+      "escalationContactAr": "علي",
+      "processingTimeAr": "حوالي 24 ساعة لخدمات الجوازات المكتملة."
+    },
+    {
+      "id": "svc-delivery",
+      "title": "Delivery",
+      "category": "Delivery",
+      "department": "To be assigned",
+      "summary": "Service name list for Delivery. Details, requirements, fees, and procedures will be completed after employee confirmation.",
+      "audience": "Internal employees and call center",
+      "fees": "To be confirmed later.",
+      "processingTime": "To be confirmed later.",
+      "requirements": [
+        "Delivery Services",
+        "Delivery/Pickup",
+        "Return Service",
+        "Aamer Callback"
+      ],
+      "steps": [],
+      "faqs": [],
+      "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+      "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+      "escalationContact": "To be assigned",
+      "tags": [
+        "delivery",
+        "delivery services",
+        "delivery/pickup",
+        "return service",
+        "aamer callback"
+      ],
+      "status": "published",
+      "updatedAt": "2026-04-30T08:43:03.961Z",
+      "updatedBy": "AKB Admin",
+      "titleAr": "التوصيل",
+      "categoryAr": "التوصيل",
+      "summaryAr": "قائمة أسماء خدمات التوصيل. سيتم إضافة التفاصيل والمتطلبات والرسوم والإجراءات بعد تأكيد الموظفين.",
+      "requirementsAr": [
+        "خدمات التوصيل",
+        "توصيل/استلام",
+        "خدمة الإرجاع",
+        "اتصال من آمر"
+      ],
+      "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+      "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين.",
+      "subServices": [
+        {
+          "id": "svc-delivery-delivery-services-1",
+          "title": "Delivery Services",
+          "titleAr": "خدمات التوصيل",
+          "summary": "Exact details for Delivery Services. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة خدمات التوصيل. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-delivery-delivery-pickup-2",
+          "title": "Delivery/Pickup",
+          "titleAr": "توصيل/استلام",
+          "summary": "Exact details for Delivery/Pickup. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة توصيل/استلام. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-delivery-return-service-3",
+          "title": "Return Service",
+          "titleAr": "خدمة الإرجاع",
+          "summary": "Exact details for Return Service. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة خدمة الإرجاع. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        },
+        {
+          "id": "svc-delivery-aamer-callback-4",
+          "title": "Aamer Callback",
+          "titleAr": "اتصال من آمر",
+          "summary": "Exact details for Aamer Callback. Requirements, fees, processing time, and validation rules will be completed after employee confirmation.",
+          "summaryAr": "التفاصيل الدقيقة لخدمة اتصال من آمر. سيتم إكمال المتطلبات والرسوم ومدة الإنجاز وشروط التحقق بعد تأكيد الموظفين.",
+          "fees": "To be confirmed later.",
+          "feesAr": "سيتم تأكيد الرسوم لاحقاً.",
+          "processingTime": "To be confirmed later.",
+          "processingTimeAr": "سيتم تأكيد مدة الإنجاز لاحقاً.",
+          "requirements": [
+            "Employee-confirmed requirements will be added here."
+          ],
+          "requirementsAr": [
+            "سيتم إضافة المتطلبات المؤكدة من الموظفين هنا."
+          ],
+          "steps": [],
+          "stepsAr": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "No validation restriction confirmed yet."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "لم يتم تأكيد أي شرط تحقق بعد."
+          },
+          "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+          "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+          "internalNotes": "Only service names and sub-services were added from Aamer_Services_List.pdf. Full details will be completed later after asking employees.",
+          "internalNotesAr": "تمت إضافة أسماء الخدمات فقط. سيتم إكمال التفاصيل لاحقاً بعد سؤال الموظفين."
+        }
+      ]
+    },
+    {
+      "id": "svc-commercial-licenses",
+      "title": "Commercial Licenses",
+      "category": "Commercial Licenses",
+      "department": "To be assigned",
+      "summary": "Detailed Commercial Licenses service records. Only employee-confirmed commercial license services are shown; empty placeholders were removed.",
+      "audience": "Internal employees and call center",
+      "fees": "To be confirmed later.",
+      "processingTime": "To be confirmed later.",
+      "requirements": [
+        "Freelance License",
+        "Issuing New Economic License - Commercial (Sole Proprietor/LLC)",
+        "New Economic License - Abu Dhabi Trader",
+        "Renewal of Commercial License",
+        "Freelance License and Visa",
+        "Commercial License with Investor Visa",
+        "Tajer Abu Dhabi with Visa",
+        "License Amendment (Changing) - CA"
+      ],
+      "steps": [],
+      "faqs": [],
+      "callCenterScript": "Confirm the exact sub-service name with the customer, then follow the approved procedure once details are added.",
+      "internalNotes": "Commercial License, Freelance License, and Tajer Abu Dhabi now include employee notes, quote fees, procedures, validation notes, and with-visa package variants.",
+      "escalationContact": "Abrar",
+      "tags": [
+        "commercial licenses",
+        "reserve trade name",
+        "real beneficiary (registration / modification)",
+        "licenses",
+        "freelance license",
+        "issuing new economic license - commercial (sole proprietor/llc)",
+        "new economic license - abu dhabi trader",
+        "renewal of commercial license",
+        "freelance license and visa",
+        "commercial license with investor visa",
+        "tajer abu dhabi with visa",
+        "DED",
+        "TAMM",
+        "ICP",
+        "notary",
+        "MOA",
+        "license amendment",
+        "CA",
+        "CR number",
+        "real beneficiary update",
+        "newspaper advertisement",
+        "sale transfer agreement"
+      ],
+      "status": "published",
+      "updatedAt": "2026-05-07T05:11:48.638Z",
+      "updatedBy": "AKB Admin",
+      "titleAr": "الرخص التجارية",
+      "categoryAr": "الرخص التجارية",
+      "summaryAr": "سجلات خدمات الرخص التجارية المفصلة. تظهر فقط خدمات الرخص التجارية المؤكدة من الموظفين، وتم حذف العناصر الفارغة.",
+      "requirementsAr": [
+        "رخصة العمل الحر",
+        "إصدار رخصة اقتصادية جديدة - تجارية (مؤسسة فردية/ذ.م.م)",
+        "رخصة اقتصادية جديدة - تاجر أبوظبي",
+        "تجديد الرخصة التجارية",
+        "رخصة العمل الحر مع التأشيرة",
+        "رخصة تجارية مع تأشيرة مستثمر",
+        "تاجر أبوظبي مع التأشيرة",
+        "تعديل الرخصة التجارية - CA"
+      ],
+      "callCenterScriptAr": "أكد اسم الخدمة الفرعية مع العميل، ثم اتبع الإجراء المعتمد عند إضافة التفاصيل.",
+      "internalNotesAr": "تمت إضافة ملاحظات الموظفين والعروض والإجراءات وملاحظات التحقق وباقات التأشيرة للرخصة التجارية ورخصة العمل الحر وتاجر أبوظبي.",
+      "subServices": [
+        {
+          "id": "svc-commercial-licenses-freelance-license-4",
+          "title": "Freelance License",
+          "titleAr": "رخصة العمل الحر",
+          "summary": "Freelance economic license. Use TAMM: Issue Economic License - Freelance License. Select activity, enter trade name, and issue ICP establishment card if the customer wants visa under the license.",
+          "summaryAr": "رخصة اقتصادية للعمل الحر. في تم: Issue Economic License - Freelance License. يتم اختيار النشاط وكتابة الاسم التجاري وإصدار بطاقة منشأة من ICP إذا كان العميل يريد وضع التأشيرة تحت الرخصة.",
+          "fees": "Fees depend on the exact transaction items the customer needs. Do not quote the full package automatically. Use the item breakdown below and confirm the final invoice before payment.",
+          "feesAr": "الرسوم تعتمد على البنود المطلوبة للعميل بالضبط. لا تذكر إجمالي الباقة تلقائياً. استخدم تفاصيل البنود أدناه وأكد الفاتورة النهائية قبل الدفع.",
+          "processingTime": "To be confirmed on TAMM / DED after activity and trade name selection.",
+          "processingTimeAr": "يتم التأكيد عبر تم / دائرة التنمية الاقتصادية بعد اختيار النشاط والاسم التجاري.",
+          "requirements": [
+            "Emirates ID copy.",
+            "Academic certificate.",
+            "Selected freelance activity.",
+            "Trade name suggestion.",
+            "If visa will be under the license, check and issue establishment card on ICP."
+          ],
+          "requirementsAr": [
+            "نسخة الهوية الإماراتية.",
+            "شهادة أكاديمية.",
+            "اختيار نشاط العمل الحر.",
+            "اقتراح اسم تجاري.",
+            "إذا كانت التأشيرة ستكون تحت الرخصة، يتم التحقق وإصدار بطاقة منشأة عبر ICP."
+          ],
+          "steps": [
+            "Search on TAMM for Issue Economic License - Freelance License.",
+            "Select the freelance activity.",
+            "Enter the trade name.",
+            "Submit the license request.",
+            "If the customer wants visa under the license, check and issue the establishment card on ICP."
+          ],
+          "stepsAr": [
+            "البحث في تم عن Issue Economic License - Freelance License.",
+            "اختيار نشاط العمل الحر.",
+            "إدخال الاسم التجاري.",
+            "تقديم طلب الرخصة.",
+            "إذا أراد العميل التأشيرة تحت الرخصة، يتم التحقق وإصدار بطاقة المنشأة عبر ICP."
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Emirates ID is required for the base freelance license. Owner of the license can sponsor family. Verify live requirements on TAMM / DED / ICP before submission."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "الهوية الإماراتية مطلوبة للرخصة الأساسية. صاحب الرخصة يمكنه كفالة العائلة. يجب التأكد من المتطلبات المباشرة عبر تم / DED / ICP قبل التقديم."
+          },
+          "callCenterScript": "For Freelance License, confirm the customer has Emirates ID and an academic certificate, then confirm the activity and trade name. If they also need visa under the license, use the Freelance License and Visa service.",
+          "callCenterScriptAr": "لرخصة العمل الحر، تأكد من توفر الهوية الإماراتية والشهادة الأكاديمية، ثم أكد النشاط والاسم التجاري. إذا كان العميل يحتاج تأشيرة تحت الرخصة استخدم خدمة رخصة العمل الحر مع التأشيرة.",
+          "internalNotes": "Source: FREELANCE LICENSE Quote.pdf and Aamer_License_Notes.pdf. Freelance activity list has 99 activities. Quote valid for one month only. If government prices change, customer must pay the revised amount. Bank transfer to WIO / Aamer Consultancy after confirming final invoice.",
+          "internalNotesAr": "المصدر: FREELANCE LICENSE Quote.pdf و Aamer_License_Notes.pdf. قائمة أنشطة العمل الحر تحتوي على 99 نشاطاً. العرض صالح لمدة شهر واحد فقط. في حال تغيرت الرسوم الحكومية يتحمل العميل فرق الرسوم. يتم التحويل إلى حساب WIO / Aamer Consultancy بعد تأكيد الفاتورة النهائية.",
+          "feeItems": [
+            {
+              "name": "Trade Name",
+              "amount": "AED 210.00",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When reserving / using trade name for the freelance license."
+            },
+            {
+              "name": "Issue License",
+              "amount": "AED 1,300.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing the freelance license."
+            },
+            {
+              "name": "Real Beneficiary",
+              "amount": "AED 367.50",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When real beneficiary registration is required."
+            },
+            {
+              "name": "Aamer Charge",
+              "amount": "AED 617.52",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for the freelance license quote."
+            },
+            {
+              "name": "Full quote reference",
+              "amount": "AED 2,495.00",
+              "tax": "Reference only",
+              "appliesWhen": "Only if all quoted items are required."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-issuing-new-economic-license-commercial-sole-proprietor-llc-5",
+          "title": "Issuing New Economic License - Commercial (Sole Proprietor/LLC)",
+          "titleAr": "إصدار رخصة اقتصادية جديدة - تجارية (مؤسسة فردية/ذ.م.م)",
+          "summary": "Full commercial license process including trade name, DED approval, ICP security approval, MOA, Notary, and TAMM license issuance.",
+          "summaryAr": "إجراءات الرخصة التجارية الكاملة وتشمل الاسم التجاري، موافقة DED، الموافقة الأمنية من ICP، عقد التأسيس، الكاتب العدل، وإصدار الرخصة عبر تم.",
+          "fees": "Fees depend on the exact transaction items the customer needs. Do not quote the full package automatically. Use the item breakdown below and confirm the final invoice before payment.",
+          "feesAr": "الرسوم تعتمد على البنود المطلوبة للعميل بالضبط. لا تذكر إجمالي الباقة تلقائياً. استخدم تفاصيل البنود أدناه وأكد الفاتورة النهائية قبل الدفع.",
+          "processingTime": "Depends on DED approval, ICP security approval, Notary, and TAMM issuance.",
+          "processingTimeAr": "تعتمد المدة على موافقة DED، الموافقة الأمنية من ICP، الكاتب العدل، وإصدار تم.",
+          "requirements": [
+            "Emirates ID copy, or passport copy if the customer is a visitor.",
+            "Activities.",
+            "Trade name suggestions.",
+            "License type.",
+            "Confirm what the activities are.",
+            "Capital share amount."
+          ],
+          "requirementsAr": [
+            "نسخة الهوية الإماراتية، أو نسخة جواز السفر إذا كان العميل زائراً.",
+            "الأنشطة.",
+            "اقتراحات الاسم التجاري.",
+            "نوع الرخصة.",
+            "تأكيد طبيعة الأنشطة.",
+            "مبلغ رأس المال / الحصص."
+          ],
+          "steps": [
+            "Reserve the trade name.",
+            "After DED approval, pay the fee.",
+            "Request is assigned to ICP for security approval.",
+            "If ICP approves, prepare the MOA and share it with the customer to sign.",
+            "Share documents with the Notary.",
+            "After notarization, submit license issuance through TAMM."
+          ],
+          "stepsAr": [
+            "حجز الاسم التجاري.",
+            "بعد موافقة DED يتم دفع الرسوم.",
+            "يتم تحويل الطلب إلى ICP للموافقة الأمنية.",
+            "إذا تمت موافقة ICP، يتم تجهيز عقد التأسيس ومشاركته مع العميل للتوقيع.",
+            "مشاركة المستندات مع الكاتب العدل.",
+            "بعد التوثيق، يتم تقديم إصدار الرخصة عبر تم."
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Visitor can use passport copy instead of Emirates ID. ICP security approval is required before continuing."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يمكن للزائر استخدام نسخة جواز السفر بدلاً من الهوية الإماراتية. الموافقة الأمنية من ICP مطلوبة قبل الاستكمال."
+          },
+          "callCenterScript": "For Commercial License, collect EID or passport copy, activities, trade name suggestions, license type, and capital share. Explain that ICP security approval and Notary steps are part of the process.",
+          "callCenterScriptAr": "للرخصة التجارية، اجمع الهوية أو جواز السفر، الأنشطة، اقتراحات الاسم التجاري، نوع الرخصة، ورأس المال. وضح أن الموافقة الأمنية من ICP وخطوة الكاتب العدل جزء من الإجراء.",
+          "internalNotes": "Documents for Notary: trade name, passport or EID copies, signed MOA. Source: COMMERCIAL LICENSE Quote.pdf and Aamer_License_Notes.pdf. Quote valid for one month only. If government prices change, customer must pay the revised amount. Bank transfer to WIO / Aamer Consultancy after confirming final invoice.",
+          "internalNotesAr": "مستندات الكاتب العدل: الاسم التجاري، نسخ الجواز أو الهوية، عقد التأسيس الموقع. المصدر: COMMERCIAL LICENSE Quote.pdf و Aamer_License_Notes.pdf. العرض صالح لمدة شهر واحد فقط. في حال تغيرت الرسوم الحكومية يتحمل العميل فرق الرسوم. يتم التحويل إلى حساب WIO / Aamer Consultancy بعد تأكيد الفاتورة النهائية.",
+          "feeItems": [
+            {
+              "name": "Trade Name Reservation",
+              "amount": "AED 220.49",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When reserving the trade name."
+            },
+            {
+              "name": "MOA",
+              "amount": "AED 1,259.94",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When MOA is required."
+            },
+            {
+              "name": "Special Notary",
+              "amount": "AED 2,204.90",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When special notary is required."
+            },
+            {
+              "name": "Real Beneficiary",
+              "amount": "AED 367.48",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When real beneficiary registration is required."
+            },
+            {
+              "name": "Issuance of License",
+              "amount": "AED 7,074.87",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing the commercial license."
+            },
+            {
+              "name": "Aamer Charge",
+              "amount": "AED 3,149.85",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for commercial license."
+            },
+            {
+              "name": "Full quote reference",
+              "amount": "AED 14,264.05",
+              "tax": "Reference only",
+              "appliesWhen": "Only if all quoted items are required."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-new-economic-license-abu-dhabi-trader-6",
+          "title": "New Economic License - Abu Dhabi Trader",
+          "titleAr": "رخصة اقتصادية جديدة - تاجر أبوظبي",
+          "summary": "Tajer Abu Dhabi license. Main condition from notes: owner should have UAE visa / residence. Benefit: 3 years without Tawtheeq / tenancy contract.",
+          "summaryAr": "رخصة تاجر أبوظبي. الشرط الأساسي من الملاحظات: يجب أن يكون لدى المالك تأشيرة / إقامة في الإمارات. الميزة: 3 سنوات بدون توثيق / عقد إيجار.",
+          "fees": "Fees depend on the exact transaction items the customer needs. Do not quote the full package automatically. Use the item breakdown below and confirm the final invoice before payment.",
+          "feesAr": "الرسوم تعتمد على البنود المطلوبة للعميل بالضبط. لا تذكر إجمالي الباقة تلقائياً. استخدم تفاصيل البنود أدناه وأكد الفاتورة النهائية قبل الدفع.",
+          "processingTime": "To be confirmed on TAMM / DED after activities and trade name review.",
+          "processingTimeAr": "يتم التأكيد عبر تم / DED بعد مراجعة الأنشطة والاسم التجاري.",
+          "requirements": [
+            "Emirates ID copy.",
+            "Passport copy.",
+            "Activities.",
+            "Trade name suggestions.",
+            "Capital share."
+          ],
+          "requirementsAr": [
+            "نسخة الهوية الإماراتية.",
+            "نسخة جواز السفر.",
+            "الأنشطة.",
+            "اقتراحات الاسم التجاري.",
+            "رأس المال / الحصص."
+          ],
+          "steps": [
+            "Confirm owner has UAE visa / residence.",
+            "Confirm activities from Tajer Abu Dhabi activities list.",
+            "Collect EID, passport, trade name suggestions, and capital share.",
+            "Submit Tajer Abu Dhabi license request through TAMM / DED flow.",
+            "Complete payment and issuance after approval."
+          ],
+          "stepsAr": [
+            "تأكيد أن المالك لديه تأشيرة / إقامة في الإمارات.",
+            "تأكيد الأنشطة من قائمة أنشطة تاجر أبوظبي.",
+            "جمع الهوية والجواز واقتراحات الاسم التجاري ورأس المال.",
+            "تقديم طلب رخصة تاجر أبوظبي عبر تم / DED.",
+            "إتمام الدفع والإصدار بعد الموافقة."
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Owner should have UAE visa / residence. If customer does not have UAE residence, do not show requirements as final; escalate/confirm eligibility first."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يجب أن يكون لدى المالك تأشيرة / إقامة في الإمارات. إذا لم يكن لدى العميل إقامة في الإمارات، لا تعتبر المتطلبات نهائية ويجب التصعيد/تأكيد الأهلية أولاً."
+          },
+          "callCenterScript": "For Tajer Abu Dhabi, first confirm the owner has UAE visa/residence. Then collect EID, passport, activities, trade name suggestions, and capital share. Mention the benefit: 3 years without Tawtheeq / tenancy contract.",
+          "callCenterScriptAr": "لرخصة تاجر أبوظبي، تأكد أولاً أن المالك لديه تأشيرة/إقامة في الإمارات. ثم اجمع الهوية والجواز والأنشطة واقتراحات الاسم التجاري ورأس المال. اذكر الميزة: 3 سنوات بدون توثيق / عقد إيجار.",
+          "internalNotes": "Source: TAJER ABU DHABI Quote.pdf and Aamer_License_Notes.pdf. Tajer Abu Dhabi activity list has 470 extracted activities. Quote valid for one month only. If government prices change, customer must pay the revised amount. Bank transfer to WIO / Aamer Consultancy after confirming final invoice.",
+          "internalNotesAr": "المصدر: TAJER ABU DHABI Quote.pdf و Aamer_License_Notes.pdf. قائمة أنشطة تاجر أبوظبي تحتوي على 470 نشاطاً مستخرجاً. العرض صالح لمدة شهر واحد فقط. في حال تغيرت الرسوم الحكومية يتحمل العميل فرق الرسوم. يتم التحويل إلى حساب WIO / Aamer Consultancy بعد تأكيد الفاتورة النهائية.",
+          "feeItems": [
+            {
+              "name": "Trade Name",
+              "amount": "AED 210.00",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When reserving / using trade name."
+            },
+            {
+              "name": "Real Beneficiary",
+              "amount": "AED 367.50",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When real beneficiary registration is required."
+            },
+            {
+              "name": "Issuing Commercial License - Tajer Abu Dhabi",
+              "amount": "AED 6,968.87",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing Tajer Abu Dhabi license."
+            },
+            {
+              "name": "Aamer Charge for Tajer Abu Dhabi",
+              "amount": "AED 2,625.00",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for Tajer Abu Dhabi."
+            },
+            {
+              "name": "Full quote reference",
+              "amount": "AED 10,171.37",
+              "tax": "Reference only",
+              "appliesWhen": "Only if all quoted items are required."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-renewal-of-commercial-license-7",
+          "title": "Renewal of Commercial License",
+          "titleAr": "تجديد الرخصة التجارية",
+          "summary": "Renewal flow for an existing commercial license using the CR number. Includes tenancy contract, company signboard, real beneficiary update, and payment.",
+          "summaryAr": "إجراء تجديد رخصة تجارية قائمة باستخدام رقم CR. يشمل عقد الإيجار ولوحة الشركة وتحديث المستفيد الحقيقي والدفع.",
+          "fees": "Fees depend on the exact transaction type and selected government steps. Confirm the live fee in TAMM / DED before quoting the customer.",
+          "feesAr": "الرسوم تعتمد على نوع المعاملة والخطوات الحكومية المختارة. يجب تأكيد الرسوم المباشرة في تم / DED قبل إبلاغ العميل.",
+          "processingTime": "To be confirmed after CR number lookup and renewal request review.",
+          "processingTimeAr": "يتم التأكيد بعد البحث برقم CR ومراجعة طلب التجديد.",
+          "requirements": [
+            "Tenancy Contract.",
+            "Company Signboard.",
+            "CR number for the existing license.",
+            "Select Renewal of Commercial License using CR number.",
+            "Update Real Beneficiary.",
+            "Payment."
+          ],
+          "requirementsAr": [
+            "عقد الإيجار.",
+            "لوحة الشركة.",
+            "رقم CR للرخصة القائمة.",
+            "اختيار تجديد الرخصة التجارية باستخدام رقم CR.",
+            "تحديث المستفيد الحقيقي.",
+            "الدفع."
+          ],
+          "steps": [
+            "Select Renewal of Commercial License.",
+            "Search using the CR number for the license.",
+            "Attach / confirm tenancy contract.",
+            "Attach / confirm company signboard.",
+            "Update Real Beneficiary.",
+            "Review fees and complete payment."
+          ],
+          "stepsAr": [
+            "اختيار تجديد الرخصة التجارية.",
+            "البحث باستخدام رقم CR للرخصة.",
+            "إرفاق / تأكيد عقد الإيجار.",
+            "إرفاق / تأكيد لوحة الشركة.",
+            "تحديث المستفيد الحقيقي.",
+            "مراجعة الرسوم وإتمام الدفع."
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Existing commercial license / CR number is required. Do not proceed without confirming the CR record."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يجب توفر رخصة تجارية قائمة / رقم CR. لا تبدأ الإجراء قبل تأكيد سجل CR."
+          },
+          "callCenterScript": "For renewal, ask for the CR number first, then confirm tenancy contract, company signboard, and whether Real Beneficiary needs updating before payment.",
+          "callCenterScriptAr": "للتجديد، اطلب رقم CR أولاً، ثم أكد عقد الإيجار ولوحة الشركة وهل يحتاج المستفيد الحقيقي إلى تحديث قبل الدفع.",
+          "internalNotes": "Source: Commercial_Licenses_Notes_FINAL_v2.pdf pages 1 and 3. Handwritten page confirms using CR number, update real beneficiary, then payment.",
+          "internalNotesAr": "المصدر: Commercial_Licenses_Notes_FINAL_v2.pdf الصفحات 1 و3. الصفحة اليدوية تؤكد استخدام رقم CR وتحديث المستفيد الحقيقي ثم الدفع.",
+          "feeItems": [
+            {
+              "name": "Renewal of Commercial License",
+              "amount": "Confirm in TAMM / DED",
+              "tax": "Live fee required",
+              "appliesWhen": "When renewing the license using the CR number."
+            },
+            {
+              "name": "Update Real Beneficiary",
+              "amount": "Confirm in TAMM / DED",
+              "tax": "Live fee required",
+              "appliesWhen": "When real beneficiary information must be updated before/with renewal."
+            },
+            {
+              "name": "Payment",
+              "amount": "Final invoice amount",
+              "tax": "Depends on transaction",
+              "appliesWhen": "After all renewal items are confirmed."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-freelance-license-and-visa",
+          "title": "Freelance License and Visa",
+          "titleAr": "رخصة العمل الحر مع التأشيرة",
+          "requirements": [
+            "Emirates ID copy.",
+            "Academic certificate.",
+            "Selected freelance activity.",
+            "Trade name suggestion.",
+            "UID details if available.",
+            "Confirm medical test and health insurance arrangement separately."
+          ],
+          "requirementsAr": [
+            "نسخة الهوية الإماراتية.",
+            "شهادة أكاديمية.",
+            "اختيار نشاط العمل الحر.",
+            "اقتراح اسم تجاري.",
+            "بيانات الرقم الموحد إن وجدت.",
+            "تأكيد ترتيب الفحص الطبي والتأمين الصحي بشكل منفصل."
+          ],
+          "steps": [
+            "Issue the freelance license.",
+            "Open / use E-Channel.",
+            "Link the license with UID.",
+            "Issue visa.",
+            "Complete change status if required.",
+            "Process Emirates ID and residence.",
+            "Arrange medical test and health insurance separately if customer requests."
+          ],
+          "stepsAr": [
+            "إصدار رخصة العمل الحر.",
+            "فتح / استخدام القنوات الإلكترونية.",
+            "ربط الرخصة بالرقم الموحد.",
+            "إصدار التأشيرة.",
+            "إتمام تعديل الوضع إذا كان مطلوباً.",
+            "إجراءات الهوية والإقامة.",
+            "ترتيب الفحص الطبي والتأمين الصحي بشكل منفصل إذا طلب العميل."
+          ],
+          "summary": "Freelance license package with establishment / UID link / visa / change status / Emirates ID and residence. Medical test and health insurance are not included in the quote.",
+          "summaryAr": "باقة رخصة العمل الحر مع المنشأة / ربط الرخصة بالرقم الموحد / التأشيرة / تعديل الوضع / الهوية والإقامة. الفحص الطبي والتأمين الصحي غير مشمولين في العرض.",
+          "fees": "Fees depend on the exact transaction items the customer needs. Do not quote the full package automatically. Use the item breakdown below and confirm the final invoice before payment.",
+          "feesAr": "الرسوم تعتمد على البنود المطلوبة للعميل بالضبط. لا تذكر إجمالي الباقة تلقائياً. استخدم تفاصيل البنود أدناه وأكد الفاتورة النهائية قبل الدفع.",
+          "processingTime": "To be confirmed after license issuance and ICP visa steps.",
+          "processingTimeAr": "يتم التأكيد بعد إصدار الرخصة وخطوات تأشيرة ICP.",
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Visa eligibility must be confirmed in ICP before promising approval. Medical test and health insurance are not included in the quote."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يجب تأكيد أهلية التأشيرة في ICP قبل وعد العميل بالموافقة. الفحص الطبي والتأمين الصحي غير مشمولين في العرض."
+          },
+          "callCenterScript": "This package includes freelance license and visa steps. Tell the customer medical test and health insurance are not included, but Aamer can arrange and suggest a company.",
+          "callCenterScriptAr": "هذه الباقة تشمل رخصة العمل الحر وخطوات التأشيرة. أخبر العميل أن الفحص الطبي والتأمين الصحي غير مشمولين، ويمكن لآمر ترتيبها واقتراح شركة.",
+          "internalNotes": "Source: Freelance License and Visa Quote.pdf and Aamer_License_Notes.pdf. Quote valid for one month only. If government prices change, customer must pay the revised amount. Bank transfer to WIO / Aamer Consultancy after confirming final invoice.",
+          "internalNotesAr": "المصدر: Freelance License and Visa Quote.pdf و Aamer_License_Notes.pdf. العرض صالح لمدة شهر واحد فقط. في حال تغيرت الرسوم الحكومية يتحمل العميل فرق الرسوم. يتم التحويل إلى حساب WIO / Aamer Consultancy بعد تأكيد الفاتورة النهائية.",
+          "feeItems": [
+            {
+              "name": "Freelance License",
+              "amount": "AED 2,500.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing the freelance license."
+            },
+            {
+              "name": "E-Channel",
+              "amount": "AED 3,750.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When E-Channel is needed for visa processing."
+            },
+            {
+              "name": "Link the License with UID",
+              "amount": "AED 500.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When the license must be linked with UID."
+            },
+            {
+              "name": "Issue Visa",
+              "amount": "AED 525.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing the visa."
+            },
+            {
+              "name": "Change Status",
+              "amount": "AED 845.00",
+              "tax": "0% VAT",
+              "appliesWhen": "Only if change status is required."
+            },
+            {
+              "name": "Emirates ID and Residence",
+              "amount": "AED 1,023.75",
+              "tax": "0% VAT",
+              "appliesWhen": "When Emirates ID and residence processing are required."
+            },
+            {
+              "name": "Aamer Charge",
+              "amount": "AED 1,050.00",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for this package."
+            },
+            {
+              "name": "Medical Test and Health Insurance",
+              "amount": "Not included",
+              "tax": "",
+              "appliesWhen": "Arrange separately if needed."
+            },
+            {
+              "name": "Full quote reference",
+              "amount": "AED 10,193.75",
+              "tax": "Reference only",
+              "appliesWhen": "Only if all quoted package items are required."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-commercial-license-with-investor-visa",
+          "title": "Commercial License with Investor Visa",
+          "titleAr": "رخصة تجارية مع تأشيرة مستثمر",
+          "requirements": [
+            "Commercial license requirements.",
+            "UID details if available.",
+            "Investor visa details.",
+            "Confirm medical test and health insurance arrangement separately."
+          ],
+          "requirementsAr": [
+            "متطلبات الرخصة التجارية.",
+            "بيانات الرقم الموحد إن وجدت.",
+            "بيانات تأشيرة المستثمر.",
+            "تأكيد ترتيب الفحص الطبي والتأمين الصحي بشكل منفصل."
+          ],
+          "steps": [
+            "Complete commercial license issuance steps.",
+            "Open / use E-Channel.",
+            "Link the license with UID.",
+            "Issue new investor visa.",
+            "Complete change status if required.",
+            "Process Emirates ID and residence.",
+            "Arrange medical test and health insurance separately if customer requests."
+          ],
+          "stepsAr": [
+            "إكمال خطوات إصدار الرخصة التجارية.",
+            "فتح / استخدام القنوات الإلكترونية.",
+            "ربط الرخصة بالرقم الموحد.",
+            "إصدار تأشيرة مستثمر جديدة.",
+            "إتمام تعديل الوضع إذا كان مطلوباً.",
+            "إجراءات الهوية والإقامة.",
+            "ترتيب الفحص الطبي والتأمين الصحي بشكل منفصل إذا طلب العميل."
+          ],
+          "summary": "Commercial license package with investor visa steps: license issuance, E-Channel, UID link, new visa, change status, Emirates ID and residence. Medical test and health insurance are not included.",
+          "summaryAr": "باقة الرخصة التجارية مع تأشيرة مستثمر: إصدار الرخصة، القنوات الإلكترونية، ربط الرقم الموحد، تأشيرة جديدة، تعديل الوضع، الهوية والإقامة. الفحص الطبي والتأمين الصحي غير مشمولين.",
+          "fees": "Fees depend on the exact transaction items the customer needs. Do not quote the full package automatically. Use the item breakdown below and confirm the final invoice before payment.",
+          "feesAr": "الرسوم تعتمد على البنود المطلوبة للعميل بالضبط. لا تذكر إجمالي الباقة تلقائياً. استخدم تفاصيل البنود أدناه وأكد الفاتورة النهائية قبل الدفع.",
+          "processingTime": "Depends on DED, ICP security approval, Notary, TAMM issuance, then ICP visa processing.",
+          "processingTimeAr": "تعتمد المدة على DED، موافقة ICP الأمنية، الكاتب العدل، إصدار تم، ثم إجراءات التأشيرة عبر ICP.",
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Commercial license must be eligible/issued first. Investor visa eligibility must be confirmed with ICP before promising approval."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يجب أن تكون الرخصة التجارية مؤهلة/صادرة أولاً. يجب تأكيد أهلية تأشيرة المستثمر مع ICP قبل وعد العميل بالموافقة."
+          },
+          "callCenterScript": "This package includes the commercial license and investor visa. Make clear that medical test and health insurance are not included in the quote.",
+          "callCenterScriptAr": "هذه الباقة تشمل الرخصة التجارية وتأشيرة المستثمر. وضح أن الفحص الطبي والتأمين الصحي غير مشمولين في العرض.",
+          "internalNotes": "Source: COMMERCIAL LICENSE WITH INVESTOR VISA Quote.pdf and Aamer_License_Notes.pdf. Quote valid for one month only. If government prices change, customer must pay the revised amount. Bank transfer to WIO / Aamer Consultancy after confirming final invoice.",
+          "internalNotesAr": "المصدر: COMMERCIAL LICENSE WITH INVESTOR VISA Quote.pdf و Aamer_License_Notes.pdf. العرض صالح لمدة شهر واحد فقط. في حال تغيرت الرسوم الحكومية يتحمل العميل فرق الرسوم. يتم التحويل إلى حساب WIO / Aamer Consultancy بعد تأكيد الفاتورة النهائية.",
+          "feeItems": [
+            {
+              "name": "Trade Name Reservation",
+              "amount": "AED 220.49",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When reserving the trade name."
+            },
+            {
+              "name": "MOA",
+              "amount": "AED 1,259.96",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When MOA is required."
+            },
+            {
+              "name": "Special Notary",
+              "amount": "AED 2,204.93",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When special notary is required."
+            },
+            {
+              "name": "Real Beneficiary",
+              "amount": "AED 367.49",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When real beneficiary registration is required."
+            },
+            {
+              "name": "Issuance of License",
+              "amount": "AED 7,074.87",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing the commercial license."
+            },
+            {
+              "name": "Aamer Charge - Commercial License",
+              "amount": "AED 3,149.91",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for commercial license."
+            },
+            {
+              "name": "E-Channel",
+              "amount": "AED 3,750.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When E-Channel is needed for visa processing."
+            },
+            {
+              "name": "Link the License with UID",
+              "amount": "AED 500.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When the license must be linked with UID."
+            },
+            {
+              "name": "Issue New Visa",
+              "amount": "AED 525.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing investor visa."
+            },
+            {
+              "name": "Change Status",
+              "amount": "AED 845.00",
+              "tax": "0% VAT",
+              "appliesWhen": "Only if change status is required."
+            },
+            {
+              "name": "Emirates ID and Residence",
+              "amount": "AED 1,023.75",
+              "tax": "0% VAT",
+              "appliesWhen": "When Emirates ID and residence processing are required."
+            },
+            {
+              "name": "Aamer Charge - Visa",
+              "amount": "AED 1,049.97",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for visa part."
+            },
+            {
+              "name": "Medical Test and Health Insurance",
+              "amount": "Not included",
+              "tax": "",
+              "appliesWhen": "Arrange separately if needed."
+            },
+            {
+              "name": "Full quote reference",
+              "amount": "AED 21,957.89",
+              "tax": "Reference only",
+              "appliesWhen": "Only if all quoted package items are required."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-tajer-abu-dhabi-with-visa",
+          "title": "Tajer Abu Dhabi with Visa",
+          "titleAr": "تاجر أبوظبي مع التأشيرة",
+          "requirements": [
+            "Tajer Abu Dhabi license requirements.",
+            "UID details if available.",
+            "Visa details.",
+            "Confirm medical test and health insurance arrangement separately."
+          ],
+          "requirementsAr": [
+            "متطلبات رخصة تاجر أبوظبي.",
+            "بيانات الرقم الموحد إن وجدت.",
+            "بيانات التأشيرة.",
+            "تأكيد ترتيب الفحص الطبي والتأمين الصحي بشكل منفصل."
+          ],
+          "steps": [
+            "Complete Tajer Abu Dhabi license steps.",
+            "Open / use E-Channel.",
+            "Link the license with UID.",
+            "Issue visa.",
+            "Complete change status if required.",
+            "Process Emirates ID and residence.",
+            "Arrange medical test and health insurance separately if customer requests."
+          ],
+          "stepsAr": [
+            "إكمال خطوات رخصة تاجر أبوظبي.",
+            "فتح / استخدام القنوات الإلكترونية.",
+            "ربط الرخصة بالرقم الموحد.",
+            "إصدار التأشيرة.",
+            "إتمام تعديل الوضع إذا كان مطلوباً.",
+            "إجراءات الهوية والإقامة.",
+            "ترتيب الفحص الطبي والتأمين الصحي بشكل منفصل إذا طلب العميل."
+          ],
+          "summary": "Tajer Abu Dhabi package with visa steps: Tajer license, E-Channel, UID link, visa, change status, Emirates ID and residence. Medical test and health insurance are not included.",
+          "summaryAr": "باقة تاجر أبوظبي مع خطوات التأشيرة: رخصة تاجر، القنوات الإلكترونية، ربط الرقم الموحد، التأشيرة، تعديل الوضع، الهوية والإقامة. الفحص الطبي والتأمين الصحي غير مشمولين.",
+          "fees": "Fees depend on the exact transaction items the customer needs. Do not quote the full package automatically. Use the item breakdown below and confirm the final invoice before payment.",
+          "feesAr": "الرسوم تعتمد على البنود المطلوبة للعميل بالضبط. لا تذكر إجمالي الباقة تلقائياً. استخدم تفاصيل البنود أدناه وأكد الفاتورة النهائية قبل الدفع.",
+          "processingTime": "To be confirmed after Tajer license approval and ICP visa steps.",
+          "processingTimeAr": "يتم التأكيد بعد موافقة رخصة تاجر وخطوات التأشيرة عبر ICP.",
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Confirm Tajer license and visa eligibility with DED / ICP before promising approval. Medical test and health insurance are not included."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يجب تأكيد أهلية رخصة تاجر والتأشيرة مع DED / ICP قبل وعد العميل بالموافقة. الفحص الطبي والتأمين الصحي غير مشمولين."
+          },
+          "callCenterScript": "This package includes Tajer Abu Dhabi and visa steps. Tell the customer medical test and health insurance are not included, but Aamer can arrange and suggest a company.",
+          "callCenterScriptAr": "هذه الباقة تشمل تاجر أبوظبي وخطوات التأشيرة. أخبر العميل أن الفحص الطبي والتأمين الصحي غير مشمولين، ويمكن لآمر ترتيبها واقتراح شركة.",
+          "internalNotes": "Source: Tajer Abu Dhabi with Visa Quote.pdf and Aamer_License_Notes.pdf. Quote valid for one month only. If government prices change, customer must pay the revised amount. Bank transfer to WIO / Aamer Consultancy after confirming final invoice.",
+          "internalNotesAr": "المصدر: Tajer Abu Dhabi with Visa Quote.pdf و Aamer_License_Notes.pdf. العرض صالح لمدة شهر واحد فقط. في حال تغيرت الرسوم الحكومية يتحمل العميل فرق الرسوم. يتم التحويل إلى حساب WIO / Aamer Consultancy بعد تأكيد الفاتورة النهائية.",
+          "feeItems": [
+            {
+              "name": "Trade Name Reservation",
+              "amount": "AED 210.00",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When reserving trade name."
+            },
+            {
+              "name": "Real Beneficiary",
+              "amount": "AED 367.50",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "When real beneficiary registration is required."
+            },
+            {
+              "name": "Issue License Tajer Abu Dhabi",
+              "amount": "AED 6,968.87",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing Tajer Abu Dhabi license."
+            },
+            {
+              "name": "E-Channel",
+              "amount": "AED 3,750.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When E-Channel is needed for visa processing."
+            },
+            {
+              "name": "Link the License with UID",
+              "amount": "AED 500.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When the license must be linked with UID."
+            },
+            {
+              "name": "Issue Visa",
+              "amount": "AED 525.00",
+              "tax": "0% VAT",
+              "appliesWhen": "When issuing visa."
+            },
+            {
+              "name": "Change Status",
+              "amount": "AED 845.00",
+              "tax": "0% VAT",
+              "appliesWhen": "Only if change status is required."
+            },
+            {
+              "name": "Emirates ID and Residence",
+              "amount": "AED 1,023.75",
+              "tax": "0% VAT",
+              "appliesWhen": "When Emirates ID and residence processing are required."
+            },
+            {
+              "name": "Aamer Charge",
+              "amount": "AED 3,675.00",
+              "tax": "Includes 5% VAT",
+              "appliesWhen": "Aamer service charge for package."
+            },
+            {
+              "name": "Medical Test and Health Insurance",
+              "amount": "Not included",
+              "tax": "",
+              "appliesWhen": "Arrange separately if needed."
+            },
+            {
+              "name": "Full quote reference",
+              "amount": "AED 17,865.12",
+              "tax": "Reference only",
+              "appliesWhen": "Only if all quoted package items are required."
+            }
+          ],
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        },
+        {
+          "id": "svc-commercial-licenses-license-amendment-changing-ca",
+          "title": "License Amendment (Changing) - CA",
+          "titleAr": "تعديل الرخصة التجارية - CA",
+          "requirements": [
+            "Copy of original license.",
+            "Copies of partners' Emirates IDs or passports.",
+            "Initial company contract / initial Memorandum of Association.",
+            "Sale & transfer contract if ownership/partner transfer is involved.",
+            "Newspaper advertisements if required by amendment type.",
+            "New trade name if the trade name is changed.",
+            "Partners names and ownership percentages when amendment is related to partners."
+          ],
+          "requirementsAr": [
+            "نسخة من الرخصة الأصلية.",
+            "نسخ هويات أو جوازات الشركاء.",
+            "عقد الشركة الأولي / عقد التأسيس الأولي.",
+            "عقد البيع والتنازل إذا كان التعديل يشمل نقل ملكية/شركاء.",
+            "إعلانات الصحف إذا كانت مطلوبة حسب نوع التعديل.",
+            "اسم تجاري جديد إذا كان التعديل يشمل تغيير الاسم التجاري.",
+            "أسماء الشركاء ونسب الملكية إذا كان التعديل متعلقاً بالشركاء."
+          ],
+          "steps": [
+            "Confirm amendment type.",
+            "Collect original license copy.",
+            "Collect partner ID/passport copies.",
+            "Prepare initial company contract / MOA.",
+            "Prepare sale & transfer contract if required.",
+            "Issue commercial / newspaper advertisement if required.",
+            "If trade name changes, approve the new trade name.",
+            "Partners sign and notarize required contracts.",
+            "Attach notarized contract and documents to the CA request.",
+            "Submit CA request and update the license after approval."
+          ],
+          "stepsAr": [
+            "تأكيد نوع التعديل.",
+            "جمع نسخة الرخصة الأصلية.",
+            "جمع نسخ هويات/جوازات الشركاء.",
+            "تجهيز عقد الشركة الأولي / عقد التأسيس.",
+            "تجهيز عقد البيع والتنازل إذا كان مطلوباً.",
+            "إصدار الإعلان التجاري / إعلان الصحف إذا كان مطلوباً.",
+            "إذا تغير الاسم التجاري، يتم اعتماد الاسم التجاري الجديد.",
+            "توقيع الشركاء وتوثيق العقود المطلوبة.",
+            "إرفاق العقد الموثق والمستندات في طلب CA.",
+            "تقديم طلب CA وتحديث الرخصة بعد الموافقة."
+          ],
+          "summary": "Commercial license amendment / changing flow. A CA number is generated after the transaction. Advertisement requirements depend on the type of amendment.",
+          "summaryAr": "إجراء تعديل الرخصة التجارية. يتم إصدار رقم CA بعد المعاملة. متطلبات الإعلان تعتمد على نوع التعديل.",
+          "fees": "Fees depend on the exact transaction type and selected government steps. Confirm the live fee in TAMM / DED before quoting the customer.",
+          "feesAr": "الرسوم تعتمد على نوع المعاملة والخطوات الحكومية المختارة. يجب تأكيد الرسوم المباشرة في تم / DED قبل إبلاغ العميل.",
+          "feeItems": [
+            {
+              "name": "License Amendment / CA Request",
+              "amount": "Confirm in TAMM / DED",
+              "tax": "Live fee required",
+              "appliesWhen": "When submitting the amendment request."
+            },
+            {
+              "name": "Initial Memorandum of Association",
+              "amount": "Confirm if required",
+              "tax": "Depends on amendment",
+              "appliesWhen": "When amendment requires initial MOA."
+            },
+            {
+              "name": "Sale & Transfer Agreement",
+              "amount": "Confirm if required",
+              "tax": "Depends on amendment",
+              "appliesWhen": "When partner/ownership transfer is part of amendment."
+            },
+            {
+              "name": "Commercial Advertisement / Newspaper Advertisement",
+              "amount": "Confirm if required",
+              "tax": "Depends on amendment",
+              "appliesWhen": "When advertisement is required for the amendment type."
+            },
+            {
+              "name": "Notary",
+              "amount": "Confirm if required",
+              "tax": "Depends on amendment",
+              "appliesWhen": "When contracts must be signed and notarized."
+            }
+          ],
+          "processingTime": "Depends on amendment type, advertisement requirement, partner signatures, notarization, and CA request approval.",
+          "processingTimeAr": "تعتمد المدة على نوع التعديل ومتطلبات الإعلان وتوقيع الشركاء والتوثيق وموافقة طلب CA.",
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified yet",
+            "notes": "Amendment type must be confirmed first. Partner amendments require partner names, ownership percentages, signatures, and notarization."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد بعد",
+            "notes": "يجب تأكيد نوع التعديل أولاً. تعديلات الشركاء تحتاج أسماء الشركاء ونسب الملكية والتواقيع والتوثيق."
+          },
+          "callCenterScript": "For license amendment, first ask what exactly needs to change: partners, ownership percentage, trade name, activity, or another amendment. Explain that advertisement and notary steps depend on the amendment type.",
+          "callCenterScriptAr": "لتعديل الرخصة، اسأل أولاً ما المطلوب تغييره بالضبط: الشركاء، نسب الملكية، الاسم التجاري، النشاط، أو تعديل آخر. وضح أن الإعلان وخطوات الكاتب العدل تعتمد على نوع التعديل.",
+          "internalNotes": "Source: Commercial_Licenses_Notes_FINAL_v2.pdf pages 2, 4, and 5. Red notes: Initial MOA, Sale & Transfer Agreement, Issue Commercial Advertisement, CA number generated after transaction, advertisement depends on amendment type.",
+          "internalNotesAr": "المصدر: Commercial_Licenses_Notes_FINAL_v2.pdf الصفحات 2 و4 و5. الملاحظات الحمراء: عقد تأسيس أولي، عقد بيع وتنازل، إصدار إعلان تجاري، يتم إنشاء رقم CA بعد المعاملة، والإعلان يعتمد على نوع التعديل.",
+          "escalationContact": "Abrar",
+          "escalationContactAr": "أبرار"
+        }
+      ],
+      "escalationContactAr": "أبرار"
+    },
+    {
+      "id": "svc-judicial-department",
+      "title": "Judicial Department",
+      "category": "Judicial Department",
+      "department": "To be assigned",
+      "summary": "Judicial Department Notary Services. Previous employee-entered Judicial items were replaced with the Notary Services file content.",
+      "audience": "Internal employees and call center",
+      "fees": "Fees depend on the selected Notary service and fee items.",
+      "processingTime": "Approximately 24 hours for all listed Notary services.",
+      "requirements": [
+        "Notary - Disability Decision",
+        "Notary - Power of Attorney",
+        "Notary - Service Agent",
+        "Notary - Marriage Certificate",
+        "Notary - Company Attestation / Board Resolution",
+        "Notary - Power of Attorney from Embassy",
+        "Notary - Canceling a Power of Attorney",
+        "Notary - Signature Attestation",
+        "Notary - Power of Attorney and Waiver"
+      ],
+      "steps": [],
+      "faqs": [],
+      "callCenterScript": "Select Judicial Department, then choose the exact Notary service. Confirm required documents and fees, then escalate to Reda if employee confirmation is needed.",
+      "internalNotes": "Previous Judicial entries supplied earlier were removed per user request. Current Judicial Department data comes from Judicial_Department_Notary_Services_Translated.docx.",
+      "escalationContact": "Reda",
+      "tags": [
+        "judicial department",
+        "notary",
+        "notary public",
+        "documentation",
+        "reda",
+        "disability decision",
+        "disability report",
+        "social status",
+        "dependents",
+        "power of attorney",
+        "poa",
+        "principal",
+        "agent",
+        "signature attestation",
+        "service agent",
+        "license",
+        "form",
+        "moa",
+        "marriage certificate",
+        "marriage contract",
+        "witnesses",
+        "company attestation",
+        "board resolution",
+        "company formation",
+        "embassy",
+        "kinship",
+        "cancel poa",
+        "cancel power of attorney",
+        "trade license",
+        "trade name",
+        "contract",
+        "waiver",
+        "service agent contract"
+      ],
+      "status": "published",
+      "updatedAt": "2026-05-07T10:54:36.340Z",
+      "updatedBy": "AKB Admin",
+      "titleAr": "دائرة القضاء",
+      "categoryAr": "دائرة القضاء",
+      "summaryAr": "خدمات الكاتب العدل في دائرة القضاء. تم استبدال الإدخالات القضائية السابقة بمحتوى ملف خدمات الكاتب العدل.",
+      "requirementsAr": [
+        "الكاتب العدل - إثبات/قرار الإعاقة",
+        "الكاتب العدل - وكالة",
+        "الكاتب العدل - وكيل خدمات",
+        "الكاتب العدل - شهادة زواج",
+        "الكاتب العدل - تصديق شركة / قرار مجلس الإدارة",
+        "الكاتب العدل - وكالة من السفارة",
+        "الكاتب العدل - إلغاء وكالة",
+        "الكاتب العدل - تصديق توقيع",
+        "الكاتب العدل - وكالة وتنازل"
+      ],
+      "callCenterScriptAr": "اختر دائرة القضاء، ثم اختر خدمة الكاتب العدل المطلوبة بدقة. أكد المستندات والرسوم، ثم صعد إلى رضا إذا كانت هناك حاجة لتأكيد الموظف.",
+      "internalNotesAr": "تم حذف الإدخالات القضائية السابقة حسب طلب المستخدم. بيانات دائرة القضاء الحالية مأخوذة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+      "subServices": [
+        {
+          "id": "svc-judicial-notary-disability-decision",
+          "title": "Notary - Disability Decision",
+          "titleAr": "الكاتب العدل - إثبات/قرار الإعاقة",
+          "summary": "Notary - Disability Decision under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - إثبات/قرار الإعاقة ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Client ID",
+            "Disability report",
+            "Client visa / passport if ID is not available",
+            "Tax file opening when required"
+          ],
+          "requirementsAr": [
+            "هوية العميل",
+            "تقرير الإعاقة",
+            "تأشيرة/جواز سفر العميل إذا لم تتوفر الهوية",
+            "فتح ملف ضريبي عند الحاجة"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Select Social Status and Adding Dependents.",
+            "Complete the transaction.",
+            "Select the required authority to issue the disability proof for the client.",
+            "If the client does not have an ID, register the passport information.",
+            "Attach the required documents and pay the system fee."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار الحالة الاجتماعية وإضافة المعالين.",
+            "إكمال المعاملة.",
+            "اختيار الجهة المطلوبة لإصدار إثبات الإعاقة للعميل.",
+            "إذا لم يكن لدى العميل هوية، يتم تسجيل بيانات الجواز.",
+            "إرفاق المستندات المطلوبة ودفع رسوم النظام."
+          ],
+          "feeItems": [
+            {
+              "name": "System fee",
+              "amount": "AED 100"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "disability decision",
+            "disability report",
+            "social status",
+            "dependents"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-power-of-attorney",
+          "title": "Notary - Power of Attorney",
+          "titleAr": "الكاتب العدل - وكالة",
+          "summary": "Notary - Power of Attorney under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - وكالة ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Personal ID",
+            "Principal details",
+            "Agent details",
+            "Choose the language",
+            "Upload and attach a copy if signature attestation is required"
+          ],
+          "requirementsAr": [
+            "الهوية الشخصية",
+            "بيانات الموكل",
+            "بيانات الوكيل",
+            "اختيار اللغة",
+            "رفع وإرفاق نسخة إذا كان تصديق التوقيع مطلوباً"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Select Power of Attorney.",
+            "Enter principal and agent details.",
+            "In request details, choose Other.",
+            "Choose the language.",
+            "Select signature attestation if evaluation approval is required.",
+            "Upload the required copy and submit."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار وكالة.",
+            "إدخال بيانات الموكل والوكيل.",
+            "في تفاصيل الطلب، اختيار أخرى.",
+            "اختيار اللغة.",
+            "اختيار تصديق التوقيع إذا كان اعتماد التقييم مطلوباً.",
+            "رفع النسخة المطلوبة وتقديم الطلب."
+          ],
+          "feeItems": [
+            {
+              "name": "Power of Attorney for 3 years",
+              "amount": "AED 300"
+            },
+            {
+              "name": "Signature attestation",
+              "amount": "AED 500",
+              "appliesWhen": "If signature attestation is required"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "power of attorney",
+            "poa",
+            "principal",
+            "agent",
+            "signature attestation"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-service-agent",
+          "title": "Notary - Service Agent",
+          "titleAr": "الكاتب العدل - وكيل خدمات",
+          "summary": "Notary - Service Agent under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - وكيل خدمات ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "IDs",
+            "Owner / service agent or representative on behalf of them",
+            "License",
+            "Form",
+            "Power of attorney if providing authorization on behalf of the service agent",
+            "Memorandum of Association if applicable"
+          ],
+          "requirementsAr": [
+            "الهويات",
+            "المالك / وكيل الخدمات أو من يمثلهما",
+            "الرخصة",
+            "النموذج",
+            "وكالة إذا كان التفويض مقدماً نيابة عن وكيل الخدمات",
+            "عقد التأسيس عند الانطباق"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [
+            {
+              "name": "Service Agent",
+              "amount": "AED 50"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "service agent",
+            "license",
+            "form",
+            "moa"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-marriage-certificate",
+          "title": "Notary - Marriage Certificate",
+          "titleAr": "الكاتب العدل - شهادة زواج",
+          "summary": "Notary - Marriage Certificate under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - شهادة زواج ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Fee not mentioned in the employee file. Confirm before submission.",
+          "feesAr": "لم يتم ذكر الرسوم في ملف الموظف. يجب التأكيد قبل التقديم.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "IDs",
+            "Marriage contract",
+            "Husband and wife",
+            "Presence and witnesses",
+            "Verify husband’s identity"
+          ],
+          "requirementsAr": [
+            "الهويات",
+            "عقد الزواج",
+            "الزوج والزوجة",
+            "الحضور والشهود",
+            "التحقق من هوية الزوج"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "marriage certificate",
+            "marriage contract",
+            "witnesses"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-company-attestation-board-resolution",
+          "title": "Notary - Company Attestation / Board Resolution",
+          "titleAr": "الكاتب العدل - تصديق شركة / قرار مجلس الإدارة",
+          "summary": "Notary - Company Attestation / Board Resolution under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - تصديق شركة / قرار مجلس الإدارة ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "ID",
+            "Document proving company formation",
+            "Company attestation document",
+            "Board of Directors Resolution"
+          ],
+          "requirementsAr": [
+            "الهوية",
+            "مستند يثبت تأسيس الشركة",
+            "مستند تصديق الشركة",
+            "قرار مجلس الإدارة"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [
+            {
+              "name": "Company Attestation / Board Resolution",
+              "amount": "AED 500 to AED 5000"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "company attestation",
+            "board resolution",
+            "company formation"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-power-of-attorney-from-embassy",
+          "title": "Notary - Power of Attorney from Embassy",
+          "titleAr": "الكاتب العدل - وكالة من السفارة",
+          "summary": "Notary - Power of Attorney from Embassy under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - وكالة من السفارة ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "IDs",
+            "Passport",
+            "Proof of kinship",
+            "Form to be attested"
+          ],
+          "requirementsAr": [
+            "الهويات",
+            "جواز السفر",
+            "إثبات صلة القرابة",
+            "النموذج المراد تصديقه"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [
+            {
+              "name": "Power of Attorney from Embassy",
+              "amount": "AED 500"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "embassy",
+            "power of attorney",
+            "kinship"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-cancel-power-of-attorney",
+          "title": "Notary - Canceling a Power of Attorney",
+          "titleAr": "الكاتب العدل - إلغاء وكالة",
+          "summary": "Notary - Canceling a Power of Attorney under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - إلغاء وكالة ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "Correct form",
+            "IDs",
+            "Principal",
+            "Agent",
+            "License / real estate / vehicles if applicable",
+            "Previous power of attorney"
+          ],
+          "requirementsAr": [
+            "النموذج الصحيح",
+            "الهويات",
+            "الموكل",
+            "الوكيل",
+            "الرخصة / العقار / المركبات عند الانطباق",
+            "الوكالة السابقة"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [
+            {
+              "name": "Canceling a Power of Attorney",
+              "amount": "AED 100"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "cancel poa",
+            "cancel power of attorney",
+            "principal",
+            "agent"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-signature-attestation",
+          "title": "Notary - Signature Attestation",
+          "titleAr": "الكاتب العدل - تصديق توقيع",
+          "summary": "Notary - Signature Attestation under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - تصديق توقيع ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "IDs",
+            "Individual / company documents",
+            "Proof that the signer represents the agent if signing on behalf of the original person",
+            "Memorandum of Association",
+            "Sole proprietorship company documents",
+            "Trade license",
+            "Trade name reservation",
+            "Required contract",
+            "Signatory ID / passport",
+            "Passport copy if the ID is expired"
+          ],
+          "requirementsAr": [
+            "الهويات",
+            "مستندات الفرد / الشركة",
+            "إثبات أن الموقّع يمثل الوكيل إذا كان التوقيع نيابة عن الشخص الأصلي",
+            "عقد التأسيس",
+            "مستندات شركة المؤسسة الفردية",
+            "الرخصة التجارية",
+            "حجز الاسم التجاري",
+            "العقد المطلوب",
+            "هوية / جواز الموقّع",
+            "صورة الجواز إذا كانت الهوية منتهية"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [
+            {
+              "name": "Signature Attestation",
+              "amount": "AED 500"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "signature attestation",
+            "trade license",
+            "trade name",
+            "contract"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        },
+        {
+          "id": "svc-judicial-notary-power-of-attorney-and-waiver",
+          "title": "Notary - Power of Attorney and Waiver",
+          "titleAr": "الكاتب العدل - وكالة وتنازل",
+          "summary": "Notary - Power of Attorney and Waiver under Judicial Department Notary Services. Added from Judicial_Department_Notary_Services_Translated.docx.",
+          "summaryAr": "الكاتب العدل - وكالة وتنازل ضمن خدمات الكاتب العدل في دائرة القضاء. تمت الإضافة من ملف Judicial_Department_Notary_Services_Translated.docx.",
+          "fees": "Select the applicable fee item. Final fee depends on the selected notary request.",
+          "feesAr": "اختر بند الرسوم المطبق. تعتمد الرسوم النهائية على طلب الكاتب العدل المختار.",
+          "processingTime": "Approximately 24 hours.",
+          "processingTimeAr": "حوالي 24 ساعة.",
+          "requirements": [
+            "IDs",
+            "License for individual form",
+            "Attestation",
+            "Service agent contract cancellation if the business is foreign-owned"
+          ],
+          "requirementsAr": [
+            "الهويات",
+            "رخصة لنموذج الفرد",
+            "التصديق",
+            "إلغاء عقد وكيل الخدمات إذا كان النشاط مملوكاً لأجنبي"
+          ],
+          "steps": [
+            "Open Digital Services.",
+            "Select Notary Public and Documentation.",
+            "Choose the exact notary service required.",
+            "Enter the client and transaction details.",
+            "Attach the required documents.",
+            "Pay the applicable system fees.",
+            "Submit the transaction and follow up until completion."
+          ],
+          "stepsAr": [
+            "فتح الخدمات الرقمية.",
+            "اختيار الكاتب العدل والتوثيق.",
+            "اختيار خدمة الكاتب العدل المطلوبة بدقة.",
+            "إدخال بيانات العميل والمعاملة.",
+            "إرفاق المستندات المطلوبة.",
+            "دفع رسوم النظام المطبقة.",
+            "تقديم المعاملة ومتابعتها حتى الإنجاز."
+          ],
+          "feeItems": [
+            {
+              "name": "Power of Attorney and Waiver",
+              "amount": "AED 500 to AED 5000"
+            }
+          ],
+          "validation": {
+            "gender": "Any",
+            "nationality": "All nationalities",
+            "age": "Not specified",
+            "notes": "No gender, nationality, or age restriction was provided in the employee file."
+          },
+          "validationAr": {
+            "gender": "الكل",
+            "nationality": "كل الجنسيات",
+            "age": "غير محدد",
+            "notes": "لم يتم ذكر أي شرط للجنس أو الجنسية أو العمر في ملف الموظف."
+          },
+          "callCenterScript": "Confirm the exact notary service, check the required documents with the customer, then submit through Digital Services > Notary Public and Documentation.",
+          "callCenterScriptAr": "أكد خدمة الكاتب العدل المطلوبة بدقة، راجع المستندات المطلوبة مع العميل، ثم قدم الطلب من خلال الخدمات الرقمية > الكاتب العدل والتوثيق.",
+          "internalNotes": "Rebuilt Judicial Department from the Notary Services DOCX after the user asked to delete previous Judicial entries. Source mentions original photos.",
+          "internalNotesAr": "تمت إعادة بناء دائرة القضاء من ملف خدمات الكاتب العدل بعد طلب المستخدم حذف الإدخالات القضائية السابقة. يذكر المصدر وجود صور أصلية.",
+          "escalationContact": "Reda",
+          "escalationContactAr": "رضا",
+          "tags": [
+            "judicial department",
+            "notary",
+            "notary public",
+            "reda",
+            "power of attorney",
+            "waiver",
+            "service agent contract"
+          ],
+          "status": "published",
+          "updatedAt": "2026-05-07T10:54:36.340Z",
+          "updatedBy": "AKB Admin"
+        }
+      ],
+      "escalationContactAr": "رضا",
+      "feesAr": "تعتمد الرسوم على خدمة الكاتب العدل المختارة وبنود الرسوم.",
+      "processingTimeAr": "حوالي 24 ساعة لجميع خدمات الكاتب العدل المدرجة."
+    }
+  ],
+  "categories": [
+    "Golden Visa",
+    "Translation",
+    "Immigration & ID",
+    "Delivery",
+    "Commercial Licenses",
+    "Judicial Department"
+  ],
+  "categoriesAr": {
+    "Golden Visa": "التأشيرة الذهبية",
+    "Translation": "الترجمة",
+    "Immigration & ID": "الهجرة والهوية",
+    "Delivery": "التوصيل",
+    "Commercial Licenses": "الرخص التجارية",
+    "Judicial Department": "دائرة القضاء"
+  },
+  "departments": [
+    "Operations",
+    "Immigration & ID",
+    "Translation",
+    "Delivery",
+    "Commercial Licenses",
+    "Judicial Department"
+  ],
+  "changeLog": [
+    {
+      "id": "judicial-notary-replace-1778151276418",
+      "serviceId": "svc-judicial-department",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-07T10:54:36.340Z",
+      "note": "Deleted previous employee-entered Judicial Department entries and replaced them with 9 Notary services from Judicial_Department_Notary_Services_Translated.docx. All set to approximately 24 hours and Reda."
+    },
+    {
+      "id": "immigration-clean-complete-1778150430512",
+      "serviceId": "svc-immigration-id",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-07T10:40:30.496Z",
+      "note": "Removed blank Immigration & ID placeholder services and set all 7 completed Passport Services entries to approximately 24 hours processing time."
+    },
+    {
+      "id": "immigration-passport-services-1778146701860",
+      "serviceId": "svc-immigration-id",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-07T09:38:21.835Z",
+      "note": "Added 7 Immigration & ID Passport Services entries from Passport_Services_English_with_Arabic.docx with requirements, Arabic, shared steps, terms, and fee items."
+    },
+    {
+      "id": "judicial-poa-attestation-1778146307211",
+      "serviceId": "svc-judicial-department",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-07T09:31:47.189Z",
+      "note": "Added Attestations - Power of Attorney Translation and confirmed Sponsorship Declaration as a standalone Judicial service with approximately 24 hours processing."
+    },
+    {
+      "id": "log-escalation-contacts-1778130708638",
+      "serviceId": "department-escalation-contacts",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-07T05:11:48.639Z",
+      "note": "Set escalation contacts: Judicial Department = Reda, Commercial Licenses = Abrar, Immigration & ID = Ali."
+    },
+    {
+      "id": "log-sponsorship-processing-1778075362526",
+      "serviceId": "svc-judicial-department",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-06T13:49:22.513Z",
+      "note": "Updated Sponsorship Declaration processing time to approximately 24 hours."
+    },
+    {
+      "id": "log-judicial-sponsorship-1778056842948",
+      "serviceId": "svc-judicial-department",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-06T08:40:42.921Z",
+      "note": "Added Judicial Department Sponsorship Declaration requirements, steps, fee, and validation notes."
+    },
+    {
+      "id": "log-remove-empty-commercial-1778054309446",
+      "serviceId": "svc-commercial-licenses",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-06T07:58:29.292Z",
+      "note": "Removed 3 empty Commercial Licenses placeholder services."
+    },
+    {
+      "id": "log-commercial-final-v2-1778050041379",
+      "serviceId": "svc-commercial-licenses",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-06T06:47:21.357Z",
+      "note": "Added final Commercial Licenses notes for renewal and license amendment / CA."
+    },
+    {
+      "id": "log-fee-items-1777634592061",
+      "serviceId": "svc-commercial-licenses",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-01T11:23:12.057Z",
+      "note": "Changed license fees from fixed text totals to itemized fee breakdowns with final amount depending on customer transaction."
+    },
+    {
+      "id": "log-license-details-1777625743134",
+      "serviceId": "svc-commercial-licenses",
+      "action": "updated",
+      "actor": "AKB Admin",
+      "at": "2026-05-01T08:55:43.085Z",
+      "note": "Added detailed requirements, fees, validation notes, and procedures for Commercial License, Freelance License, and Tajer Abu Dhabi."
+    },
+    {
+      "id": "d1d7d60b-f02f-4999-9e54-1da8554487b5",
+      "serviceId": "svc-golden-visa",
+      "action": "created",
+      "actor": "AKB Admin",
+      "at": "2026-04-30T08:43:03.961Z",
+      "note": "Created Golden Visa service names from Aamer_Services_List.pdf"
+    },
+    {
+      "id": "48371eb5-e410-4674-be3f-1f540d7b0c8c",
+      "serviceId": "svc-translation",
+      "action": "created",
+      "actor": "AKB Admin",
+      "at": "2026-04-30T08:43:03.961Z",
+      "note": "Created Translation service names from Aamer_Services_List.pdf"
+    },
+    {
+      "id": "0875adfa-bb04-4a2f-a46a-b3ac81c3ccdf",
+      "serviceId": "svc-immigration-id",
+      "action": "created",
+      "actor": "AKB Admin",
+      "at": "2026-04-30T08:43:03.961Z",
+      "note": "Created Immigration & ID service names from Aamer_Services_List.pdf"
+    },
+    {
+      "id": "047e3112-ea92-42e6-9e9c-593bcac2bf12",
+      "serviceId": "svc-delivery",
+      "action": "created",
+      "actor": "AKB Admin",
+      "at": "2026-04-30T08:43:03.961Z",
+      "note": "Created Delivery service names from Aamer_Services_List.pdf"
+    },
+    {
+      "id": "ee9ce19a-c279-462f-9ea8-19672b0a9b8f",
+      "serviceId": "svc-commercial-licenses",
+      "action": "created",
+      "actor": "AKB Admin",
+      "at": "2026-04-30T08:43:03.961Z",
+      "note": "Created Commercial Licenses service names from Aamer_Services_List.pdf"
+    },
+    {
+      "id": "48606ca9-f413-4afb-8e70-5607a742b236",
+      "serviceId": "svc-judicial-department",
+      "action": "created",
+      "actor": "AKB Admin",
+      "at": "2026-04-30T08:43:03.961Z",
+      "note": "Created Judicial Department service names from Aamer_Services_List.pdf"
+    }
+  ],
+  "auditLog": [
+    {
+      "id": "24b22a02-91cb-4d9e-9dfe-e62abfcab221",
+      "at": "2026-05-13T09:01:47.004Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "1d29d623-0229-40a0-9268-a316e5c73811",
+      "at": "2026-05-13T08:07:55.538Z",
+      "type": "login",
+      "actor": "Immigration & ID",
+      "teamId": "immigration-id",
+      "note": "Logged in as Immigration & ID"
+    },
+    {
+      "id": "5b174b00-343f-4cc0-aff9-37d35089fa1e",
+      "at": "2026-05-13T08:07:40.351Z",
+      "type": "login-failed",
+      "actor": "immingration",
+      "note": "Failed login attempt"
+    },
+    {
+      "id": "bcd90d86-e010-45f8-abab-f6d537656e20",
+      "at": "2026-05-13T08:05:56.641Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "1be1cfc8-fcd0-47be-9105-b1d7aff5cb87",
+      "at": "2026-05-13T08:05:41.492Z",
+      "type": "login-failed",
+      "actor": "ali",
+      "note": "Failed login attempt"
+    },
+    {
+      "id": "b51e185b-ee57-4991-88fd-226895019531",
+      "at": "2026-05-13T08:05:32.164Z",
+      "type": "login-failed",
+      "actor": "ali",
+      "note": "Failed login attempt"
+    },
+    {
+      "id": "022d751a-9b7a-475e-9bd2-b70a6bfac101",
+      "at": "2026-05-13T08:05:14.176Z",
+      "type": "team-created",
+      "actor": "AKB Admin",
+      "teamId": "ali",
+      "note": "Created login for Staff (Ali) with editor access"
+    },
+    {
+      "id": "3f9cd7a5-9d12-45e7-9e45-b380067e055e",
+      "at": "2026-05-13T08:04:41.618Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "2834bfa8-5676-465c-9a73-e3142b83a0e6",
+      "at": "2026-05-13T08:04:20.320Z",
+      "type": "login",
+      "actor": "Call Center",
+      "teamId": "call-center",
+      "note": "Logged in as Call Center"
+    },
+    {
+      "id": "79d5a94b-28f2-41ce-bd91-385ce95ca84f",
+      "at": "2026-05-13T08:04:12.977Z",
+      "type": "login-failed",
+      "actor": "callcenter",
+      "note": "Failed login attempt"
+    },
+    {
+      "id": "64f13f02-a1c5-4297-9cc2-a31c55981495",
+      "at": "2026-05-13T08:01:41.414Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "743a34c0-a845-429b-a1c1-ac1e93642fe7",
+      "at": "2026-05-13T08:00:55.904Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "9e388a99-d54a-425c-91ef-6f5aa513974d",
+      "at": "2026-05-13T07:47:07.531Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "4258435c-d1dc-479f-8349-bec50f95e204",
+      "at": "2026-05-13T07:45:03.729Z",
+      "type": "login-failed",
+      "actor": "shariq",
+      "note": "Failed login attempt"
+    },
+    {
+      "id": "162ad9f5-1429-4a7e-b5d6-39e147a3492b",
+      "at": "2026-05-13T07:42:29.458Z",
+      "type": "login",
+      "actor": "AKB Admin",
+      "teamId": "admin",
+      "note": "Logged in as AKB Admin"
+    },
+    {
+      "id": "audit-system-admin-service-removed-1778656248650",
+      "type": "system-cleanup",
+      "actor": "AKB Admin",
+      "at": "2026-05-13T07:10:48.651Z",
+      "note": "Removed fake System/Admin Features service; replacing it with real user creation and audit functionality."
+    }
+  ],
+  "teams": [
+    {
+      "id": "admin",
+      "name": "AKB Admin",
+      "username": "admin",
+      "role": "admin",
+      "updatedAt": "2026-05-13T09:28:23.042Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "call-center",
+      "name": "Call Center",
+      "username": "callcenter",
+      "role": "viewer",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "username": "operations",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "immigration-id",
+      "name": "Immigration & ID",
+      "username": "immigration",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "translation",
+      "name": "Translation",
+      "username": "translation",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "delivery",
+      "name": "Delivery",
+      "username": "delivery",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "commercial-licenses",
+      "name": "Commercial Licenses",
+      "username": "licenses",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "judicial-department",
+      "name": "Judicial Department",
+      "username": "judicial",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    },
+    {
+      "id": "ali",
+      "name": "Staff",
+      "username": "Ali",
+      "role": "editor",
+      "updatedAt": "2026-05-13T09:28:23.047Z",
+      "updatedBy": "Public repo sanitization"
+    }
+  ]
+};
