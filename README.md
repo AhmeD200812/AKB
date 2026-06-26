@@ -12,16 +12,26 @@ AKB is an internal knowledge base prototype for Aamer employees and call center 
 - Change log for created and updated services
 - Search without AI
 
+## Port Ranges
+
+| Environment | Port range | AKB default |
+| --- | --- | --- |
+| Dev | 3040 - 3049 | 3040 |
+| UAT | 4040 - 4049 | 4040 |
+| Prod | 5040 - 5049 | 5040 |
+
+Use `PORT=3040` for local development, `PORT=4040` for UAT, and `PORT=5040` for production unless another port in the approved range is needed.
+
 ## Run locally
 
 ```bash
-npm start
+PORT=3040 npm start
 ```
 
 Then open:
 
 ```text
-http://localhost:4000
+http://localhost:3040
 ```
 
 ## Project structure
@@ -62,9 +72,31 @@ Run AKB with Docker Compose:
 
 ```bash
 docker compose up -d --build
+
+# UAT example
+AKB_PORT=4040 docker compose up -d --build
+
+# Prod example
+AKB_PORT=5040 docker compose up -d --build
 ```
 
-Open http://localhost:4000.
+Open http://localhost:3040.
+
+## Git push helper
+
+Use the push helper when you want to push to an existing branch or create a new branch:
+
+```bash
+./git-push-akb.sh branch-name
+```
+
+Optional commit message:
+
+```bash
+./git-push-akb.sh branch-name "Update AKB services"
+```
+
+The script will switch/create the branch, stage changes, commit if needed, and push with upstream.
 
 ## Public repo note
 

@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const PORT = Number(process.env.PORT || 4000);
+const PORT = Number(process.env.PORT || 3040);
 const ROOT = path.join(__dirname, "..");
 const FRONTEND_DIR = path.join(ROOT, "frontend");
 const DB_PATH = path.join(ROOT, "database", "akb-db.json");
