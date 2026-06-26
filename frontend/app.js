@@ -12,15 +12,20 @@ const state = {
   categoriesAr: {},
   departments: [],
   teams: [],
+  roles: [],
   editingId: null,
+  editingTeamId: null,
+  editingRoleId: null,
   team: null,
   lang: localStorage.getItem("akbLang") || "en"
 };
 
+let currentChangeLog = [];
+
 const UI_TEXT = {
   en: {
     teamLogin: "Team login", teamUsername: "Team username", usernamePlaceholder: "Example: callcenter", password: "Password", passwordPlaceholder: "Team password", login: "Log in",
-    internalSystem: "Internal company system", employeeSearch: "Employee Search", adminPanel: "Admin Panel", changeLog: "Service History", auditLog: "Audit Log", addUser: "Add user", createUser: "Create user", signedInAs: "Signed in as", logout: "Log out",
+    internalSystem: "Internal company system", dashboardMenu: "Dashboard", adminPanel: "Services", usersMenu: "Users", rolesMenu: "Roles & Permissions", settingsMenu: "Settings", changeLog: "Activity Log", addUser: "Add user", createUser: "Create user", signedInAs: "Signed in as", logout: "Log out",
     platform: "Aamer internal platform", liveDatabase: "Live database", searchServices: "Search services", searchPlaceholder: "Search by service, document, fee, department, or keyword",
     clearSearch: "Clear search", allCategories: "All categories", allDepartments: "All departments", services: "Services", selectService: "Select a service",
     selectServiceHint: "Open any service to view names, steps, fees, FAQs, and call center notes.", namesUnder: "Names under this service", employeeSteps: "Employee steps",
@@ -28,11 +33,11 @@ const UI_TEXT = {
     escalation: "Escalation", updated: "Updated", willAddLater: "Will be added later", noFaqs: "No FAQs added yet.", notAdded: "Not added yet.",
     noServices: "No services found", noServicesHint: "Clear the search and filters to show all AKB services.", loadingServices: "Loading services...",
     allSubServices: "All services under category", anyGender: "Any gender", anyNationality: "Any nationality", exactService: "Exact service", validation: "Validation", validationNotes: "Validation notes", gender: "Gender", nationality: "Nationality", age: "Age", male: "Male", female: "Female", feeBreakdown: "Fee breakdown", appliesWhen: "Applies when", finalFeeDepends: "Final fee depends on the exact items required for this customer.", selectedFees: "Selected fees", selectedTotal: "Selected total", noFeesSelected: "No fee items selected yet.", fullQuoteReference: "Full quote reference", eligible: "Eligible", notEligible: "Not eligible", eligibilityNotChecked: "Select validation details to check eligibility.", eligibilityPass: "Customer can continue for this service based on current validation rules.", eligibilityFail: "Do not show requirements. This customer is not eligible based on current validation rules.",
-    serviceSingular: "service", servicePlural: "services", searchAccess: "Search access", adminAccess: "Admin access", editorAccess: "Team editor access", exportService: "Export PDF file", exportedAt: "Exported at", selectedFeeItemsLabel: "Selected fee items", langButton: "العربية"
+    serviceSingular: "service", servicePlural: "services", searchAccess: "Call Center view/export access", adminAccess: "Admin access", editorAccess: "Staff CRUD access", exportService: "Export PDF file", exportedAt: "Exported at", selectedFeeItemsLabel: "Selected fee items", langButton: "العربية"
   },
   ar: {
     teamLogin: "تسجيل دخول الفريق", teamUsername: "اسم مستخدم الفريق", usernamePlaceholder: "مثال: callcenter", password: "كلمة المرور", passwordPlaceholder: "كلمة مرور الفريق", login: "تسجيل الدخول",
-    internalSystem: "نظام داخلي للشركة", employeeSearch: "بحث الموظفين", adminPanel: "لوحة الإدارة", changeLog: "سجل الخدمات", auditLog: "سجل التدقيق", addUser: "إضافة مستخدم", createUser: "إنشاء مستخدم", signedInAs: "مسجل الدخول باسم", logout: "تسجيل الخروج",
+    internalSystem: "نظام داخلي للشركة", dashboardMenu: "لوحة التحكم", adminPanel: "الخدمات", usersMenu: "المستخدمون", rolesMenu: "الأدوار والصلاحيات", settingsMenu: "الإعدادات", changeLog: "سجل النشاط", addUser: "إضافة مستخدم", createUser: "إنشاء مستخدم", signedInAs: "مسجل الدخول باسم", logout: "تسجيل الخروج",
     platform: "منصة آمر الداخلية", liveDatabase: "قاعدة البيانات مفعلة", searchServices: "بحث الخدمات", searchPlaceholder: "ابحث باسم الخدمة أو المستند أو الرسوم أو القسم أو الكلمة المفتاحية",
     clearSearch: "مسح البحث", allCategories: "كل الفئات", allDepartments: "كل الأقسام", services: "الخدمات", selectService: "اختر خدمة",
     selectServiceHint: "افتح أي خدمة لعرض الأسماء والخطوات والرسوم والأسئلة وملاحظات مركز الاتصال.", namesUnder: "الأسماء تحت هذه الخدمة", employeeSteps: "خطوات الموظف",
@@ -40,7 +45,7 @@ const UI_TEXT = {
     escalation: "التصعيد", updated: "آخر تحديث", willAddLater: "سيتم إضافته لاحقاً", noFaqs: "لم تتم إضافة أسئلة بعد.", notAdded: "لم تتم الإضافة بعد.",
     noServices: "لا توجد خدمات", noServicesHint: "امسح البحث والفلاتر لعرض جميع خدمات AKB.", loadingServices: "جاري تحميل الخدمات...",
     allSubServices: "كل الخدمات تحت الفئة", anyGender: "أي جنس", anyNationality: "أي جنسية", exactService: "الخدمة المحددة", validation: "التحقق", validationNotes: "ملاحظات التحقق", gender: "الجنس", nationality: "الجنسية", age: "العمر", male: "ذكر", female: "أنثى", feeBreakdown: "تفاصيل الرسوم", appliesWhen: "ينطبق عند", finalFeeDepends: "الرسوم النهائية تعتمد على البنود المطلوبة لهذا العميل بالضبط.", selectedFees: "الرسوم المختارة", selectedTotal: "الإجمالي المختار", noFeesSelected: "لم يتم اختيار أي بند رسوم بعد.", fullQuoteReference: "مرجع إجمالي العرض", eligible: "مؤهل", notEligible: "غير مؤهل", eligibilityNotChecked: "اختر بيانات التحقق للتأكد من الأهلية.", eligibilityPass: "يمكن للعميل المتابعة لهذه الخدمة حسب شروط التحقق الحالية.", eligibilityFail: "لا تعرض المتطلبات. هذا العميل غير مؤهل حسب شروط التحقق الحالية.",
-    serviceSingular: "خدمة", servicePlural: "خدمات", searchAccess: "صلاحية البحث", adminAccess: "صلاحية الإدارة", editorAccess: "صلاحية تعديل الفريق", exportService: "تصدير PDF", exportedAt: "وقت التصدير", selectedFeeItemsLabel: "بنود الرسوم المختارة", langButton: "English"
+    serviceSingular: "خدمة", servicePlural: "خدمات", searchAccess: "صلاحية عرض وتصدير مركز الاتصال", adminAccess: "صلاحية الإدارة", editorAccess: "صلاحية تعديل الموظف", exportService: "تصدير PDF", exportedAt: "وقت التصدير", selectedFeeItemsLabel: "بنود الرسوم المختارة", langButton: "English"
   }
 };
 
@@ -167,13 +172,29 @@ const els = {
   serviceDetail: document.querySelector("#serviceDetail"),
   resultCount: document.querySelector("#resultCount"),
   serviceForm: document.querySelector("#serviceForm"),
+  serviceSubServiceEditor: document.querySelector("#serviceSubServiceEditor"),
+  feeMatrixEditorPanel: document.querySelector("#feeMatrixEditorPanel"),
+  feeMatrixEditor: document.querySelector("#feeMatrixEditor"),
+  addSubServiceRowButton: document.querySelector("#addSubServiceRowButton"),
   formMessage: document.querySelector("#formMessage"),
   adminServiceCount: document.querySelector("#adminServiceCount"),
   changeLog: document.querySelector("#changeLog"),
-  auditLog: document.querySelector("#auditLog"),
   categoryList: document.querySelector("#categoryList"),
-  departmentList: document.querySelector("#departmentList"),
   adminServiceList: document.querySelector("#adminServiceList"),
+  showServiceFormButton: document.querySelector("#showServiceFormButton"),
+  adminServiceFilter: document.querySelector("#adminServiceFilter"),
+  adminServiceSearch: document.querySelector("#adminServiceSearch"),
+  exportServicesCsv: document.querySelector("#exportServicesCsv"),
+  backupServicesJson: document.querySelector("#backupServicesJson"),
+  importServicesJson: document.querySelector("#importServicesJson"),
+  importServicesJsonFile: document.querySelector("#importServicesJsonFile"),
+  settingsServiceCount: document.querySelector("#settingsServiceCount"),
+  settingsDepartmentCount: document.querySelector("#settingsDepartmentCount"),
+  settingsCategoryCount: document.querySelector("#settingsCategoryCount"),
+  settingsUserCount: document.querySelector("#settingsUserCount"),
+  dashboardUserMetric: document.querySelector("#dashboardUserMetric"),
+  settingsDepartmentList: document.querySelector("#settingsDepartmentList"),
+  settingsCategoryList: document.querySelector("#settingsCategoryList"),
   formTitle: document.querySelector("#formTitle"),
   saveServiceButton: document.querySelector("#saveServiceButton"),
   cancelEditButton: document.querySelector("#cancelEditButton"),
@@ -184,6 +205,21 @@ const els = {
   adminUserPanel: document.querySelector("#adminUserPanel"),
   adminTeamList: document.querySelector("#adminTeamList"),
   adminTeamMessage: document.querySelector("#adminTeamMessage"),
+  showUserFormButton: document.querySelector("#showUserFormButton"),
+  userForm: document.querySelector("#userForm"),
+  userFormTitle: document.querySelector("#userFormTitle"),
+  userFormMessage: document.querySelector("#userFormMessage"),
+  cancelUserButton: document.querySelector("#cancelUserButton"),
+  userDetail: document.querySelector("#userDetail"),
+  showRoleFormButton: document.querySelector("#showRoleFormButton"),
+  rolePermissionList: document.querySelector("#rolePermissionList"),
+  roleMessage: document.querySelector("#roleMessage"),
+  roleForm: document.querySelector("#roleForm"),
+  roleFormTitle: document.querySelector("#roleFormTitle"),
+  roleFormMessage: document.querySelector("#roleFormMessage"),
+  cancelRoleButton: document.querySelector("#cancelRoleButton"),
+  activityServiceFilter: document.querySelector("#activityServiceFilter"),
+  activityActorFilter: document.querySelector("#activityActorFilter"),
   createTeamPanel: document.querySelector("#createTeamPanel"),
   createTeamButton: document.querySelector("#createTeamButton"),
   createTeamMessage: document.querySelector("#createTeamMessage"),
@@ -193,18 +229,70 @@ const els = {
   languageToggles: document.querySelectorAll(".language-toggle")
 };
 
+function roleKey(role) {
+  if (role === "editor") return "staff";
+  if (role === "viewer") return "callcenter";
+  return role || "callcenter";
+}
+
+function roleRecord(role = state.team?.role) {
+  const key = roleKey(role);
+  return state.roles.find(item => item.id === key) || window.AKB_STATIC_DB?.roles?.find(item => item.id === key) || null;
+}
+
+function roleCan(permission, role = state.team?.role) {
+  if (!state.team && role === state.team?.role) return false;
+  const key = roleKey(role);
+  const record = roleRecord(role);
+  if (key === "admin" && !record) return true;
+  if (key === "staff" && !record) return ["dashboard", "servicesView", "servicesExport", "servicesCreate", "servicesEdit", "servicesDelete"].includes(permission);
+  if (key === "callcenter" && !record) return ["servicesView", "servicesExport"].includes(permission);
+  return Boolean(record?.permissions?.[permission]);
+}
+
 function isAdmin() {
-  return state.team?.role === "admin";
+  return roleKey(state.team?.role) === "admin" || roleCan("rolesManage");
+}
+
+function isStaff() {
+  return roleKey(state.team?.role) === "staff";
+}
+
+function canAccessServices() {
+  return roleCan("servicesView");
+}
+
+function canCrudServices() {
+  return roleCan("servicesCreate") || roleCan("servicesEdit") || roleCan("servicesDelete");
+}
+
+function canCreateServices() { return roleCan("servicesCreate"); }
+function canEditServices() { return roleCan("servicesEdit"); }
+function canDeleteServices() { return roleCan("servicesDelete"); }
+function canExportServices() { return roleCan("servicesExport"); }
+function canManageUsers() { return roleCan("usersManage"); }
+function canManageRoles() { return roleCan("rolesManage"); }
+
+function canSeeActivity() {
+  return roleCan("activityLog");
 }
 
 function canManageServices() {
-  return ["admin", "editor"].includes(state.team?.role);
+  return canCrudServices();
 }
 
 function roleLabel(role) {
-  if (role === "admin") return t("adminAccess");
-  if (role === "editor") return t("editorAccess");
+  const record = roleRecord(role);
+  if (record?.name) return record.name;
+  const key = roleKey(role);
+  if (key === "admin") return t("adminAccess");
+  if (key === "staff") return t("editorAccess");
   return t("searchAccess");
+}
+
+function activeViewName() {
+  const active = Array.from(els.views).find(view => view.classList.contains("active"));
+  return active?.id?.replace(/View$/, "") || "dashboard";
 }
 
 function applyAuthState() {
@@ -214,18 +302,29 @@ function applyAuthState() {
   if (!isLoggedIn) return;
   els.signedInTeam.textContent = state.team.name;
   els.signedInRole.textContent = roleLabel(state.team.role);
-  const adminNav = document.querySelector("[data-view=admin]");
-  const auditNav = document.querySelector("[data-view=audit]");
-  adminNav.classList.toggle("hidden", !canManageServices());
-  if (auditNav) auditNav.classList.toggle("hidden", !isAdmin());
-  if (els.adminUserPanel) els.adminUserPanel.classList.toggle("hidden", !isAdmin());
-  if (!isAdmin() && els.adminTeamList) els.adminTeamList.innerHTML = "";
-  if (!canManageServices() && document.querySelector("#adminView").classList.contains("active")) {
-    setView("portal");
-  }
-  if (!isAdmin() && document.querySelector("#auditView").classList.contains("active")) {
-    setView("portal");
-  }
+  const dashboardNav = document.querySelector("[data-view=dashboard]");
+  const servicesNav = document.querySelector("[data-view=admin]");
+  const usersNav = document.querySelector("[data-view=users]");
+  const rolesNav = document.querySelector("[data-view=roles]");
+  const settingsNav = document.querySelector("[data-view=settings]");
+  const activityNav = document.querySelector("[data-view=activity]");
+  if (dashboardNav) dashboardNav.classList.toggle("hidden", !roleCan("dashboard"));
+  if (servicesNav) servicesNav.classList.toggle("hidden", !canAccessServices());
+  if (usersNav) usersNav.classList.toggle("hidden", !canManageUsers());
+  if (rolesNav) rolesNav.classList.toggle("hidden", !canManageRoles());
+  if (settingsNav) settingsNav.classList.toggle("hidden", !roleCan("settings"));
+  if (activityNav) activityNav.classList.toggle("hidden", !canSeeActivity());
+  if (els.adminUserPanel) els.adminUserPanel.classList.toggle("hidden", !canManageUsers());
+  if (els.showServiceFormButton) els.showServiceFormButton.classList.toggle("hidden", !canCreateServices());
+  if (els.showUserFormButton) els.showUserFormButton.classList.toggle("hidden", !canManageUsers());
+  if (els.showRoleFormButton) els.showRoleFormButton.classList.toggle("hidden", !canManageRoles());
+  if (!canManageUsers() && els.adminTeamList) els.adminTeamList.innerHTML = "";
+  const view = activeViewName();
+  if (["users", "userForm", "userDetail"].includes(view) && !canManageUsers()) setView(roleKey(state.team?.role) === "callcenter" ? "admin" : "dashboard");
+  if (["roles", "roleForm"].includes(view) && !canManageRoles()) setView(roleKey(state.team?.role) === "callcenter" ? "admin" : "dashboard");
+  if (["settings"].includes(view) && !roleCan("settings")) setView(roleKey(state.team?.role) === "callcenter" ? "admin" : "dashboard");
+  if (view === "activity" && !canSeeActivity()) setView(roleKey(state.team?.role) === "callcenter" ? "admin" : "dashboard");
+  if (view === "dashboard" && roleKey(state.team?.role) === "callcenter") setView("admin");
 }
 
 function applyLanguage() {
@@ -240,28 +339,30 @@ function applyLanguage() {
   loginLabels[1].querySelector("input").placeholder = t("passwordPlaceholder");
   els.loginForm.querySelector("button[type=submit]").textContent = t("login");
   document.querySelector(".sidebar .brand span").textContent = t("internalSystem");
-  document.querySelector('[data-view="portal"]').lastChild.textContent = " " + t("employeeSearch");
-  document.querySelector('[data-view="admin"]').lastChild.textContent = " " + t("adminPanel");
-  document.querySelector('[data-view="activity"]').lastChild.textContent = " " + t("changeLog");
-  const auditNav = document.querySelector('[data-view="audit"]');
-  if (auditNav) auditNav.lastChild.textContent = " " + t("auditLog");
+  const navLabels = { dashboard: "dashboardMenu", admin: "adminPanel", users: "usersMenu", roles: "rolesMenu", activity: "changeLog", settings: "settingsMenu" };
+  for (const [view, key] of Object.entries(navLabels)) {
+    const nav = document.querySelector('[data-view="' + view + '"]');
+    if (nav) nav.lastChild.textContent = " " + t(key);
+  }
   if (els.createTeamButton) els.createTeamButton.textContent = t("createUser");
   document.querySelector(".access-panel small").textContent = t("signedInAs");
   els.logoutButton.textContent = t("logout");
   document.querySelector(".eyebrow").textContent = t("platform");
   document.querySelector(".status-pill").lastChild.textContent = "\n            " + t("liveDatabase") + "\n          ";
-  document.querySelector('label[for="searchInput"]').firstChild.textContent = t("searchServices");
-  els.searchInput.placeholder = t("searchPlaceholder");
-  els.clearSearch.title = t("clearSearch");
-  if (els.categoryFilter.options[0]) els.categoryFilter.options[0].textContent = t("allCategories");
-  if (els.subServiceFilter.options[0]) els.subServiceFilter.options[0].textContent = t("allSubServices");
-  if (els.genderFilter.options[0]) els.genderFilter.options[0].textContent = t("anyGender");
-  if (els.genderFilter.options[1]) els.genderFilter.options[1].textContent = t("male");
-  if (els.genderFilter.options[2]) els.genderFilter.options[2].textContent = t("female");
-  if (els.nationalityFilter.options[0]) els.nationalityFilter.options[0].textContent = t("anyNationality");
-  if (els.departmentFilter.options[0]) els.departmentFilter.options[0].textContent = t("allDepartments");
-  document.querySelector(".service-list-panel h2").textContent = t("services");
-  const empty = els.serviceDetail.querySelector(".empty-state");
+  const searchLabel = document.querySelector('label[for="searchInput"]');
+  if (searchLabel) searchLabel.firstChild.textContent = t("searchServices");
+  if (els.searchInput) els.searchInput.placeholder = t("searchPlaceholder");
+  if (els.clearSearch) els.clearSearch.title = t("clearSearch");
+  if (els.categoryFilter?.options[0]) els.categoryFilter.options[0].textContent = t("allCategories");
+  if (els.subServiceFilter?.options[0]) els.subServiceFilter.options[0].textContent = t("allSubServices");
+  if (els.genderFilter?.options[0]) els.genderFilter.options[0].textContent = t("anyGender");
+  if (els.genderFilter?.options[1]) els.genderFilter.options[1].textContent = t("male");
+  if (els.genderFilter?.options[2]) els.genderFilter.options[2].textContent = t("female");
+  if (els.nationalityFilter?.options[0]) els.nationalityFilter.options[0].textContent = t("anyNationality");
+  if (els.departmentFilter?.options[0]) els.departmentFilter.options[0].textContent = t("allDepartments");
+  const listHeading = document.querySelector(".service-list-panel h2");
+  if (listHeading) listHeading.textContent = t("services");
+  const empty = els.serviceDetail?.querySelector(".empty-state");
   if (empty) {
     empty.querySelector("strong").textContent = t("selectService");
     empty.querySelector("span").textContent = t("selectServiceHint");
@@ -313,7 +414,10 @@ function staticApi(path, options = {}) {
   }
   const url = new URL(path, "http://akb.local");
   if (url.pathname === "/api/meta") {
-    return { categories: db.categories || [], categoriesAr: db.categoriesAr || {}, departments: db.departments || [], users: [], teams: db.teams || [] };
+    return { categories: db.categories || [], categoriesAr: db.categoriesAr || {}, departments: db.departments || [], users: [], teams: db.teams || [], roles: db.roles || [] };
+  }
+  if (url.pathname === "/api/roles") {
+    return { roles: db.roles || [] };
   }
   if (url.pathname === "/api/change-log") {
     return { changeLog: db.changeLog || [] };
@@ -360,15 +464,32 @@ async function api(path, options = {}) {
     throw error;
   }
 }
+function jsonArrayValue(items) {
+  return JSON.stringify(items || [], null, 2);
+}
+
 function lines(value) {
-  return String(value || "")
+  if (Array.isArray(value)) return value.map(item => String(item).trim()).filter(Boolean);
+  const text = cleanEditText(value).trim();
+  if (!text) return [];
+  try {
+    const parsed = JSON.parse(text);
+    if (Array.isArray(parsed)) return parsed.map(item => String(item).trim()).filter(Boolean);
+  } catch (error) {}
+  return text
     .split("\n")
-    .map(item => item.trim())
+    .map(item => item.trim().replace(/^["',\[\]]+|["',\[\]]+$/g, ""))
     .filter(Boolean);
 }
 
 function tags(value) {
-  return String(value || "")
+  const text = String(value || "").trim();
+  if (!text) return [];
+  try {
+    const parsed = JSON.parse(text);
+    if (Array.isArray(parsed)) return parsed.map(item => String(item).trim()).filter(Boolean);
+  } catch (error) {}
+  return text
     .split(",")
     .map(item => item.trim())
     .filter(Boolean);
@@ -379,7 +500,16 @@ function normalize(value) {
 }
 
 function faqs(value) {
-  return String(value || "")
+  const text = String(value || "").trim();
+  if (!text) return [];
+  try {
+    const parsed = JSON.parse(text);
+    const items = Array.isArray(parsed) ? parsed : parsed.faqs || [];
+    return items
+      .map(item => ({ question: item.question || item.q || "", answer: item.answer || item.a || "" }))
+      .filter(faq => faq.question && faq.answer);
+  } catch (error) {}
+  return text
     .split(/\n\s*\n/)
     .map(block => {
       const blockLines = block.split("\n").map(line => line.trim()).filter(Boolean);
@@ -400,20 +530,25 @@ function faqs(value) {
 }
 
 function setView(viewName) {
-  if (viewName === "admin" && !canManageServices()) {
-    viewName = "portal";
-  }
-  if (viewName === "audit" && !isAdmin()) {
-    viewName = "portal";
-  }
+  if (!viewName || viewName === "portal" || viewName === "audit") viewName = roleCan("dashboard") ? "dashboard" : "admin";
+  if (viewName === "dashboard" && !roleCan("dashboard")) viewName = "admin";
+  if (["admin", "serviceDetail", "serviceForm"].includes(viewName) && !canAccessServices()) viewName = roleCan("dashboard") ? "dashboard" : "admin";
+  if (viewName === "serviceForm" && !canCrudServices()) viewName = "admin";
+  if (["users", "userForm", "userDetail"].includes(viewName) && !canManageUsers()) viewName = roleCan("dashboard") ? "dashboard" : "admin";
+  if (["roles", "roleForm"].includes(viewName) && !canManageRoles()) viewName = roleCan("dashboard") ? "dashboard" : "admin";
+  if (viewName === "settings" && !roleCan("settings")) viewName = roleCan("dashboard") ? "dashboard" : "admin";
+  if (viewName === "activity" && !canSeeActivity()) viewName = roleCan("dashboard") ? "dashboard" : "admin";
   els.navItems.forEach(item => {
-    item.classList.toggle("active", item.dataset.view === viewName);
+    item.classList.toggle("active", item.dataset.view === viewName || (viewName.startsWith("service") && item.dataset.view === "admin") || (viewName.startsWith("user") && item.dataset.view === "users") || (viewName.startsWith("role") && item.dataset.view === "roles"));
   });
   els.views.forEach(view => {
-    view.classList.toggle("active", view.id === `${viewName}View`);
+    view.classList.toggle("active", view.id === `${viewName}View` || view.id === viewName);
   });
+  window.scrollTo({ top: 0, behavior: "auto" });
   if (viewName === "activity") loadChangeLog();
-  if (viewName === "audit") loadAuditLog();
+  if (viewName === "users") loadTeams();
+  if (viewName === "roles") renderRoles();
+  if (viewName === "dashboard" || viewName === "settings") renderSettings();
 }
 function populateSubServiceFilter() {
   const selected = els.subServiceFilter.value;
@@ -430,21 +565,25 @@ function populateSubServiceFilter() {
 function populateMeta() {
   const selectedCategory = els.categoryFilter.value;
   const selectedDepartment = els.departmentFilter.value;
+  const serviceDepartmentSelect = els.serviceForm?.elements.department;
+  const selectedFormDepartment = serviceDepartmentSelect?.value || "";
   els.categoryFilter.innerHTML = `<option value="">${t("allCategories")}</option>`;
   els.departmentFilter.innerHTML = `<option value="">${t("allDepartments")}</option>`;
+  if (serviceDepartmentSelect) serviceDepartmentSelect.innerHTML = '<option value="">Select department</option>';
   els.categoryList.innerHTML = "";
-  els.departmentList.innerHTML = "";
   for (const category of state.categories) {
     els.categoryFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(category)}">${escapeHtml(categoryLabel(category))}</option>`);
     els.categoryList.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(category)}"></option>`);
   }
   for (const department of state.departments.filter(item => item !== "To be assigned")) {
     els.departmentFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(department)}">${escapeHtml(department)}</option>`);
-    els.departmentList.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(department)}"></option>`);
+    if (serviceDepartmentSelect) serviceDepartmentSelect.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(department)}">${escapeHtml(department)}</option>`);
   }
   els.categoryFilter.value = selectedCategory;
   els.departmentFilter.value = selectedDepartment;
+  if (serviceDepartmentSelect) serviceDepartmentSelect.value = state.departments.includes(selectedFormDepartment) ? selectedFormDepartment : "";
   populateSubServiceFilter();
+  renderSettings();
 }
 function serviceCard(service) {
   const tagsHtml = (service.tags || []).slice(0, 4).map(tag => `<span class="chip">${escapeHtml(tag)}</span>`).join("");
@@ -481,11 +620,255 @@ function renderServices() {
   els.serviceList.innerHTML = state.services.map(serviceCard).join("");
 }
 
-function renderAdminServices() { if (!els.adminServiceList) return; if (!state.services.length) { els.adminServiceList.innerHTML = `<div class="admin-service-empty">No services yet</div>`; return; } els.adminServiceList.innerHTML = state.services.map(service => ` <div class="admin-service-item"> <div> <strong>${escapeHtml(serviceText(service, "title"))}</strong> <span>${escapeHtml(service.requirements?.length || 0)} names under it</span> </div> <div class="admin-service-actions"> <button class="mini-button" type="button" data-edit-id="${escapeHtml(service.id)}">Edit</button> <button class="mini-button danger" type="button" data-delete-id="${escapeHtml(service.id)}">Delete</button> </div> </div> `).join(""); }
+function feeAmounts(value) {
+  const text = String(value || "");
+  return [...text.matchAll(/(?:AED|درهم)?\s*([0-9][0-9,]*(?:\.[0-9]+)?)/gi)]
+    .map(match => {
+      const amount = Number(match[1].replace(/,/g, ""));
+      const before = text.slice(Math.max(0, match.index - 45), match.index).toLowerCase();
+      const after = text.slice(match.index, Math.min(text.length, match.index + 80)).toLowerCase();
+      const isRejectionOnly = amount === 500 && /reject|rejection|رفض/.test(before + after);
+      const isDurationOnly = /^(?:\s*[0-9,.]+)?\s*(?:year|years|yr|yrs|day|days|hrs|hours)\b/i.test(after);
+      return isRejectionOnly || isDurationOnly ? null : amount;
+    })
+    .filter(amount => Number.isFinite(amount) && amount > 0);
+}
+
+function priceOnly(value) {
+  const prices = feeAmounts(value).map(formatAed);
+  return [...new Set(prices)].join(" / ") || "-";
+}
+
+function priceInputValue(value) {
+  const amount = feeAmounts(value)[0];
+  return amount ? String(amount) : "";
+}
+
+function adminRowFee(subService, service) {
+  if (subService?.feeMatrix || service?.feeMatrix) return "-";
+  return priceOnly(subServiceText(subService, "fees") || serviceText(service, "fees"));
+}
+
+function serviceRowFee(service) {
+  if (service?.feeMatrix || (service?.subServices || []).some(item => item.feeMatrix)) return "-";
+  return priceOnly(serviceText(service, "fees"));
+}
+
+function adminRowSla(subService, service) {
+  return subServiceText(subService, "processingTime") || service.processingTime || "Not added";
+}
+
+function populateAdminServiceFilter() {
+  if (!els.adminServiceFilter) return;
+  const selected = els.adminServiceFilter.value;
+  els.adminServiceFilter.innerHTML = '<option value="">All services</option>' + state.services.map(service => `<option value="${escapeHtml(service.id)}">${escapeHtml(serviceText(service, "title"))}</option>`).join("");
+  els.adminServiceFilter.value = state.services.some(service => service.id === selected) ? selected : "";
+}
+
+function renderAdminServices() {
+  if (!els.adminServiceList) return;
+  populateAdminServiceFilter();
+  if (els.showServiceFormButton) els.showServiceFormButton.classList.toggle("hidden", !canCreateServices());
+  if (!state.services.length) {
+    els.adminServiceList.innerHTML = `<div class="admin-service-empty">No services yet</div>`;
+    return;
+  }
+  const selectedServiceId = els.adminServiceFilter?.value || "";
+  const searchTerm = normalize(els.adminServiceSearch?.value || "");
+  const filteredServices = state.services.filter(service => {
+    if (selectedServiceId && service.id !== selectedServiceId) return false;
+    if (!searchTerm) return true;
+    const subText = getSubServices(service).map(subService => [
+      subServiceText(subService, "title"),
+      subServiceText(subService, "summary"),
+      adminRowFee(subService, service),
+      adminRowSla(subService, service),
+      subServiceListItems(subService, "requirements").join(" ")
+    ].join(" ")).join(" ");
+    const haystack = normalize([
+      serviceText(service, "title"),
+      serviceText(service, "summary"),
+      categoryLabel(service.category),
+      visibleDepartment(service),
+      serviceRowFee(service),
+      service.processingTime,
+      service.tags?.join(" "),
+      subText
+    ].join(" "));
+    return haystack.includes(searchTerm);
+  });
+  if (!filteredServices.length) {
+    els.adminServiceList.innerHTML = `<div class="admin-service-empty">No services match this filter</div>`;
+    return;
+  }
+  els.adminServiceList.innerHTML = filteredServices.map(service => {
+    const subServices = getSubServices(service);
+    const serviceRows = subServices.map(subService => `
+      <div class="admin-service-row sub-row" data-service-id="${escapeHtml(service.id)}" data-sub-service-id="${escapeHtml(subService.id)}">
+        <div class="admin-service-cell name-cell">
+          <span class="row-label">Sub-service</span>
+          <strong>${escapeHtml(subServiceText(subService, "title"))}</strong>
+        </div>
+        <div class="admin-service-cell price-cell">
+          <span class="row-label">Price</span>
+          <span>${escapeHtml(adminRowFee(subService, service))}</span>
+        </div>
+        <div class="admin-service-cell sla-cell">
+          <span class="row-label">SLA</span>
+          <span>${escapeHtml(adminRowSla(subService, service))}</span>
+        </div>
+        <div class="admin-service-actions row-actions">
+          <button class="mini-button" type="button" data-view-id="${escapeHtml(service.id)}" data-view-sub-id="${escapeHtml(subService.id)}">Open</button>
+          ${canEditServices() ? `<button class="mini-button" type="button" data-edit-id="${escapeHtml(service.id)}" data-edit-sub-id="${escapeHtml(subService.id)}">Edit</button>` : ""}
+          ${canDeleteServices() ? `<button class="mini-button danger" type="button" data-delete-sub-id="${escapeHtml(subService.id)}" data-parent-id="${escapeHtml(service.id)}">Delete</button>` : ""}
+        </div>
+      </div>
+    `).join("");
+    return `
+      <section class="admin-service-table" data-service-id="${escapeHtml(service.id)}">
+        <div class="admin-service-row parent-row">
+          <div class="admin-service-cell name-cell">
+            <span class="row-label">Service</span>
+            <strong>${escapeHtml(serviceText(service, "title"))}</strong>
+            <small>${escapeHtml(categoryLabel(service.category))}${visibleDepartment(service) ? " / " + escapeHtml(visibleDepartment(service)) : ""}</small>
+          </div>
+          <div class="admin-service-cell price-cell">
+            <span class="row-label">Price</span>
+            <span>${escapeHtml(serviceRowFee(service))}</span>
+          </div>
+          <div class="admin-service-cell sla-cell">
+            <span class="row-label">SLA</span>
+            <span>${escapeHtml(service.processingTime || "See sub-services")}</span>
+          </div>
+          <div class="admin-service-actions row-actions">
+            <button class="mini-button" type="button" data-view-id="${escapeHtml(service.id)}">Open</button>
+            ${canEditServices() ? `<button class="mini-button" type="button" data-edit-id="${escapeHtml(service.id)}">Edit</button>` : ""}
+            ${canDeleteServices() ? `<button class="mini-button danger" type="button" data-delete-id="${escapeHtml(service.id)}">Delete</button>` : ""}
+          </div>
+        </div>
+        ${service.feeMatrix ? `<div class="admin-service-matrix">${renderFeeMatrix(service.feeMatrix)}</div>` : ""}
+        <div class="admin-service-row header-row" aria-hidden="true">
+          <span>Name</span>
+          <span>Price</span>
+          <span>SLA / Time</span>
+          <span>Actions</span>
+        </div>
+        ${serviceRows || `<div class="admin-service-empty">No sub-services yet</div>`}
+      </section>
+    `;
+  }).join("");
+}
+
+function renderSettings() {
+  if (els.settingsServiceCount) els.settingsServiceCount.textContent = String(state.services.length);
+  if (els.settingsDepartmentCount) els.settingsDepartmentCount.textContent = String(state.departments.filter(item => item !== "To be assigned").length);
+  if (els.settingsCategoryCount) els.settingsCategoryCount.textContent = String(state.categories.length);
+  if (els.settingsUserCount) els.settingsUserCount.textContent = String(state.teams.length || 0);
+  if (els.dashboardUserMetric) els.dashboardUserMetric.classList.toggle("hidden", isStaff());
+  if (els.settingsDepartmentList) {
+    const departments = state.departments.filter(item => item !== "To be assigned");
+    els.settingsDepartmentList.innerHTML = departments.map(item => `<span>${escapeHtml(item)}</span>`).join("") || '<span>None</span>';
+  }
+  if (els.settingsCategoryList) {
+    els.settingsCategoryList.innerHTML = state.categories.map(item => `<span>${escapeHtml(categoryLabel(item))}</span>`).join("") || '<span>None</span>';
+  }
+}
+
+function csvCell(value) {
+  return '"' + String(value || "").replaceAll('"', '""') + '"';
+}
+
+function serviceRowsForExport() {
+  const rows = [["Type", "Service", "Sub-service", "Price", "SLA / Time", "Category", "Department"]];
+  for (const service of state.services) {
+    rows.push([
+      "Service",
+      serviceText(service, "title"),
+      "",
+      serviceRowFee(service),
+      service.processingTime || "See sub-services",
+      categoryLabel(service.category),
+      visibleDepartment(service)
+    ]);
+    for (const subService of getSubServices(service)) {
+      rows.push([
+        "Sub-service",
+        serviceText(service, "title"),
+        subServiceText(subService, "title"),
+        adminRowFee(subService, service),
+        adminRowSla(subService, service),
+        categoryLabel(service.category),
+        visibleDepartment(service)
+      ]);
+    }
+  }
+  return rows;
+}
+
+function exportServicesCsv() {
+  const csv = serviceRowsForExport().map(row => row.map(csvCell).join(",")).join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "AKB-services-export.csv";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+async function exportBackupJson() {
+  const response = await fetch(`${API_BASE}/api/backup-json`);
+  if (!response.ok) throw new Error("Could not create JSON backup");
+  const blob = await response.blob();
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "AKB-database-backup-" + new Date().toISOString().slice(0, 10) + ".json";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+function readJsonFile(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      try { resolve(JSON.parse(String(reader.result || "{}"))); }
+      catch (error) { reject(new Error("Selected file is not valid JSON")); }
+    };
+    reader.onerror = () => reject(new Error("Could not read selected JSON file"));
+    reader.readAsText(file);
+  });
+}
+
+async function importBackupJson(file) {
+  if (!file) return;
+  const confirmed = window.confirm("Import this JSON backup into AKB? Current database will be backed up first, then replaced.");
+  if (!confirmed) return;
+  const backup = await readJsonFile(file);
+  const result = await api("/api/import-json", {
+    method: "POST",
+    body: JSON.stringify({ database: backup, actor: state.team?.name || "AKB Admin", actorRole: state.team?.role || "admin" })
+  });
+  window.alert("Import complete. Services restored: " + result.services);
+  await loadServices();
+  await loadMeta();
+  await loadChangeLog();
+  setView("admin");
+}
+
+function roleOptions(selectedRole = "callcenter") {
+  const roles = state.roles.length ? state.roles : (window.AKB_STATIC_DB?.roles || []);
+  return roles.map(role => `<option value="${escapeHtml(role.id)}" ${role.id === roleKey(selectedRole) ? "selected" : ""}>${escapeHtml(role.name)}</option>`).join("");
+}
+
+function populateUserRoleSelect(selectedRole = "callcenter") {
+  const select = els.userForm?.elements.userRole;
+  if (select) select.innerHTML = roleOptions(selectedRole);
+}
 
 function renderAdminTeams() {
   if (!els.adminTeamList) return;
-  if (!isAdmin()) {
+  if (!canManageUsers()) {
     els.adminTeamList.innerHTML = "";
     return;
   }
@@ -493,47 +876,308 @@ function renderAdminTeams() {
     els.adminTeamList.innerHTML = `<div class="admin-service-empty">No users yet</div>`;
     return;
   }
-  els.adminTeamList.innerHTML = state.teams.map(team => `
-    <div class="admin-team-item" data-team-id="${escapeHtml(team.id)}">
-      <label>
-        Team name
-        <input name="teamName" value="${escapeHtml(team.name)}" form="loginForm">
-      </label>
-      <label>
-        Username
-        <input name="teamUsername" value="${escapeHtml(team.username)}" form="loginForm" autocomplete="off">
-      </label>
-      <label>
-        Role
-        <select name="teamRole" form="loginForm">
-          <option value="viewer" ${team.role === "viewer" ? "selected" : ""}>Viewer</option>
-          <option value="editor" ${team.role === "editor" ? "selected" : ""}>Editor</option>
-          <option value="admin" ${team.role === "admin" ? "selected" : ""}>Admin</option>
-        </select>
-      </label>
-      <label>
-        Reset password
-        <input name="teamPassword" type="password" form="loginForm" autocomplete="new-password" placeholder="Leave blank to keep current">
-      </label>
-      <div class="admin-team-meta">
-        <strong>${escapeHtml(team.username)}</strong>
-        <span>Current role: ${escapeHtml(team.role)}</span>
-      </div>
-      <div class="admin-service-actions">
-        <button class="mini-button" type="button" data-update-team="${escapeHtml(team.id)}">Save</button>
-        <button class="mini-button danger" type="button" data-delete-team="${escapeHtml(team.id)}">Delete</button>
-      </div>
-    </div>
-  `).join("");
+  els.adminTeamList.innerHTML = `
+    <table class="users-table">
+      <thead><tr><th>User</th><th>Email</th><th>Phone</th><th>Role</th><th>Action</th></tr></thead>
+      <tbody>
+        ${state.teams.map(team => `
+          <tr class="admin-team-item" data-team-id="${escapeHtml(team.id)}">
+            <td><strong>${escapeHtml(team.name)}</strong><span>${escapeHtml(team.username)}</span></td>
+            <td>${escapeHtml(team.email || "-")}</td>
+            <td>${escapeHtml(team.phone || "-")}</td>
+            <td>${escapeHtml(roleLabel(team.role))}</td>
+            <td class="admin-service-actions">
+              <button class="mini-button" type="button" data-open-team="${escapeHtml(team.id)}">Open</button>
+              <button class="mini-button" type="button" data-edit-team="${escapeHtml(team.id)}">Edit</button>
+              <button class="mini-button danger" type="button" data-delete-team="${escapeHtml(team.id)}">Delete</button>
+            </td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
 }
 
-function textareaValue(items) { return (items || []).join("\n"); }
+function fillUserForm(team) {
+  els.userForm.elements.userName.value = team?.name || "";
+  els.userForm.elements.userUsername.value = team?.username || "";
+  els.userForm.elements.userEmail.value = team?.email || "";
+  els.userForm.elements.userPhone.value = team?.phone || "";
+  els.userForm.elements.userPassword.value = "";
+  populateUserRoleSelect(team?.role || "callcenter");
+}
 
-function faqValue(items) { return (items || []).map(faq => `Question: ${faq.question}\nAnswer: ${faq.answer}`).join("\n\n"); }
+function openUserForm(teamId = "") {
+  if (!canManageUsers()) return;
+  const team = state.teams.find(item => item.id === teamId) || null;
+  state.editingTeamId = team?.id || null;
+  fillUserForm(team);
+  if (els.userFormTitle) els.userFormTitle.textContent = team ? "Edit user" : "Add user";
+  if (els.userFormMessage) els.userFormMessage.textContent = team ? "Editing " + team.name : "";
+  setView("userForm");
+  window.setTimeout(() => els.userForm?.elements.userName?.focus(), 60);
+}
 
-function setFormMode(mode) { const isEditing = mode === "edit"; els.formTitle.textContent = isEditing ? "Edit service" : "Add service"; els.saveServiceButton.textContent = isEditing ? "Save changes" : "Publish and view"; els.cancelEditButton.classList.toggle("hidden", !isEditing); }
+function renderUserDetail(team) {
+  if (!els.userDetail || !team) return;
+  els.userDetail.innerHTML = `
+    <div class="page-back-row"><button class="secondary-button" type="button" data-back-users>Back to users</button></div>
+    <div class="detail-header">
+      <div class="detail-title-row">
+        <div><h2>${escapeHtml(team.name)}</h2><p class="detail-summary">${escapeHtml(team.username)}</p></div>
+        <span class="chip alt">${escapeHtml(roleLabel(team.role))}</span>
+      </div>
+    </div>
+    <div class="info-grid">
+      <div class="info-box"><span>Email</span>${escapeHtml(team.email || "Not added")}</div>
+      <div class="info-box"><span>Phone</span>${escapeHtml(team.phone || "Not added")}</div>
+      <div class="info-box"><span>Role</span>${escapeHtml(roleLabel(team.role))}</div>
+      <div class="info-box"><span>Updated</span>${escapeHtml(team.updatedAt ? new Date(team.updatedAt).toLocaleString() : "Not added")}</div>
+    </div>
+    <div class="button-row"><button class="primary-button" type="button" data-edit-team="${escapeHtml(team.id)}">Edit user</button></div>
+  `;
+}
 
-function fillServiceForm(service) { els.serviceForm.elements.title.value = service.title || ""; els.serviceForm.elements.category.value = service.category || ""; els.serviceForm.elements.department.value = service.department || ""; els.serviceForm.elements.processingTime.value = service.processingTime || ""; els.serviceForm.elements.summary.value = service.summary || ""; els.serviceForm.elements.fees.value = service.fees || ""; els.serviceForm.elements.requirements.value = textareaValue(service.requirements); els.serviceForm.elements.steps.value = textareaValue(service.steps); els.serviceForm.elements.faqs.value = faqValue(service.faqs); els.serviceForm.elements.callCenterScript.value = service.callCenterScript || ""; els.serviceForm.elements.internalNotes.value = service.internalNotes || ""; els.serviceForm.elements.escalationContact.value = service.escalationContact || ""; els.serviceForm.elements.tags.value = (service.tags || []).join(", "); }
+const PERMISSION_LABELS = {
+  dashboard: "Dashboard",
+  servicesView: "Services view",
+  servicesExport: "Export PDFs",
+  servicesCreate: "Add services",
+  servicesEdit: "Edit services",
+  servicesDelete: "Delete services",
+  usersManage: "Users",
+  rolesManage: "Roles & Permissions",
+  activityLog: "Activity Log",
+  settings: "Settings"
+};
+
+function renderRoles() {
+  if (!els.rolePermissionList) return;
+  const roles = state.roles.length ? state.roles : (window.AKB_STATIC_DB?.roles || []);
+  els.rolePermissionList.innerHTML = roles.map(role => {
+    const permissions = Object.entries(PERMISSION_LABELS)
+      .filter(([key]) => role.permissions?.[key])
+      .map(([, label]) => `<span>${escapeHtml(label)}</span>`)
+      .join("") || "<span>No permissions selected</span>";
+    return `
+      <div class="role-card" data-role-id="${escapeHtml(role.id)}">
+        <div><strong>${escapeHtml(role.name)}</strong><small>${escapeHtml(role.id)}${role.system ? " · system" : ""}</small></div>
+        <div class="role-chip-list">${permissions}</div>
+        <div class="admin-service-actions">
+          <button class="mini-button" type="button" data-edit-role="${escapeHtml(role.id)}">Edit</button>
+          <button class="mini-button danger" type="button" data-delete-role="${escapeHtml(role.id)}" ${role.system ? "disabled" : ""}>Delete</button>
+        </div>
+      </div>
+    `;
+  }).join("") || '<div class="admin-service-empty">No roles yet</div>';
+}
+
+function rolePayloadFromForm() {
+  const permissions = {};
+  for (const key of Object.keys(PERMISSION_LABELS)) permissions[key] = Boolean(els.roleForm.elements[key]?.checked);
+  return {
+    id: els.roleForm.elements.roleKey.value.trim(),
+    name: els.roleForm.elements.roleName.value.trim(),
+    permissions,
+    actorRole: state.team?.role,
+    updatedBy: state.team?.name || "AKB Admin"
+  };
+}
+
+function fillRoleForm(role) {
+  els.roleForm.elements.roleName.value = role?.name || "";
+  els.roleForm.elements.roleKey.value = role?.id || "";
+  els.roleForm.elements.roleKey.readOnly = Boolean(role?.system);
+  for (const key of Object.keys(PERMISSION_LABELS)) els.roleForm.elements[key].checked = Boolean(role?.permissions?.[key]);
+}
+
+function openRoleForm(roleId = "") {
+  if (!canManageRoles()) return;
+  const role = state.roles.find(item => item.id === roleId) || null;
+  state.editingRoleId = role?.id || null;
+  fillRoleForm(role);
+  if (els.roleFormTitle) els.roleFormTitle.textContent = role ? "Edit role" : "Add role";
+  if (els.roleFormMessage) els.roleFormMessage.textContent = role ? "Editing " + role.name : "";
+  setView("roleForm");
+}
+
+function cleanEditText(value) {
+  return String(value || "").replace(/\\n/g, "\n").replace(/\/n/g, "\n");
+}
+
+function textareaValue(items) {
+  return (items || []).map(cleanEditText).join("\n");
+}
+
+function subServiceRowId(value) {
+  return String(value || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "sub-service-" + Date.now();
+}
+
+function subServiceEditorRow(subService = {}) {
+  const id = subService.id || subServiceRowId(subService.title || subService.titleAr || "new");
+  return `
+    <div class="editable-service-row bilingual-service-row" data-editor-sub-service>
+      <input type="hidden" name="subId" value="${escapeHtml(id)}">
+      <label><span>Sub-service EN</span><input name="subTitle" value="${escapeHtml(subService.title || "")}" placeholder="Service name"></label>
+      <label><span>Sub-service AR</span><input name="subTitleAr" dir="rtl" value="${escapeHtml(subService.titleAr || "")}" placeholder="اسم الخدمة"></label>
+      <label><span>Price</span><input name="subPrice" inputmode="decimal" value="${escapeHtml(priceInputValue(subService.fees || ""))}" placeholder="Example: 5300"></label>
+      <label><span>SLA EN</span><input name="subSla" value="${escapeHtml(subService.processingTime || "")}" placeholder="Example: 24 hrs"></label>
+      <label><span>SLA AR</span><input name="subSlaAr" dir="rtl" value="${escapeHtml(subService.processingTimeAr || "")}" placeholder="مثال: 24 ساعة"></label>
+      <label><span>Summary EN</span><input name="subSummary" value="${escapeHtml(subService.summary || subService.title || "")}" placeholder="Short summary"></label>
+      <label><span>Summary AR</span><input name="subSummaryAr" dir="rtl" value="${escapeHtml(subService.summaryAr || subService.titleAr || "")}" placeholder="ملخص قصير"></label>
+      <label class="wide-cell"><span>Requirements EN</span><textarea name="subRequirements" rows="4" placeholder="One per line">${escapeHtml(textareaValue(subService.requirements || []))}</textarea></label>
+      <label class="wide-cell"><span>Requirements AR</span><textarea name="subRequirementsAr" dir="rtl" rows="4" placeholder="كل متطلب في سطر">${escapeHtml(textareaValue(subService.requirementsAr || []))}</textarea></label>
+      <label class="wide-cell"><span>Steps EN</span><textarea name="subSteps" rows="4" placeholder="One per line">${escapeHtml(textareaValue(subService.steps || []))}</textarea></label>
+      <label class="wide-cell"><span>Steps AR</span><textarea name="subStepsAr" dir="rtl" rows="4" placeholder="كل خطوة في سطر">${escapeHtml(textareaValue(subService.stepsAr || []))}</textarea></label>
+      <label class="wide-cell"><span>Notes EN</span><textarea name="subNotes" rows="4" placeholder="Internal notes or fee information">${escapeHtml(subService.internalNotes || subService.validation?.notes || "")}</textarea></label>
+      <label class="wide-cell"><span>Notes AR</span><textarea name="subNotesAr" dir="rtl" rows="4" placeholder="ملاحظات داخلية أو معلومات الرسوم">${escapeHtml(subService.internalNotesAr || subService.validationAr?.notes || "")}</textarea></label>
+      <div class="row-edit-actions"><button class="mini-button danger" type="button" data-remove-sub-service-row>Delete row</button></div>
+    </div>
+  `;
+}
+
+function renderSubServiceEditor(subServices = []) {
+  if (!els.serviceSubServiceEditor) return;
+  const rows = subServices.length ? subServices : [{ title: "", processingTime: "", fees: "", requirements: [], steps: [] }];
+  els.serviceSubServiceEditor.innerHTML = rows.map(subServiceEditorRow).join("");
+}
+
+function renderFeeMatrixEditor(matrix) {
+  if (!els.feeMatrixEditor || !els.feeMatrixEditorPanel) return;
+  const columns = matrix?.columns || [];
+  const rows = matrix?.rows || [];
+  els.feeMatrixEditorPanel.classList.toggle("hidden", !columns.length || !rows.length);
+  if (!columns.length || !rows.length) {
+    els.feeMatrixEditor.innerHTML = "";
+    return;
+  }
+  const columnHeaders = columns.map(column =>
+    '<div class="fee-matrix-edit-cell fee-matrix-edit-head">' +
+      '<span>' + escapeHtml(column.label || column.key) + '</span>' +
+      '<small dir="rtl">' + escapeHtml(column.labelAr || '') + '</small>' +
+      '<input type="hidden" name="feeColumnKey" value="' + escapeHtml(column.key) + '">' +
+      '<input type="hidden" name="feeColumnLabel" value="' + escapeHtml(column.label || '') + '">' +
+      '<input type="hidden" name="feeColumnLabelAr" value="' + escapeHtml(column.labelAr || '') + '">' +
+    '</div>'
+  ).join("");
+  const rowCells = rows.map(row =>
+    '<div class="fee-matrix-edit-cell fee-matrix-edit-row-title">' +
+      '<strong>' + escapeHtml(row.label || row.key) + '</strong>' +
+      '<small dir="rtl">' + escapeHtml(row.labelAr || '') + '</small>' +
+      '<input type="hidden" name="feeRowKey" value="' + escapeHtml(row.key) + '">' +
+      '<input type="hidden" name="feeRowLabel" value="' + escapeHtml(row.label || '') + '">' +
+      '<input type="hidden" name="feeRowLabelAr" value="' + escapeHtml(row.labelAr || '') + '">' +
+    '</div>' +
+    columns.map(column =>
+      '<label class="fee-matrix-edit-cell">' +
+        '<span>' + escapeHtml(column.label || column.key) + '</span>' +
+        '<input name="feeMatrixValue" data-row-key="' + escapeHtml(row.key) + '" data-column-key="' + escapeHtml(column.key) + '" value="' + escapeHtml(row.values?.[column.key] || '') + '">' +
+      '</label>'
+    ).join("")
+  ).join("");
+  els.feeMatrixEditor.innerHTML =
+    '<div class="fee-matrix-edit-scroll">' +
+      '<div class="fee-matrix-edit-grid" style="grid-template-columns: minmax(150px, 1.15fr) repeat(' + columns.length + ', minmax(112px, 0.85fr));">' +
+        '<div class="fee-matrix-edit-cell fee-matrix-edit-head">Type</div>' +
+        columnHeaders + rowCells +
+      '</div>' +
+    '</div>';
+}
+
+function feeMatrixFromEditor() {
+  if (!els.feeMatrixEditorPanel || els.feeMatrixEditorPanel.classList.contains("hidden")) return null;
+  const columns = Array.from(els.feeMatrixEditor?.querySelectorAll('[name="feeColumnKey"]') || []).map(input => {
+    const cell = input.closest(".fee-matrix-edit-cell");
+    return {
+      key: input.value,
+      label: cell?.querySelector('[name="feeColumnLabel"]')?.value || input.value,
+      labelAr: cell?.querySelector('[name="feeColumnLabelAr"]')?.value || ""
+    };
+  });
+  const rows = Array.from(els.feeMatrixEditor?.querySelectorAll('[name="feeRowKey"]') || []).map(input => {
+    const cell = input.closest(".fee-matrix-edit-cell");
+    const key = input.value;
+    const values = {};
+    for (const column of columns) {
+      const selector = '[name="feeMatrixValue"][data-row-key="' + CSS.escape(key) + '"][data-column-key="' + CSS.escape(column.key) + '"]';
+      values[column.key] = els.feeMatrixEditor?.querySelector(selector)?.value.trim() || "-";
+    }
+    return {
+      key,
+      label: cell?.querySelector('[name="feeRowLabel"]')?.value || key,
+      labelAr: cell?.querySelector('[name="feeRowLabelAr"]')?.value || "",
+      values
+    };
+  });
+  return columns.length && rows.length ? { columns, rows } : null;
+}
+
+function subServicesFromEditor() {
+  const rows = Array.from(els.serviceSubServiceEditor?.querySelectorAll("[data-editor-sub-service]") || []);
+  return rows.map(row => {
+    const title = row.querySelector('[name="subTitle"]')?.value.trim() || "";
+    const titleAr = row.querySelector('[name="subTitleAr"]')?.value.trim() || "";
+    if (!title && !titleAr) return null;
+    const englishTitle = title || titleAr;
+    const price = row.querySelector('[name="subPrice"]')?.value.trim() || "";
+    const amount = Number(String(price).replace(/,/g, ""));
+    const feeText = Number.isFinite(amount) && amount > 0 ? formatAed(amount) : "Confirm with operations";
+    const notes = row.querySelector('[name="subNotes"]')?.value.trim() || "";
+    const notesAr = row.querySelector('[name="subNotesAr"]')?.value.trim() || "";
+    const idValue = row.querySelector('[name="subId"]')?.value || "";
+    return {
+      id: idValue && !idValue.startsWith("sub-service-") ? idValue : subServiceRowId(englishTitle),
+      title: englishTitle,
+      titleAr,
+      summary: row.querySelector('[name="subSummary"]')?.value.trim() || englishTitle,
+      summaryAr: row.querySelector('[name="subSummaryAr"]')?.value.trim() || titleAr,
+      processingTime: row.querySelector('[name="subSla"]')?.value.trim() || "Confirm with operations",
+      processingTimeAr: row.querySelector('[name="subSlaAr"]')?.value.trim() || "",
+      fees: feeText,
+      feeItems: Number.isFinite(amount) && amount > 0 ? [{ label: englishTitle + " fee", labelAr: titleAr ? "رسوم " + titleAr : "", amount: feeText, appliesWhen: englishTitle }] : [],
+      requirements: lines(row.querySelector('[name="subRequirements"]')?.value || ""),
+      requirementsAr: lines(row.querySelector('[name="subRequirementsAr"]')?.value || ""),
+      steps: lines(row.querySelector('[name="subSteps"]')?.value || ""),
+      stepsAr: lines(row.querySelector('[name="subStepsAr"]')?.value || ""),
+      internalNotes: notes,
+      internalNotesAr: notesAr,
+      validation: { gender: "Any", nationality: "All nationalities", age: "Not specified", notes: notes || "Confirm validation rules before submission." },
+      validationAr: { gender: "أي", nationality: "كل الجنسيات", age: "غير محدد", notes: notesAr || "يرجى تأكيد شروط التحقق قبل التقديم." }
+    };
+  }).filter(Boolean);
+}
+
+function setFormMode(mode) {
+  const isEditing = mode === "edit";
+  if (els.formTitle) els.formTitle.textContent = isEditing ? "Edit service" : "Add service";
+  if (els.saveServiceButton) els.saveServiceButton.textContent = isEditing ? "Save changes" : "Publish";
+  if (els.cancelEditButton) els.cancelEditButton.classList.toggle("hidden", !isEditing);
+  if (els.serviceForm) els.serviceForm.classList.toggle("editing-now", isEditing);
+}
+
+function fillServiceForm(service) {
+  els.serviceForm.elements.title.value = service.title || "";
+  if (els.serviceForm.elements.titleAr) els.serviceForm.elements.titleAr.value = service.titleAr || "";
+  els.serviceForm.elements.category.value = service.category || "";
+  els.serviceForm.elements.department.value = service.department || "";
+  els.serviceForm.elements.processingTime.value = service.processingTime || "";
+  els.serviceForm.elements.summary.value = service.summary || "";
+  if (els.serviceForm.elements.summaryAr) els.serviceForm.elements.summaryAr.value = service.summaryAr || "";
+  if (els.serviceForm.elements.serviceFee) els.serviceForm.elements.serviceFee.value = priceInputValue(service.fees || "");
+  els.serviceForm.elements.requirements.value = textareaValue(service.requirements);
+  if (els.serviceForm.elements.requirementsAr) els.serviceForm.elements.requirementsAr.value = textareaValue(service.requirementsAr);
+  renderSubServiceEditor(service.subServices || []);
+  renderFeeMatrixEditor(service.feeMatrix || service.subServices?.find(item => item.feeMatrix)?.feeMatrix || null);
+  els.serviceForm.elements.steps.value = textareaValue(service.steps);
+  if (els.serviceForm.elements.stepsAr) els.serviceForm.elements.stepsAr.value = textareaValue(service.stepsAr);
+  els.serviceForm.elements.faqs.value = faqValue(service.faqs);
+  els.serviceForm.elements.callCenterScript.value = service.callCenterScript || "";
+  if (els.serviceForm.elements.callCenterScriptAr) els.serviceForm.elements.callCenterScriptAr.value = service.callCenterScriptAr || "";
+  els.serviceForm.elements.internalNotes.value = service.internalNotes || "";
+  if (els.serviceForm.elements.internalNotesAr) els.serviceForm.elements.internalNotesAr.value = service.internalNotesAr || "";
+  els.serviceForm.elements.escalationContact.value = service.escalationContact || "";
+  els.serviceForm.elements.tags.value = (service.tags || []).join(", ");
+}
 
 function listItems(items, ordered = false) {
   const tag = ordered ? "ol" : "ul";
@@ -567,7 +1211,33 @@ function feeItemAmount(item) {
 function formatAed(value) {
   return `AED ${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
+
+function renderFeeMatrix(matrix) {
+  const columns = matrix?.columns || [];
+  const rows = matrix?.rows || [];
+  if (!columns.length || !rows.length) return "";
+  const typeLabel = isArabic() ? "النوع" : "Type";
+  return `
+    <div class="fee-matrix-scroll" role="region" aria-label="Domestic Worker fee table" tabindex="0">
+      <div class="fee-service-grid" style="grid-template-columns: minmax(150px, 1.15fr) repeat(${columns.length}, minmax(112px, 0.85fr));">
+        <div class="fee-service-cell fee-service-head">${escapeHtml(typeLabel)}</div>
+        ${columns.map(column => `<div class="fee-service-cell fee-service-head">${escapeHtml(isArabic() ? column.labelAr || column.label : column.label || column.labelAr)}</div>`).join("")}
+        ${rows.map(row => `
+          <div class="fee-service-cell fee-service-row-title">${escapeHtml(isArabic() ? row.labelAr || row.label : row.label || row.labelAr)}</div>
+          ${columns.map(column => `<div class="fee-service-cell">${escapeHtml(row.values?.[column.key] || "-")}</div>`).join("")}
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
 function renderFeeItems(subService) {
+  if (subService?.feeMatrix) {
+    const note = subServiceText(subService, "fees");
+    return `
+      ${note ? `<div class="fee-note">${escapeHtml(note)}</div>` : ""}
+      ${renderFeeMatrix(subService.feeMatrix)}
+    `;
+  }
   const items = subService?.feeItems || [];
   if (!items.length) return escapeHtml(subServiceText(subService, "fees") || t("willAddLater"));
   const selectedIndexes = selectedFeeIndexes(subService);
@@ -622,6 +1292,13 @@ function serviceExportFilename(service, subService) {
 }
 
 function selectedFeeExportLines(subService) {
+  if (subService?.feeMatrix) {
+    const columns = subService.feeMatrix.columns || [];
+    return (subService.feeMatrix.rows || []).map(row => {
+      const cells = columns.map(column => `${column.label || column.labelAr}: ${row.values?.[column.key] || "-"}`);
+      return `${row.label || row.labelAr}: ${cells.join(" | ")}`;
+    });
+  }
   const items = subService?.feeItems || [];
   if (!items.length) return [subServiceText(subService, "fees") || t("willAddLater")];
   const selectedIndexes = selectedFeeIndexes(subService);
@@ -838,23 +1515,32 @@ function canvasesToPdfBlob(canvases, title) {
   return new Blob([bytes], { type: "application/pdf" });
 }
 
-function downloadServiceFile(service, subService) {
-  loadAamerLogo();
-  const canvases = makePdfPages(service, subService, aamerLogoImage);
-  const blob = canvasesToPdfBlob(canvases, subServiceText(subService, "title") || serviceText(service, "title"));
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = serviceExportFilename(service, subService);
-  link.target = "_blank";
-  document.body.appendChild(link);
-  try {
-    link.click();
-  } catch (error) {
-    window.open(link.href, "_blank");
+async function downloadServiceFile(service, subService) {
+  const params = new URLSearchParams();
+  if (subService?.id) params.set("subService", subService.id);
+  const response = await fetch(`${API_BASE}/api/services/${encodeURIComponent(service.id)}/export?${params.toString()}`);
+  if (!response.ok) {
+    let message = "Export request failed";
+    try {
+      const data = await response.json();
+      message = data.error || message;
+    } catch (error) {}
+    throw new Error(message);
   }
-  const exported = { url: link.href, filename: link.download };
-  link.remove();
-  return exported;
+  const blob = await response.blob();
+  const disposition = response.headers.get("Content-Disposition") || "";
+  const match = disposition.match(/filename="?([^";]+)"?/i);
+  const filename = match?.[1] || serviceExportFilename(service, subService);
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.rel = "noopener";
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  window.setTimeout(() => link.remove(), 1000);
+  return { url, filename, size: blob.size };
 }
 
 function renderDetail(service) {
@@ -871,6 +1557,7 @@ function renderDetail(service) {
   const eligibilityReasons = eligibility.reasons.length ? `<ul>${eligibility.reasons.map(reason => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>` : "";
   const subOptions = subServices.map(item => `<option value="${escapeHtml(item.id)}" ${item.id === subService?.id ? "selected" : ""}>${escapeHtml(subServiceText(item, "title"))}</option>`).join("");
   els.serviceDetail.innerHTML = `
+    <div class="page-back-row"><button class="secondary-button" type="button" data-back-services>Back to services</button></div>
     <div class="detail-header">
       <div class="detail-title-row">
         <div>
@@ -898,7 +1585,7 @@ function renderDetail(service) {
           <p class="detail-summary">${escapeHtml(subServiceText(subService, "summary") || t("willAddLater"))}</p>
         </div>
         <div class="export-service-actions">
-          <button class="secondary-button export-service-button" type="button" data-export-service>${escapeHtml(t("exportService"))}</button>
+          ${canExportServices() ? `<button class="secondary-button export-service-button" type="button" data-export-service>${escapeHtml(t("exportService"))}</button>` : ""}
           <div id="exportStatus" class="export-status" aria-live="polite"></div>
         </div>
       </div>
@@ -991,35 +1678,59 @@ async function loadServices() {
   }
   renderServices();
   const selected = state.services.find(service => service.id === state.selectedId);
-  if (selected) renderDetail(selected);
+  if (selected && activeViewName() === "serviceDetail") renderDetail(selected);
+}
+
+function populateActivityFilters() {
+  const serviceSelect = els.activityServiceFilter;
+  const actorSelect = els.activityActorFilter;
+  if (!serviceSelect || !actorSelect) return;
+  const selectedService = serviceSelect.value;
+  const selectedActor = actorSelect.value;
+  const services = [...new Set(currentChangeLog.map(item => item.serviceTitle || item.serviceId || item.note || "General").filter(Boolean))].sort();
+  const actors = [...new Set(currentChangeLog.map(item => item.actor || item.updatedBy || item.createdBy || "AKB").filter(Boolean))].sort();
+  serviceSelect.innerHTML = '<option value="">All services</option>' + services.map(value => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join("");
+  actorSelect.innerHTML = '<option value="">All staff/users</option>' + actors.map(value => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join("");
+  serviceSelect.value = services.includes(selectedService) ? selectedService : "";
+  actorSelect.value = actors.includes(selectedActor) ? selectedActor : "";
+}
+
+function renderChangeLog() {
+  if (!els.changeLog) return;
+  const serviceFilter = normalize(els.activityServiceFilter?.value || "");
+  const actorFilter = normalize(els.activityActorFilter?.value || "");
+  const items = currentChangeLog.filter(item => {
+    const serviceText = normalize([item.serviceTitle, item.serviceId, item.note, item.action].join(" "));
+    const actorText = normalize([item.actor, item.updatedBy, item.createdBy].join(" "));
+    return (!serviceFilter || serviceText.includes(serviceFilter)) && (!actorFilter || actorText.includes(actorFilter));
+  });
+  els.changeLog.innerHTML = items.length ? items.map(item => `
+    <div class="activity-item">
+      <strong>${escapeHtml(item.note)}</strong>
+      <span>${escapeHtml(item.action || "service")} · ${escapeHtml(item.actor || "AKB")} · ${new Date(item.at).toLocaleString()}</span>
+    </div>
+  `).join("") : '<div class="empty-state"><strong>No activity found</strong></div>';
 }
 
 async function loadChangeLog() {
   const data = await api("/api/change-log");
-  els.changeLog.innerHTML = data.changeLog.map(item => `
-    <div class="activity-item">
-      <strong>${escapeHtml(item.note)}</strong>
-      <span>${escapeHtml(item.action || "service")} · ${escapeHtml(item.actor)} · ${new Date(item.at).toLocaleString()}</span>
-    </div>
-  `).join("");
+  currentChangeLog = data.changeLog || [];
+  populateActivityFilters();
+  renderChangeLog();
+}
+
+async function loadRoles() {
+  const data = await api("/api/roles");
+  state.roles = data.roles || [];
+  populateUserRoleSelect(els.userForm?.elements.userRole?.value || "callcenter");
+  renderRoles();
 }
 
 async function loadTeams() {
-  if (!isAdmin()) return;
+  if (!canManageUsers()) return;
   const data = await api("/api/teams");
   state.teams = data.teams || [];
   renderAdminTeams();
-}
-
-async function loadAuditLog() {
-  const data = await api("/api/audit-log");
-  const items = data.auditLog || [];
-  els.auditLog.innerHTML = items.length ? items.map(item => `
-    <div class="activity-item">
-      <strong>${escapeHtml(item.note)}</strong>
-      <span>${escapeHtml(item.type || "audit")} · ${escapeHtml(item.actor)} · ${new Date(item.at).toLocaleString()}</span>
-    </div>
-  `).join("") : '<div class="empty-state"><strong>No audit activity yet</strong></div>';
 }
 
 async function init() {
@@ -1038,9 +1749,13 @@ async function init() {
   state.categories = meta.categories;
   state.categoriesAr = meta.categoriesAr || {};
   state.departments = meta.departments;
+  state.roles = meta.roles || [];
   populateMeta();
+  populateUserRoleSelect();
+  renderRoles();
   await loadServices();
-  if (isAdmin()) await loadTeams();
+  if (canManageUsers()) await loadTeams();
+  setView(roleKey(state.team?.role) === "callcenter" ? "admin" : (activeViewName() || "dashboard"));
 }
 
 els.navItems.forEach(item => {
@@ -1063,6 +1778,13 @@ els.subServiceFilter.addEventListener("change", () => {
 els.genderFilter.addEventListener("change", loadServices);
 els.nationalityFilter.addEventListener("change", loadServices);
 els.departmentFilter.addEventListener("change", loadServices);
+if (els.adminServiceFilter) els.adminServiceFilter.addEventListener("change", renderAdminServices);
+if (els.adminServiceSearch) {
+  els.adminServiceSearch.addEventListener("input", () => {
+    window.clearTimeout(els.adminServiceSearch.searchTimer);
+    els.adminServiceSearch.searchTimer = window.setTimeout(renderAdminServices, 120);
+  });
+}
 els.clearSearch.addEventListener("click", () => {
   els.searchInput.value = "";
   els.categoryFilter.value = "";
@@ -1078,79 +1800,167 @@ els.languageToggles.forEach(button => {
   button.addEventListener("click", toggleLanguage);
 });
 
-if (els.createTeamButton) {
-  els.createTeamButton.addEventListener("click", async () => {
-    if (!isAdmin()) {
-      if (els.createTeamMessage) els.createTeamMessage.textContent = "Only admin can create users.";
+if (els.showUserFormButton) {
+  els.showUserFormButton.addEventListener("click", () => openUserForm());
+}
+
+if (els.cancelUserButton) {
+  els.cancelUserButton.addEventListener("click", () => {
+    state.editingTeamId = null;
+    els.userForm?.reset();
+    setView("users");
+  });
+}
+
+document.addEventListener("click", event => {
+  if (event.target.closest("[data-back-services]")) setView("admin");
+  if (event.target.closest("[data-back-users]")) setView("users");
+  if (event.target.closest("[data-back-roles]")) setView("roles");
+});
+
+if (els.adminTeamList) {
+  els.adminTeamList.addEventListener("click", async event => {
+    const openButton = event.target.closest("[data-open-team]");
+    const editButton = event.target.closest("[data-edit-team]");
+    const deleteButton = event.target.closest("[data-delete-team]");
+    if (!openButton && !editButton && !deleteButton) return;
+    if (!canManageUsers()) {
+      if (els.adminTeamMessage) els.adminTeamMessage.textContent = "Only admin can manage users.";
       return;
     }
-    const payload = {
-      name: els.loginForm.elements.newTeamName.value.trim(),
-      username: els.loginForm.elements.newUsername.value.trim(),
-      password: els.loginForm.elements.newPassword.value,
-      role: els.loginForm.elements.newRole.value,
-      actorRole: state.team?.role,
-      createdBy: state.team?.name || "AKB Admin"
-    };
-    if (els.createTeamMessage) els.createTeamMessage.textContent = "Creating user...";
+    const id = (openButton || editButton || deleteButton).dataset.openTeam || (openButton || editButton || deleteButton).dataset.editTeam || (openButton || editButton || deleteButton).dataset.deleteTeam;
+    const team = state.teams.find(entry => entry.id === id);
+    if (!team) return;
+    if (openButton) {
+      renderUserDetail(team);
+      setView("userDetail");
+      return;
+    }
+    if (editButton) {
+      openUserForm(id);
+      return;
+    }
+    const confirmed = window.confirm("Delete login for " + team.name + "?");
+    if (!confirmed) return;
+    if (els.adminTeamMessage) els.adminTeamMessage.textContent = "Deleting user...";
     try {
-      const data = await api("/api/teams", { method: "POST", body: JSON.stringify(payload) });
-      if (els.createTeamMessage) els.createTeamMessage.textContent = "Created login for " + data.team.name + ".";
-      els.loginForm.elements.newTeamName.value = "";
-      els.loginForm.elements.newUsername.value = "";
-      els.loginForm.elements.newPassword.value = "";
-      els.loginForm.elements.newRole.value = "viewer";
+      await api("/api/teams/" + encodeURIComponent(id), {
+        method: "DELETE",
+        body: JSON.stringify({ actorRole: state.team?.role, updatedBy: state.team?.name || "AKB Admin" })
+      });
+      if (els.adminTeamMessage) els.adminTeamMessage.textContent = "User deleted.";
       await loadTeams();
     } catch (error) {
-      if (els.createTeamMessage) els.createTeamMessage.textContent = error.message;
+      if (els.adminTeamMessage) els.adminTeamMessage.textContent = error.message;
     }
   });
 }
 
-if (els.adminTeamList) {
-  els.adminTeamList.addEventListener("click", async event => {
-    const updateButton = event.target.closest("[data-update-team]");
-    const deleteButton = event.target.closest("[data-delete-team]");
-    if (!updateButton && !deleteButton) return;
-    if (!isAdmin()) {
-      if (els.adminTeamMessage) els.adminTeamMessage.textContent = "Only admin can manage users.";
-      return;
-    }
-    const id = (updateButton || deleteButton).dataset.updateTeam || (updateButton || deleteButton).dataset.deleteTeam;
-    const item = event.target.closest(".admin-team-item");
-    const team = state.teams.find(entry => entry.id === id);
-    if (!team) return;
-    if (deleteButton) {
-      const confirmed = window.confirm("Delete login for " + team.name + "?");
-      if (!confirmed) return;
-      if (els.adminTeamMessage) els.adminTeamMessage.textContent = "Deleting user...";
-      try {
-        await api("/api/teams/" + encodeURIComponent(id), {
-          method: "DELETE",
-          body: JSON.stringify({ actorRole: state.team?.role, updatedBy: state.team?.name || "AKB Admin" })
-        });
-        if (els.adminTeamMessage) els.adminTeamMessage.textContent = "User deleted.";
-        await loadTeams();
-      } catch (error) {
-        if (els.adminTeamMessage) els.adminTeamMessage.textContent = error.message;
-      }
-      return;
-    }
+if (els.userDetail) {
+  els.userDetail.addEventListener("click", event => {
+    const editButton = event.target.closest("[data-edit-team]");
+    if (editButton) openUserForm(editButton.dataset.editTeam);
+  });
+}
+
+if (els.userForm) {
+  els.userForm.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (!canManageUsers()) return;
+    const editingId = state.editingTeamId;
     const payload = {
-      name: item.querySelector('[name="teamName"]').value.trim(),
-      username: item.querySelector('[name="teamUsername"]').value.trim(),
-      role: item.querySelector('[name="teamRole"]').value,
-      password: item.querySelector('[name="teamPassword"]').value,
+      name: els.userForm.elements.userName.value.trim(),
+      username: els.userForm.elements.userUsername.value.trim(),
+      email: els.userForm.elements.userEmail.value.trim(),
+      phone: els.userForm.elements.userPhone.value.trim(),
+      password: els.userForm.elements.userPassword.value,
+      role: els.userForm.elements.userRole.value,
       actorRole: state.team?.role,
+      createdBy: state.team?.name || "AKB Admin",
       updatedBy: state.team?.name || "AKB Admin"
     };
-    if (els.adminTeamMessage) els.adminTeamMessage.textContent = "Saving user...";
+    if (!editingId && !payload.password) {
+      els.userFormMessage.textContent = "Password is required for a new user.";
+      return;
+    }
+    els.userFormMessage.textContent = editingId ? "Saving user..." : "Creating user...";
     try {
-      await api("/api/teams/" + encodeURIComponent(id), { method: "PUT", body: JSON.stringify(payload) });
-      if (els.adminTeamMessage) els.adminTeamMessage.textContent = payload.password ? "User saved and password reset." : "User saved.";
+      await api(editingId ? "/api/teams/" + encodeURIComponent(editingId) : "/api/teams", {
+        method: editingId ? "PUT" : "POST",
+        body: JSON.stringify(payload)
+      });
+      state.editingTeamId = null;
+      els.userForm.reset();
+      els.userFormMessage.textContent = "User saved.";
       await loadTeams();
+      setView("users");
     } catch (error) {
-      if (els.adminTeamMessage) els.adminTeamMessage.textContent = error.message;
+      els.userFormMessage.textContent = error.message;
+    }
+  });
+}
+
+if (els.showRoleFormButton) {
+  els.showRoleFormButton.addEventListener("click", () => openRoleForm());
+}
+
+if (els.cancelRoleButton) {
+  els.cancelRoleButton.addEventListener("click", () => {
+    state.editingRoleId = null;
+    els.roleForm?.reset();
+    setView("roles");
+  });
+}
+
+if (els.rolePermissionList) {
+  els.rolePermissionList.addEventListener("click", async event => {
+    const editButton = event.target.closest("[data-edit-role]");
+    const deleteButton = event.target.closest("[data-delete-role]");
+    if (!editButton && !deleteButton) return;
+    if (!canManageRoles()) return;
+    const id = (editButton || deleteButton).dataset.editRole || (editButton || deleteButton).dataset.deleteRole;
+    const role = state.roles.find(item => item.id === id);
+    if (!role) return;
+    if (editButton) {
+      openRoleForm(id);
+      return;
+    }
+    const confirmed = window.confirm("Delete role " + role.name + "?");
+    if (!confirmed) return;
+    if (els.roleMessage) els.roleMessage.textContent = "Deleting role...";
+    try {
+      await api("/api/roles/" + encodeURIComponent(id), {
+        method: "DELETE",
+        body: JSON.stringify({ actorRole: state.team?.role, updatedBy: state.team?.name || "AKB Admin" })
+      });
+      if (els.roleMessage) els.roleMessage.textContent = "Role deleted.";
+      await loadRoles();
+    } catch (error) {
+      if (els.roleMessage) els.roleMessage.textContent = error.message;
+    }
+  });
+}
+
+if (els.roleForm) {
+  els.roleForm.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (!canManageRoles()) return;
+    const editingId = state.editingRoleId;
+    const payload = rolePayloadFromForm();
+    els.roleFormMessage.textContent = editingId ? "Saving role..." : "Creating role...";
+    try {
+      await api(editingId ? "/api/roles/" + encodeURIComponent(editingId) : "/api/roles", {
+        method: editingId ? "PUT" : "POST",
+        body: JSON.stringify(payload)
+      });
+      state.editingRoleId = null;
+      els.roleForm.reset();
+      els.roleFormMessage.textContent = "Role saved.";
+      await loadRoles();
+      applyAuthState();
+      setView("roles");
+    } catch (error) {
+      els.roleFormMessage.textContent = error.message;
     }
   });
 }
@@ -1181,7 +1991,7 @@ els.loginForm.addEventListener("submit", async event => {
 els.logoutButton.addEventListener("click", () => {
   localStorage.removeItem("akbTeam");
   state.team = null;
-  setView("portal");
+  setView("dashboard");
   applyAuthState();
 });
 els.serviceList.addEventListener("click", event => {
@@ -1201,7 +2011,7 @@ els.serviceDetail.addEventListener("change", event => {
   if (selected) renderDetail(selected);
 });
 
-els.serviceDetail.addEventListener("click", event => {
+els.serviceDetail.addEventListener("click", async event => {
   const selectedService = state.services.find(service => service.id === state.selectedId);
   if (!selectedService) return;
   const exportButton = event.target.closest("[data-export-service]");
@@ -1212,13 +2022,15 @@ els.serviceDetail.addEventListener("click", event => {
     exportButton.textContent = "Generating PDF...";
     exportButton.disabled = true;
     try {
-      const exported = downloadServiceFile(selectedService, subService);
+      const exported = await downloadServiceFile(selectedService, subService);
       const status = document.querySelector("#exportStatus");
       if (status && exported) {
-        status.innerHTML = "<a href=\"" + escapeHtml(exported.url) + "\" download=\"" + escapeHtml(exported.filename) + "\" target=\"_blank\">PDF ready: " + escapeHtml(exported.filename) + "</a>";
+        status.innerHTML = "<a class=\"pdf-ready-link\" href=\"" + escapeHtml(exported.url) + "\" download=\"" + escapeHtml(exported.filename) + "\" target=\"_blank\" rel=\"noopener\">Open / download PDF: " + escapeHtml(exported.filename) + "</a>";
       }
     } catch (error) {
       console.error(error);
+      const status = document.querySelector("#exportStatus");
+      if (status) status.textContent = "PDF export failed: " + error.message;
       window.alert("PDF export failed: " + error.message);
     } finally {
       exportButton.textContent = originalText;
@@ -1242,22 +2054,119 @@ els.serviceDetail.addEventListener("click", event => {
   renderDetail(selectedService);
 });
 
-els.adminServiceList.addEventListener("click", async event => {
-  const editButton = event.target.closest("[data-edit-id]");
-  const deleteButton = event.target.closest("[data-delete-id]");
+if (els.exportServicesCsv) {
+  els.exportServicesCsv.addEventListener("click", exportServicesCsv);
+}
 
-  if (editButton) {
-    const service = state.services.find(item => item.id === editButton.dataset.editId);
-    if (!service) return;
+if (els.backupServicesJson) {
+  els.backupServicesJson.addEventListener("click", async () => {
+    try { await exportBackupJson(); }
+    catch (error) { window.alert(error.message); }
+  });
+}
+
+if (els.importServicesJson && els.importServicesJsonFile) {
+  els.importServicesJson.addEventListener("click", () => els.importServicesJsonFile.click());
+  els.importServicesJsonFile.addEventListener("change", async () => {
+    const file = els.importServicesJsonFile.files?.[0];
+    els.importServicesJsonFile.value = "";
+    try { await importBackupJson(file); }
+    catch (error) { window.alert("Import failed: " + error.message); }
+  });
+}
+
+async function enterServiceEdit(serviceId, subServiceId = "") {
+  if (!serviceId) return;
+  setView("serviceForm");
+  let service = state.services.find(item => item.id === serviceId);
+  if (!service) {
+    try {
+      const data = await api("/api/services/" + encodeURIComponent(serviceId));
+      service = data.service;
+    } catch (error) {
+      if (els.formMessage) els.formMessage.textContent = error.message;
+      return;
+    }
+  }
+  try {
     state.editingId = service.id;
     fillServiceForm(service);
     setFormMode("edit");
-    els.formMessage.textContent = `Editing ${service.title}`;
-    els.serviceForm.querySelector("[name=title]").focus();
+    if (els.formMessage) {
+      els.formMessage.textContent = subServiceId ? `EDIT MODE: ${service.title}. Sub-service data loaded below.` : `EDIT MODE: ${service.title}.`;
+    }
+    const editorPanel = els.serviceForm;
+    editorPanel?.classList.add("editing-now");
+    window.scrollTo({ top: 0, behavior: "auto" });
+    const focusField = subServiceId ? els.serviceSubServiceEditor?.querySelector("input[name=subTitle]") : els.serviceForm.querySelector("[name=title]");
+    window.setTimeout(() => focusField?.focus(), 80);
+  } catch (error) {
+    console.error(error);
+    if (els.formMessage) els.formMessage.textContent = "Could not open edit form: " + error.message;
+  }
+}
+
+window.enterServiceEdit = enterServiceEdit;
+
+window.addEventListener("error", event => {
+  if (els.formMessage) els.formMessage.textContent = "AKB error: " + event.message;
+});
+
+els.adminServiceList.addEventListener("click", async event => {
+  const viewButton = event.target.closest("[data-view-id]");
+  const editButton = event.target.closest("[data-edit-id]");
+  const deleteButton = event.target.closest("[data-delete-id]");
+  const deleteSubButton = event.target.closest("[data-delete-sub-id]");
+
+  if (viewButton) {
+    state.selectedId = viewButton.dataset.viewId;
+    state.selectedSubServiceId = viewButton.dataset.viewSubId || null;
+    els.searchInput.value = "";
+    els.categoryFilter.value = "";
+    els.departmentFilter.value = "";
+    els.genderFilter.value = "";
+    els.nationalityFilter.value = "";
+    setView("admin");
+    await loadServices();
+    const selected = state.services.find(service => service.id === state.selectedId);
+    if (selected) renderDetail(selected);
+    setView("serviceDetail");
+    return;
+  }
+
+  if (editButton) {
+    if (!canEditServices()) return;
+    await enterServiceEdit(editButton.dataset.editId, editButton.dataset.editSubId || "");
+    return;
+  }
+
+  if (deleteSubButton) {
+    if (!canDeleteServices()) return;
+    const service = state.services.find(item => item.id === deleteSubButton.dataset.parentId);
+    if (!service) return;
+    const subService = getSubServices(service).find(item => item.id === deleteSubButton.dataset.deleteSubId);
+    if (!subService) return;
+    const confirmed = window.confirm(`Delete ${subService.title} from ${service.title}?`);
+    if (!confirmed) return;
+    els.formMessage.textContent = `Deleting ${subService.title}...`;
+    const payload = {
+      ...service,
+      subServices: (service.subServices || []).filter(item => item.id !== subService.id),
+      updatedBy: state.team?.name || "AKB Admin"
+    };
+    try {
+      await api(`/api/services/${service.id}`, { method: "PUT", body: JSON.stringify(payload) });
+      if (state.selectedSubServiceId === subService.id) state.selectedSubServiceId = null;
+      await loadServices();
+      els.formMessage.textContent = `Deleted ${subService.title}.`;
+    } catch (error) {
+      els.formMessage.textContent = error.message;
+    }
     return;
   }
 
   if (deleteButton) {
+    if (!canDeleteServices()) return;
     const service = state.services.find(item => item.id === deleteButton.dataset.deleteId);
     if (!service) return;
     const confirmed = window.confirm(`Delete ${service.title} from AKB?`);
@@ -1278,42 +2187,96 @@ els.adminServiceList.addEventListener("click", async event => {
     }
   }
 });
+if (els.showServiceFormButton) {
+  els.showServiceFormButton.addEventListener("click", () => {
+    if (!canCreateServices()) return;
+    state.editingId = null;
+    els.serviceForm.reset();
+    renderSubServiceEditor([]);
+    renderFeeMatrixEditor(null);
+    setFormMode("add");
+    setView("serviceForm");
+    window.setTimeout(() => els.serviceForm.querySelector("[name=title]")?.focus(), 80);
+  });
+}
+
 els.serviceForm.addEventListener("click", event => {
+  const removeRowButton = event.target.closest("[data-remove-sub-service-row]");
+  if (removeRowButton) {
+    const rows = els.serviceSubServiceEditor?.querySelectorAll("[data-editor-sub-service]") || [];
+    if (rows.length <= 1) {
+      removeRowButton.closest("[data-editor-sub-service]")?.querySelectorAll("input:not([type=hidden]), textarea").forEach(input => input.value = "");
+    } else {
+      removeRowButton.closest("[data-editor-sub-service]")?.remove();
+    }
+    return;
+  }
   const submitButton = event.target.closest("[data-after-save]");
   if (submitButton) {
     els.serviceForm.dataset.afterSave = submitButton.dataset.afterSave;
   }
 });
 
+if (els.addSubServiceRowButton) {
+  els.addSubServiceRowButton.addEventListener("click", () => {
+    els.serviceSubServiceEditor?.insertAdjacentHTML("beforeend", subServiceEditorRow({}));
+    const rows = els.serviceSubServiceEditor?.querySelectorAll("[data-editor-sub-service]") || [];
+    rows[rows.length - 1]?.querySelector("input[name=subTitle]")?.focus();
+  });
+}
+
 els.cancelEditButton.addEventListener("click", () => {
   state.editingId = null;
   els.serviceForm.reset();
+  renderSubServiceEditor([]);
+  renderFeeMatrixEditor(null);
   setFormMode("add");
   els.formMessage.textContent = "Edit cancelled.";
+  setView("admin");
 });
 
 els.serviceForm.addEventListener("reset", () => {
   window.setTimeout(() => {
     state.editingId = null;
+    renderSubServiceEditor([]);
+    renderFeeMatrixEditor(null);
     setFormMode("add");
   });
 });
 els.serviceForm.addEventListener("submit", async event => {
   event.preventDefault();
+  if ((state.editingId && !canEditServices()) || (!state.editingId && !canCreateServices())) {
+    els.formMessage.textContent = "This role cannot save services.";
+    return;
+  }
   const form = new FormData(els.serviceForm);
-  const afterSave = els.serviceForm.dataset.afterSave || "portal";
+  const afterSave = els.serviceForm.dataset.afterSave || "admin";
+  const parsedSubServices = subServicesFromEditor();
+  const parsedFeeMatrix = feeMatrixFromEditor();
+  if (parsedFeeMatrix) {
+    parsedSubServices.forEach(subService => { subService.feeMatrix = parsedFeeMatrix; subService.fees = ""; subService.feeItems = []; });
+  }
+  const serviceFeeAmount = Number(String(form.get("serviceFee") || "").replace(/,/g, ""));
   const payload = {
     title: form.get("title"),
+    titleAr: form.get("titleAr"),
     category: form.get("category"),
     department: form.get("department"),
     processingTime: form.get("processingTime"),
     summary: form.get("summary"),
-    fees: form.get("fees"),
+    summaryAr: form.get("summaryAr"),
+    fees: parsedFeeMatrix ? "" : (Number.isFinite(serviceFeeAmount) && serviceFeeAmount > 0 ? formatAed(serviceFeeAmount) : ""),
+    feeMatrix: parsedFeeMatrix || undefined,
     requirements: lines(form.get("requirements")),
+    requirementsAr: lines(form.get("requirementsAr")),
+    subServices: parsedSubServices,
     steps: lines(form.get("steps")),
+    stepsAr: lines(form.get("stepsAr")),
     faqs: faqs(form.get("faqs")),
     callCenterScript: form.get("callCenterScript"),
+    callCenterScriptAr: form.get("callCenterScriptAr"),
     internalNotes: form.get("internalNotes"),
+    internalNotesAr: form.get("internalNotesAr"),
     escalationContact: form.get("escalationContact"),
     tags: tags(form.get("tags")),
     updatedBy: state.team?.name || "AKB Admin"
@@ -1336,12 +2299,15 @@ els.serviceForm.addEventListener("submit", async event => {
       els.formMessage.textContent = `Saved "${data.service.title}". Add the next service.`;
       els.serviceForm.querySelector("[name=title]").focus();
     } else {
-      setView("portal");
+      setView("admin");
     }
   } catch (error) {
     els.formMessage.textContent = error.message;
   }
 });
+
+if (els.activityServiceFilter) els.activityServiceFilter.addEventListener("change", renderChangeLog);
+if (els.activityActorFilter) els.activityActorFilter.addEventListener("change", renderChangeLog);
 
 loadAamerLogo();
 

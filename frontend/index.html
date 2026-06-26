@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AKB | Aamer Knowledge Base</title>
-    <link rel="stylesheet" href="styles.css?v=admin-users-1">
+    <link rel="stylesheet" href="styles.css?v=json-backup-import-1">
   </head>
   <body>
     <section id="loginScreen" class="login-screen">
@@ -41,17 +41,23 @@
         </div>
 
         <nav class="nav">
-          <button class="nav-item active" data-view="portal" type="button">
-            <span>⌕</span> Employee Search
+          <button class="nav-item active" data-view="dashboard" type="button">
+            <span>▦</span> Dashboard
           </button>
           <button class="nav-item" data-view="admin" type="button">
-            <span>＋</span> Admin Panel
+            <span>☷</span> Services
+          </button>
+          <button class="nav-item" data-view="users" type="button">
+            <span>◎</span> Users
+          </button>
+          <button class="nav-item" data-view="roles" type="button">
+            <span>◇</span> Roles & Permissions
           </button>
           <button class="nav-item" data-view="activity" type="button">
-            <span>◷</span> Service History
+            <span>◷</span> Activity Log
           </button>
-          <button class="nav-item" data-view="audit" type="button">
-            <span>☑</span> Audit Log
+          <button class="nav-item" data-view="settings" type="button">
+            <span>⚙</span> Settings
           </button>
         </nav>
 
@@ -78,211 +84,323 @@
           </div>
         </section>
 
-        <section id="portalView" class="view active">
-          <div class="search-strip">
+        <section id="dashboardView" class="view active">
+          <section class="page-panel">
+            <div class="panel-heading">
+              <h2>Dashboard</h2>
+              <span>Current AKB configuration</span>
+            </div>
+            <div class="settings-summary">
+              <div><span>Services</span><strong id="settingsServiceCount">0</strong></div>
+              <div><span>Departments</span><strong id="settingsDepartmentCount">0</strong></div>
+              <div><span>Categories</span><strong id="settingsCategoryCount">0</strong></div>
+              <div id="dashboardUserMetric"><span>Users</span><strong id="settingsUserCount">0</strong></div>
+            </div>
+          </section>
+          <div class="hidden" aria-hidden="true">
             <label for="searchInput">Search services</label>
-            <div class="search-row">
-              <input id="searchInput" type="search" placeholder="Search by service, document, fee, department, or keyword">
-              <button id="clearSearch" class="icon-button" type="button" title="Clear search">×</button>
-            </div>
-            <div class="filters">
-              <select id="categoryFilter" aria-label="Filter by category">
-                <option value="">All categories</option>
-              </select>
-              <select id="subServiceFilter" aria-label="Filter by service under category">
-                <option value="">All services under category</option>
-              </select>
-              <select id="genderFilter" aria-label="Filter by gender validation">
-                <option value="">Any gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-              <select id="nationalityFilter" aria-label="Filter by nationality validation">
-                <option value="">Any nationality</option>
-                <option value="UAE">UAE</option>
-                <option value="GCC">GCC</option>
-                <option value="All nationalities">All nationalities</option>
-              </select>
-              <select id="departmentFilter" aria-label="Filter by department">
-                <option value="">All departments</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="content-grid">
-            <section class="service-list-panel">
-              <div class="panel-heading">
-                <h2>Services</h2>
-                <span id="resultCount">0 results</span>
-              </div>
-              <div id="serviceList" class="service-list"></div>
-            </section>
-
-            <section id="serviceDetail" class="detail-panel">
-              <div class="empty-state">
-                <strong>Select a service</strong>
-                <span>Open any service to view requirements, steps, fees, FAQs, and call center notes.</span>
-              </div>
-            </section>
+            <input id="searchInput" type="search">
+            <button id="clearSearch" type="button">Clear</button>
+            <select id="categoryFilter"><option value="">All categories</option></select>
+            <select id="subServiceFilter"><option value="">All services under category</option></select>
+            <select id="genderFilter"><option value="">Any gender</option><option value="Male">Male</option><option value="Female">Female</option></select>
+            <select id="nationalityFilter"><option value="">Any nationality</option><option value="UAE">UAE</option><option value="GCC">GCC</option><option value="All nationalities">All nationalities</option></select>
+            <select id="departmentFilter"><option value="">All departments</option></select>
+            <span id="resultCount">0 results</span>
+            <div id="serviceList"></div>
           </div>
         </section>
 
         <section id="adminView" class="view">
-          <form id="serviceForm" class="admin-layout">
-            <div class="editor-panel">
-              <div class="panel-heading">
-                <h2 id="formTitle">Add service</h2>
-                <span id="adminServiceCount">0 saved services</span>
-              </div>
-              <div class="form-grid">
-                <label>
-                  Service name
-                  <input name="title" required placeholder="Example: Visa Status Follow-up">
-                </label>
-                <label>
-                  Category
-                  <input name="category" required list="categoryList" placeholder="Example: Government Transactions">
-                </label>
-                <label>
-                  Department
-                  <input name="department" required list="departmentList" placeholder="Example: Operations">
-                </label>
-                <label>
-                  Processing time
-                  <input name="processingTime" placeholder="Example: 2 working days">
-                </label>
-              </div>
-
-              <label>
-                Summary
-                <textarea name="summary" required rows="3" placeholder="Short internal description"></textarea>
-              </label>
-              <label>
-                Fees
-                <textarea name="fees" rows="2" placeholder="Fee details or instruction to confirm with operations"></textarea>
-              </label>
-              <label>
-                Requirements
-                <textarea name="requirements" rows="4" placeholder="One requirement per line"></textarea>
-              </label>
-              <label>
-                Steps
-                <textarea name="steps" rows="4" placeholder="One step per line"></textarea>
-              </label>
-              <label>
-                FAQs
-                <textarea name="faqs" rows="4" placeholder="One FAQ per block. Example:&#10;Question: Can customer apply by phone?&#10;Answer: No, documents must be submitted first."></textarea>
-              </label>
-              <label>
-                Call center script
-                <textarea name="callCenterScript" rows="3" placeholder="Approved wording for agents"></textarea>
-              </label>
-              <label>
-                Internal notes
-                <textarea name="internalNotes" rows="3" placeholder="Private employee notes"></textarea>
-              </label>
-              <div class="form-grid">
-                <label>
-                  Escalation contact
-                  <input name="escalationContact" placeholder="Example: Operations Supervisor">
-                </label>
-                <label>
-                  Tags
-                  <input name="tags" placeholder="Comma separated keywords">
-                </label>
-              </div>
-              <div class="button-row">
-                <button id="saveServiceButton" class="primary-button" type="submit" data-after-save="portal">Publish and view</button>
-                <button class="secondary-button" type="submit" data-after-save="another">Save and add another</button>
-                <button class="secondary-button" type="reset">Clear form</button>
-                <button id="cancelEditButton" class="secondary-button hidden" type="button">Cancel edit</button>
-              </div>
-              <p id="formMessage" class="form-message" role="status"></p>
+          <div class="services-toolbar">
+            <div>
+              <h2>Services</h2>
+              <span>Service database table</span>
             </div>
-
-            <aside class="admin-guide">
-              <section id="adminUserPanel" class="admin-user-panel hidden">
-                <h2>User creation</h2>
-                <p>Create team logins for internal employees only. Only admin can see this panel.</p>
-                <div id="createTeamPanel" class="create-team-panel">
-                  <strong>Add user / team login</strong>
-                  <label>
-                    Team/user name
-                    <input name="newTeamName" form="loginForm" placeholder="Example: Call Center">
-                  </label>
-                  <label>
-                    Username
-                    <input name="newUsername" form="loginForm" autocomplete="off" placeholder="Example: callcenter">
-                  </label>
-                  <label>
-                    Password
-                    <input name="newPassword" form="loginForm" type="password" autocomplete="new-password" placeholder="Example: callcenter123">
-                  </label>
-                  <label>
-                    Access role
-                    <select name="newRole" form="loginForm">
-                      <option value="viewer">Viewer</option>
-                      <option value="editor">Editor</option>
-                      <option value="admin">Admin</option>
-                    </select>
-                  </label>
-                  <button id="createTeamButton" class="primary-button" type="button">Create user</button>
-                  <p id="createTeamMessage" class="form-message" role="status"></p>
-                </div>
-                <div class="admin-users-heading">
-                  <h2>Admin users</h2>
-                  <p>View team logins, edit access roles, reset passwords, or remove a user.</p>
-                </div>
-                <div id="adminTeamList" class="admin-team-list"></div>
-                <p id="adminTeamMessage" class="form-message" role="status"></p>
-              </section>
-              <h2>Manage services</h2>
-              <div id="adminServiceList" class="admin-service-list"></div>
-              <h2>Database fields</h2>
-              <p>Each service is stored as structured data so call center agents can find the right answer quickly without AI.</p>
-              <div class="field-list">
-                <span>Requirements</span>
-                <span>Steps</span>
-                <span>Fees</span>
-                <span>Processing time</span>
-                <span>FAQs</span>
-                <span>Internal notes</span>
-                <span>Escalation</span>
-                <span>Tags</span>
-              </div>
-              <div class="batch-note">
-                <strong>For services later</strong>
-                <span>Add, edit, or delete services from this panel. AKB keeps everything in the database file.</span>
-              </div>
-            </aside>
-          </form>
+            <div class="services-toolbar-actions">
+              <select id="adminServiceFilter" aria-label="Filter services"><option value="">All services</option></select>
+              <input id="adminServiceSearch" type="search" placeholder="Search services" aria-label="Search services table">
+              <button id="showServiceFormButton" class="primary-button" type="button" aria-label="Add service">＋</button>
+              <button id="exportServicesCsv" class="secondary-button" type="button">Export Excel</button>
+              <button id="backupServicesJson" class="secondary-button" type="button">Backup JSON</button>
+              <button id="importServicesJson" class="secondary-button" type="button">Import JSON</button>
+              <input id="importServicesJsonFile" class="hidden" type="file" accept="application/json,.json">
+            </div>
+          </div>
+          <div id="adminServiceList" class="admin-service-list"></div>
           <datalist id="categoryList"></datalist>
-          <datalist id="departmentList"></datalist>
+        </section>
+
+        <section id="serviceDetail" class="view detail-panel service-page">
+          <div class="empty-state">
+            <strong>Select a service</strong>
+            <span>Press Open on a service row to view requirements, steps, fees, and notes.</span>
+          </div>
+        </section>
+
+        <form id="serviceForm" class="view editor-panel service-page">
+          <div class="page-back-row">
+            <button class="secondary-button" type="button" data-back-services>Back to services</button>
+          </div>
+          <div class="panel-heading">
+            <h2 id="formTitle">Add service</h2>
+            <span id="adminServiceCount">0 saved services</span>
+          </div>
+          <div class="form-grid">
+            <label>
+              Service name (English)
+              <input name="title" required placeholder="Example: Visa Status Follow-up">
+            </label>
+            <label>
+              Service name (Arabic)
+              <input name="titleAr" dir="rtl" placeholder="مثال: متابعة حالة التأشيرة">
+            </label>
+            <label>
+              Category
+              <input name="category" required list="categoryList" placeholder="Example: Government Transactions">
+            </label>
+            <label>
+              Department
+              <select name="department" required>
+                <option value="">Select department</option>
+              </select>
+            </label>
+            <label>
+              Processing time
+              <input name="processingTime" placeholder="Example: 2 working days">
+            </label>
+          </div>
+          <div class="form-grid bilingual-grid">
+            <label>
+              Summary (English)
+              <textarea name="summary" required rows="3" placeholder="Short internal description"></textarea>
+            </label>
+            <label>
+              Summary (Arabic)
+              <textarea name="summaryAr" dir="rtl" rows="3" placeholder="وصف داخلي مختصر"></textarea>
+            </label>
+          </div>
+          <section class="editable-service-panel">
+            <div class="panel-heading compact-heading">
+              <h3>Service rows</h3>
+              <button id="addSubServiceRowButton" class="primary-button compact-plus-button" type="button" aria-label="Add row" title="Add row">＋</button>
+            </div>
+            <div class="form-grid">
+              <label>
+                Main service price
+                <input name="serviceFee" inputmode="decimal" placeholder="Example: 5300">
+              </label>
+            </div>
+            <div id="serviceSubServiceEditor" class="editable-service-table"></div>
+            <div id="feeMatrixEditorPanel" class="fee-matrix-editor-panel hidden">
+              <div class="panel-heading compact-heading">
+                <h3>Fee table</h3>
+              </div>
+              <div id="feeMatrixEditor" class="fee-matrix-editor"></div>
+            </div>
+          </section>
+          <div class="form-grid bilingual-grid">
+            <label>
+              Requirements (English)
+              <textarea name="requirements" rows="5" placeholder="One requirement per line"></textarea>
+            </label>
+            <label>
+              Requirements (Arabic)
+              <textarea name="requirementsAr" dir="rtl" rows="5" placeholder="كل متطلب في سطر"></textarea>
+            </label>
+          </div>
+          <div class="form-grid bilingual-grid">
+            <label>
+              Steps (English)
+              <textarea name="steps" rows="5" placeholder="One step per line"></textarea>
+            </label>
+            <label>
+              Steps (Arabic)
+              <textarea name="stepsAr" dir="rtl" rows="5" placeholder="كل خطوة في سطر"></textarea>
+            </label>
+          </div>
+          <label>
+            FAQs
+            <textarea name="faqs" rows="5" placeholder="One FAQ per block. Example:&#10;Question: Can customer apply by phone?&#10;Answer: No, documents must be submitted first."></textarea>
+          </label>
+          <div class="form-grid bilingual-grid">
+            <label>
+              Call center script (English)
+              <textarea name="callCenterScript" rows="3" placeholder="Approved wording for agents"></textarea>
+            </label>
+            <label>
+              Call center script (Arabic)
+              <textarea name="callCenterScriptAr" dir="rtl" rows="3" placeholder="النص المعتمد للموظفين"></textarea>
+            </label>
+          </div>
+          <div class="form-grid bilingual-grid">
+            <label>
+              Internal notes (English)
+              <textarea name="internalNotes" rows="3" placeholder="Private employee notes"></textarea>
+            </label>
+            <label>
+              Internal notes (Arabic)
+              <textarea name="internalNotesAr" dir="rtl" rows="3" placeholder="ملاحظات داخلية خاصة"></textarea>
+            </label>
+          </div>
+          <div class="form-grid">
+            <label>
+              Escalation contact
+              <input name="escalationContact" placeholder="Example: Operations Supervisor">
+            </label>
+            <label>
+              Tags
+              <input name="tags" placeholder="Comma separated keywords">
+            </label>
+          </div>
+          <div class="button-row">
+            <button id="saveServiceButton" class="primary-button" type="submit" data-after-save="admin">Publish</button>
+            <button class="secondary-button" type="submit" data-after-save="another">Save and add another</button>
+            <button class="secondary-button" type="reset">Clear form</button>
+            <button id="cancelEditButton" class="secondary-button hidden" type="button">Cancel edit</button>
+          </div>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+
+        <section id="usersView" class="view">
+          <div class="services-toolbar">
+            <div>
+              <h2>Users</h2>
+              <span>Team login table</span>
+            </div>
+            <div class="services-toolbar-actions">
+              <button id="showUserFormButton" class="primary-button" type="button" aria-label="Add user">＋</button>
+            </div>
+          </div>
+          <section id="adminUserPanel" class="admin-user-panel hidden">
+            <div id="adminTeamList" class="admin-team-list"></div>
+            <p id="adminTeamMessage" class="form-message" role="status"></p>
+          </section>
+        </section>
+
+        <form id="userForm" class="view editor-panel user-page">
+          <div class="page-back-row">
+            <button class="secondary-button" type="button" data-back-users>Back to users</button>
+          </div>
+          <div class="panel-heading">
+            <h2 id="userFormTitle">Add user</h2>
+            <span>Team credentials</span>
+          </div>
+          <div class="form-grid">
+            <label>User name<input name="userName" required placeholder="Example: Ali"></label>
+            <label>Username<input name="userUsername" required autocomplete="off" placeholder="Example: ali"></label>
+            <label>Email<input name="userEmail" type="email" placeholder="name@aamer.com"></label>
+            <label>Phone<input name="userPhone" type="tel" placeholder="+971..."></label>
+            <label>Password<input name="userPassword" type="password" autocomplete="new-password" placeholder="Required for new user"></label>
+            <label>Role<select name="userRole"></select></label>
+          </div>
+          <div class="button-row">
+            <button id="saveUserButton" class="primary-button" type="submit">Save user</button>
+            <button id="cancelUserButton" class="secondary-button" type="button">Cancel</button>
+          </div>
+          <p id="userFormMessage" class="form-message" role="status"></p>
+        </form>
+
+        <section id="userDetail" class="view detail-panel user-page">
+          <div class="empty-state"><strong>Select a user</strong></div>
+        </section>
+
+        <section id="rolesView" class="view">
+          <div class="services-toolbar">
+            <div>
+              <h2>Roles & Permissions</h2>
+              <span>Manage access roles dynamically</span>
+            </div>
+            <div class="services-toolbar-actions">
+              <button id="showRoleFormButton" class="primary-button" type="button" aria-label="Add role">＋</button>
+            </div>
+          </div>
+          <div id="rolePermissionList" class="role-permission-grid"></div>
+          <p id="roleMessage" class="form-message" role="status"></p>
+        </section>
+
+        <form id="roleForm" class="view editor-panel role-page">
+          <div class="page-back-row">
+            <button class="secondary-button" type="button" data-back-roles>Back to roles</button>
+          </div>
+          <div class="panel-heading">
+            <h2 id="roleFormTitle">Add role</h2>
+            <span>Choose what this role can access</span>
+          </div>
+          <div class="form-grid">
+            <label>Role name<input name="roleName" required placeholder="Example: Finance"></label>
+            <label>Role key<input name="roleKey" required placeholder="Example: finance"></label>
+          </div>
+          <div class="permission-check-grid">
+            <label><input type="checkbox" name="dashboard"> Dashboard</label>
+            <label><input type="checkbox" name="servicesView"> Services view</label>
+            <label><input type="checkbox" name="servicesExport"> Export PDFs</label>
+            <label><input type="checkbox" name="servicesCreate"> Add services</label>
+            <label><input type="checkbox" name="servicesEdit"> Edit services</label>
+            <label><input type="checkbox" name="servicesDelete"> Delete services</label>
+            <label><input type="checkbox" name="usersManage"> Users</label>
+            <label><input type="checkbox" name="rolesManage"> Roles & Permissions</label>
+            <label><input type="checkbox" name="activityLog"> Activity Log</label>
+            <label><input type="checkbox" name="settings"> Settings</label>
+          </div>
+          <div class="button-row">
+            <button id="saveRoleButton" class="primary-button" type="submit">Save role</button>
+            <button id="cancelRoleButton" class="secondary-button" type="button">Cancel</button>
+          </div>
+          <p id="roleFormMessage" class="form-message" role="status"></p>
+        </form>
+
+        <section id="settingsView" class="view">
+          <div class="settings-grid">
+            <section class="page-panel">
+              <h2>Departments</h2>
+              <div id="settingsDepartmentList" class="field-list"></div>
+            </section>
+            <section class="page-panel">
+              <h2>Categories</h2>
+              <div id="settingsCategoryList" class="field-list"></div>
+            </section>
+            <section class="page-panel">
+              <h2>Menus</h2>
+              <div class="menu-map">
+                <div><strong>Services</strong><span>Add, edit, delete, export PDF, and maintain service requirements, steps, fees, VAT, totals, rules, and validation.</span></div>
+                <div><strong>Users</strong><span>Admin creates staff/team logins and edits user access.</span></div>
+                <div><strong>Services</strong><span>Call center opens services, creates the customer PDF, then sends it to the customer.</span></div>
+              </div>
+            </section>
+            <section class="page-panel">
+              <h2>Maintain Profile Flow</h2>
+              <div class="field-list">
+                <span>Services</span>
+                <span>Steps</span>
+                <span>Government fee</span>
+                <span>CSP fee</span>
+                <span>VAT</span>
+                <span>Total</span>
+                <span>Rules / validation</span>
+                <span>Nationality</span>
+                <span>Family relation</span>
+                <span>Investor category</span>
+                <span>Export Excel</span>
+                <span>Invoice</span>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section id="activityView" class="view">
           <div class="activity-panel">
             <div class="panel-heading">
-              <h2>Service History</h2>
-              <span>Service create, update, and delete history</span>
+              <h2>Activity Log</h2>
+              <span>Filter by service name or staff/user</span>
             </div>
-            <div id="changeLog" class="activity-list"></div>
-          </div>
-        </section>
-
-        <section id="auditView" class="view">
-          <div class="activity-panel">
-            <div class="panel-heading">
-              <h2>Audit Log</h2>
-              <span>Login, user creation, and admin activity</span>
-            </div>
-            <div id="auditLog" class="activity-list"></div>
+            <div class="activity-filters"><select id="activityServiceFilter"><option value="">All services</option></select><select id="activityActorFilter"><option value="">All staff/users</option></select></div><div id="changeLog" class="activity-list"></div>
           </div>
         </section>
       </main>
     </div>
 
-    <script src="services-data.js?v=admin-users-1"></script>
-    <script src="app.js?v=admin-users-1"></script>
+    <script src="services-data.js?v=json-backup-import-1"></script>
+    <script src="app.js?v=json-backup-import-1"></script>
   </body>
 </html>
